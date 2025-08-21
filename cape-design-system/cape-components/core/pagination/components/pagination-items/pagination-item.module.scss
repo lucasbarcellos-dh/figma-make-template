@@ -1,0 +1,50 @@
+.root {
+  --cp-pagination-item-background: var(
+    --cp-control-color-branded-secondary-enabled
+  );
+  --cp-pagination-item-color: var(--cp-text-color-primary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--cp-base-spacing-tiny);
+  width: var(--cp-control-sizing-xsmall);
+  height: var(--cp-control-sizing-xsmall);
+  border-radius: var(--cp-control-border-radius-pill);
+  font: var(--cp-desktop-body-medium);
+
+  button {
+    background: var(--cp-pagination-item-background);
+    color: var(--cp-pagination-item-color);
+    border: none;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--cp-control-border-radius-pill);
+    cursor: pointer;
+    outline: none;
+    font: inherit;
+
+    &[data-selected='true'] {
+      --cp-pagination-item-color: var(--cp-text-color-onbranded);
+      --cp-pagination-item-background: var(
+        --cp-control-color-branded-primary-selected
+      );
+    }
+
+    &:not([data-selected='true']) {
+      &:hover {
+        --cp-pagination-item-color: var(
+          --cp-control-color-branded-primary-selected-hover
+        );
+        --cp-pagination-item-background: var(
+          --cp-control-color-branded-secondary-hover
+        );
+      }
+
+      &:focus-visible {
+        box-shadow: var(--cp-base-focus-default-box-shadow);
+      }
+    }
+  }
+}

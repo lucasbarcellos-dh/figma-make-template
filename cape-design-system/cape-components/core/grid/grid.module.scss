@@ -1,0 +1,107 @@
+@use 'sass:map';
+@use '../common/utils/breakpoints';
+
+.grid {
+  // Horizontal gap variables
+  --cp-grid-gutter-wide: var(--cp-spacing-3xlarge);
+  --cp-grid-gutter-narrow: var(--cp-spacing-large);
+  --cp-grid-gutter-condensed: 1px;
+
+  // gap breakpoint variables
+  --cp-grid-gap-xs: var(--cp-grid-gutter-wide);
+  --cp-grid-gap-sm: var(--cp-grid-gutter-wide);
+  --cp-grid-gap-md: var(--cp-grid-gutter-wide);
+  --cp-grid-gap-lg: var(--cp-grid-gutter-wide);
+  --cp-grid-gap-xl: var(--cp-grid-gutter-wide);
+  --cp-grid-gap-xxl: var(--cp-grid-gutter-wide);
+  --cp-grid-gap: var(--cp-grid-gutter-wide);
+
+  // margins
+  --cp-grid-margin-xs: var(--cp-spacing-xlarge);
+  --cp-grid-margin-sm: var(--cp-spacing-3xlarge);
+  --cp-grid-margin-md: var(--cp-spacing-5xlarge);
+  --cp-grid-margin-lg: var(--cp-spacing-5xlarge);
+  --cp-grid-margin-xl: var(--cp-spacing-5xlarge);
+  --cp-grid-margin-xxl: var(--cp-spacing-5xlarge);
+  --cp-grid-margin: var(--cp-grid-margin-md);
+
+  // total number of columns
+  --cp-grid-template-columns: 12;
+
+  display: grid;
+  gap: var(--cp-grid-gap);
+  margin-inline: var(--cp-grid-margin);
+  grid-template-columns: repeat(var(--cp-grid-template-columns), 1fr);
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, xs)) and (max-width: map.get(breakpoints.$breakpoints, sm)) {
+    --cp-grid-margin: var(--cp-grid-margin-xs);
+    --cp-grid-gap: var(--cp-grid-gap-xs);
+
+    .grid-item {
+      --cp-grid-column: span var(--cp-grid-column-xs);
+    }
+  }
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, sm)) and (max-width: map.get(breakpoints.$breakpoints, md)) {
+    --cp-grid-margin: var(--cp-grid-margin-sm);
+    --cp-grid-gap: var(--cp-grid-gap-sm);
+
+    .grid-item {
+      --cp-grid-column: span var(--cp-grid-column-sm);
+    }
+  }
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, md)) and (max-width: map.get(breakpoints.$breakpoints, lg)) {
+    --cp-grid-margin: var(--cp-grid-margin-md);
+    --cp-grid-gap: var(--cp-grid-gap-md);
+
+    .grid-item {
+      --cp-grid-column: span var(--cp-grid-column-md);
+    }
+  }
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, lg)) and (max-width: map.get(breakpoints.$breakpoints, xl)) {
+    --cp-grid-margin: var(--cp-grid-margin-lg);
+    --cp-grid-gap: var(--cp-grid-gap-lg);
+
+    .grid-item {
+      --cp-grid-column: span var(--cp-grid-column-lg);
+    }
+  }
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, xl)) and (max-width: map.get(breakpoints.$breakpoints, xxl)) {
+    --cp-grid-margin: var(--cp-grid-margin-xl);
+    --cp-grid-gap: var(--cp-grid-gap-xl);
+
+    .grid-item {
+      --cp-grid-column: span var(--cp-grid-column-xxl);
+    }
+  }
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, xxl)) {
+    --cp-grid-margin: var(--cp-grid-margin-xxl);
+    --cp-grid-gap: var(--cp-grid-gap-xxl);
+
+    .grid-item {
+      --cp-grid-column: span var(--cp-grid-column-xxl);
+    }
+  }
+}
+
+.grid-item {
+  // grid column
+  --cp-grid-column-xs: auto;
+  --cp-grid-column-sm: auto;
+  --cp-grid-column-md: auto;
+  --cp-grid-column-lg: auto;
+  --cp-grid-column-xl: auto;
+  --cp-grid-column-xxl: auto;
+  --cp-grid-column: auto;
+
+  // grid row
+  --cp-grid-row: auto;
+
+  grid-column: var(--cp-grid-column);
+  grid-row: var(--cp-grid-row);
+  display: grid;
+}

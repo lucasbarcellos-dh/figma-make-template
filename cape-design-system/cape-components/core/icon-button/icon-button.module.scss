@@ -1,0 +1,277 @@
+@mixin focus-visible {
+  --cp-icon-button-box-shadow: var(--cp-focus-default);
+}
+
+.root {
+  --cp-icon-button-box-shadow: none;
+  --cp-icon-button-size: var(--cp-action-sizing-tiny);
+
+  /* ================================
+   * Icon Button Default Styles
+   * ================================ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-width: var(--cp-action-border-width-small);
+  border-style: solid;
+  border-color: var(--cp-icon-button-border-color);
+  border-radius: var(--cp-action-border-radius-pill);
+  background-color: var(--cp-icon-button-background);
+  box-shadow: var(--cp-icon-button-box-shadow);
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  overflow: hidden;
+  height: var(--cp-icon-button-size);
+  width: var(--cp-icon-button-size);
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0%);
+
+  &[data-size='2xsmall'] {
+    --cp-icon-button-size: var(--cp-control-sizing-mini);
+  }
+
+  &[data-size='small'] {
+    --cp-icon-button-size: var(--cp-action-sizing-xsmall);
+  }
+
+  &[data-size='medium'] {
+    --cp-icon-button-size: var(--cp-action-sizing-small);
+  }
+
+  &[data-size='large'] {
+    --cp-icon-button-size: var(--cp-action-sizing-medium);
+  }
+
+  &:focus-visible {
+    @include focus-visible;
+  }
+
+  &:-moz-focusring {
+    outline: none;
+  }
+
+  &[data-variant='tertiary'] {
+    --cp-icon-button-border-color: transparent;
+    --cp-icon-button-background: var(--cp-action-color-tertiary-enabled);
+
+    &:hover {
+      --cp-icon-button-background: var(--cp-action-color-tertiary-hover);
+    }
+
+    &:active {
+      --cp-icon-button-background: var(--cp-action-color-tertiary-pressed);
+    }
+
+    &:disabled {
+      --cp-icon-button-background: var(--cp-action-color-tertiary-disabled);
+    }
+
+    &[data-status='inverse'] {
+      --cp-icon-button-border-color: transparent;
+      --cp-icon-button-background: var(
+        --cp-action-color-inverse-tertiary-enabled
+      );
+
+      &:hover {
+        --cp-icon-button-background: var(
+          --cp-action-color-inverse-tertiary-hover
+        );
+      }
+
+      &:active {
+        --cp-icon-button-background: var(
+          --cp-action-color-inverse-tertiary-pressed
+        );
+      }
+
+      &:disabled {
+        --cp-icon-button-background: var(
+          --cp-action-color-inverse-tertiary-disabled
+        );
+      }
+    }
+  }
+
+  &[data-variant='secondary'],
+  &[data-outline='true'] {
+    --cp-icon-button-border-color: var(--cp-action-color-secondary-enabled);
+    --cp-icon-button-background: var(--cp-action-color-tertiary-enabled);
+
+    &:hover {
+      --cp-icon-button-border-color: var(--cp-action-color-secondary-hover);
+      --cp-icon-button-background: var(--cp-action-color-tertiary-hover);
+    }
+
+    &:active {
+      --cp-icon-button-border-color: var(--cp-action-color-secondary-pressed);
+      --cp-icon-button-background: var(--cp-action-color-tertiary-pressed);
+    }
+
+    &:disabled {
+      --cp-icon-button-border-color: var(--cp-action-color-secondary-disabled);
+      --cp-icon-button-background: none;
+    }
+
+    &[data-status='inverse'] {
+      --cp-icon-button-border-color: var(
+        --cp-action-color-inverse-secondary-enabled
+      );
+      --cp-icon-button-background: var(
+        --cp-action-color-inverse-tertiary-enabled
+      );
+
+      &:hover {
+        --cp-icon-button-border-color: var(
+          --cp-action-color-inverse-secondary-hover
+        );
+        --cp-icon-button-background: var(
+          --cp-action-color-inverse-tertiary-hover
+        );
+      }
+
+      &:active {
+        --cp-icon-button-border-color: var(
+          --cp-action-color-inverse-secondary-pressed
+        );
+        --cp-icon-button-background: var(
+          --cp-action-color-inverse-tertiary-pressed
+        );
+      }
+
+      &:disabled {
+        --cp-icon-button-border-color: var(
+          --cp-action-color-inverse-secondary-disabled
+        );
+        --cp-icon-button-background: var(
+          --cp-action-color-inverse-tertiary-disabled
+        );
+      }
+    }
+  }
+
+  &[data-variant='primary'] {
+    --cp-icon-button-border-color: transparent;
+    --cp-icon-button-background: var(--cp-action-color-branded-primary-enabled);
+
+    &:hover {
+      --cp-icon-button-background: var(--cp-action-color-branded-primary-hover);
+    }
+
+    &:active {
+      --cp-icon-button-background: var(
+        --cp-action-color-branded-primary-pressed
+      );
+    }
+
+    &:disabled {
+      --cp-icon-button-background: var(
+        --cp-action-color-branded-primary-disabled
+      );
+    }
+  }
+
+  &[data-variant='elevated'] {
+    --cp-icon-button-border-color: var(--cp-action-color-secondary-enabled);
+    --cp-icon-button-background: var(--cp-action-color-inverse-primary-enabled);
+    --cp-icon-button-box-shadow: var(--cp-base-elevation-high);
+
+    &:hover {
+      --cp-icon-button-border-color: var(--cp-action-color-secondary-hover);
+      --cp-icon-button-background: var(--cp-action-color-inverse-primary-hover);
+    }
+
+    &:active {
+      --cp-icon-button-border-color: var(--cp-action-color-secondary-pressed);
+      --cp-icon-button-background: var(
+        --cp-action-color-inverse-primary-pressed
+      );
+    }
+
+    &:disabled {
+      --cp-icon-button-border-color: var(--cp-action-color-secondary-disabled);
+      --cp-icon-button-background: var(
+        --cp-action-color-inverse-primary-disabled
+      );
+    }
+
+    &:focus-visible {
+      @include focus-visible;
+    }
+  }
+
+  /*
+  /* Legacy browser support for :focus-visible
+  */
+  @supports not (inset: 0) {
+    &:focus {
+      @include focus-visible;
+    }
+  }
+
+  /* For Safari versions between 14.1> and <15.4 */
+  @supports not selector(:focus-visible) {
+    &:focus {
+      @include focus-visible;
+    }
+  }
+}
+
+.content {
+  --cp-icon-button-content-color: var(--cp-icon-color-primary);
+  --cp-icon-button-content-size: var(--cp-sizing-xsmall);
+
+  /* ================================
+  * Icon Button Content default CSS
+  * ================================ */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--cp-icon-button-content-size);
+  height: var(--cp-icon-button-content-size);
+
+  /* SVG styles for the Icon Button */
+  svg {
+    color: var(--cp-icon-button-content-color);
+    width: 100%;
+    height: auto;
+  }
+
+  &[data-size='2xsmall'],
+  &[data-size='xsmall'] {
+    --cp-icon-button-content-size: var(--cp-sizing-xsmall);
+  }
+
+  &[data-size='small'],
+  &[data-size='medium'],
+  &[data-size='large'] {
+    --cp-icon-button-content-size: var(--cp-icon-sizing-medium);
+  }
+
+  &[data-variant='primary'] {
+    --cp-icon-button-content-color: var(--cp-icon-color-onbranded);
+  }
+}
+
+.root:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+
+  .content {
+    --cp-icon-button-content-color: var(--cp-icon-color-disabled);
+  }
+}
+
+.root[data-status='inverse'] {
+  .content {
+    --cp-icon-button-content-color: var(--cp-text-color-inverse);
+  }
+
+  &:disabled {
+    .content {
+      --cp-icon-button-content-color: var(--cp-text-color-inverse-disabled);
+    }
+  }
+}

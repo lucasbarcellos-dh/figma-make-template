@@ -1,0 +1,8 @@
+.root {
+  --cp-stack-direction: row;
+  --cp-stack-gap: 0;
+
+  display: flex;
+  flex-direction: var(--cp-stack-direction);
+  gap: var(--cp-stack-gap);
+}

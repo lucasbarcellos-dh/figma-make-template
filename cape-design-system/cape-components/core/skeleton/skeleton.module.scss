@@ -1,0 +1,66 @@
+.root {
+  /* ================================
+   * CSS Variables
+   * ================================ */
+  --cp-skeleton-border-radius: var(--cp-base-border-radius-medium);
+
+  /* ================================
+   * Default Styles
+   * ================================ */
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--cp-skeleton-color-static);
+  border-radius: var(--cp-skeleton-border-radius);
+  width: 200px;
+  height: auto;
+  aspect-ratio: 1 / 0.5;
+
+  &[data-variant='text'] {
+    --cp-skeleton-border-radius: var(--cp-action-border-radius-pill);
+
+    width: 200px;
+    aspect-ratio: 1 / 0.05;
+  }
+
+  &[data-variant='rounded'] {
+    --cp-skeleton-border-radius: var(--cp-base-border-radius-large);
+
+    aspect-ratio: 1 / 0.25;
+  }
+
+  &[data-variant='circular'] {
+    --cp-skeleton-border-radius: 50%;
+
+    width: 200px;
+    aspect-ratio: 1;
+  }
+
+  &.animated::after {
+    animation: calc(var(--cp-motion-duration-slow) * 2) linear
+      var(--cp-motion-duration-normal) infinite normal none running shimmer;
+    background: var(--cp-skeleton-color-animation);
+    content: '';
+    position: absolute;
+    transform: translateX(-100%);
+    inset: 0;
+
+    [dir='rtl'] & {
+      animation-direction: reverse;
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    50% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.root {
+  --cp-progress-indeterminate-value: 50%;
+
+  /* ================================
+   * Default Styles
+   * ================================ */
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--cp-progress-bar-size);
+  background: var(--cp-loading-color-secondary-branded);
+  border-radius: var(--cp-base-border-radius-medium);
+  overflow: hidden;
+
+  .progress-value {
+    background: var(--cp-loading-color-primary-branded);
+    height: 100%;
+  }
+
+  &[data-size='small'] {
+    --cp-progress-bar-size: 2px;
+  }
+
+  &[data-size='medium'] {
+    --cp-progress-bar-size: 4px;
+  }
+
+  &[data-size='large'] {
+    --cp-progress-bar-size: 8px;
+  }
+
+  &[data-indeterminate='false'] .progress-value {
+    width: var(--cp-progress-bar-value);
+    transition: width var(--cp-motion-duration-xslow);
+  }
+
+  &[data-variant='inverse'] {
+    background: var(--cp-loading-color-secondary-onbranded);
+
+    .progress-value {
+      background: var(--cp-loading-color-primary-onbranded);
+    }
+  }
+
+  &[data-indeterminate='true'] .progress-value {
+    position: relative;
+    width: var(--cp-progress-indeterminate-value);
+    animation: indeterminate-progress var(--cp-motion-duration-slow) infinite
+      linear;
+  }
+
+  @keyframes indeterminate-progress {
+    0% {
+      inset-inline-start: calc(-1 * var(--cp-progress-indeterminate-value));
+    }
+
+    100% {
+      inset-inline-start: 100%;
+    }
+  }
+}

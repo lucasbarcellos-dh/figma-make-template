@@ -1,0 +1,764 @@
+
+// Do not edit directly
+
+$cp-color-jacaranda-grey-10: #CECED4;
+$cp-color-jacaranda-grey-20: #b9bac1;
+$cp-color-jacaranda-grey-30: #93949D;
+$cp-color-jacaranda-grey-40: #7F8088;
+$cp-color-jacaranda-grey-50: #6C6D73;
+$cp-color-jacaranda-grey-60: #56565C;
+$cp-color-jacaranda-grey-70: #434347;
+$cp-color-jacaranda-grey-80: #343437;
+$cp-color-jacaranda-grey-90: #28282A;
+$cp-color-jacaranda-grey-95: #1E1E20;
+$cp-color-jacaranda-grey-99: #141415;
+$cp-color-jacaranda-grey-100: #000000;
+$cp-color-jacaranda-grey-05: #E9EAEC;
+$cp-color-jacaranda-grey-01: #F4F5F6;
+$cp-color-jacaranda-grey-00: #FFFFFF;
+$cp-color-cape-warning-10: #FFF1C2;
+$cp-color-cape-warning-20: #FFEAA3;
+$cp-color-cape-warning-30: #FFE285;
+$cp-color-cape-warning-40: #FFD95C;
+$cp-color-cape-warning-50: #FFCF33;
+$cp-color-cape-warning-60: #FFC400;
+$cp-color-cape-warning-70: #E5A100;
+$cp-color-cape-warning-80: #BE7F00;
+$cp-color-cape-warning-90: #8F5D00;
+$cp-color-cape-warning-95: #664200;
+$cp-color-cape-warning-05: #FFF8DF;
+$cp-color-cape-success-10: #BDE5D0;
+$cp-color-cape-success-20: #95D5B2;
+$cp-color-cape-success-30: #6CC695;
+$cp-color-cape-success-40: #31B46E;
+$cp-color-cape-success-50: #05A34E;
+$cp-color-cape-success-60: #048A42;
+$cp-color-cape-success-70: #047538;
+$cp-color-cape-success-80: #03582A;
+$cp-color-cape-success-90: #024420;
+$cp-color-cape-success-95: #012D15;
+$cp-color-cape-success-05: #E5F5EC;
+$cp-color-cape-danger-10: #F9D9D2;
+$cp-color-cape-danger-20: #F4B7AB;
+$cp-color-cape-danger-30: #EF9381;
+$cp-color-cape-danger-40: #EC6B51;
+$cp-color-cape-danger-50: #E54B2C;
+$cp-color-cape-danger-60: #D62D0B;
+$cp-color-cape-danger-70: #BF280A;
+$cp-color-cape-danger-80: #A62309;
+$cp-color-cape-danger-90: #871C07;
+$cp-color-cape-danger-95: #601405;
+$cp-color-cape-danger-05: #FCEBE8;
+$cp-color-cape-highlight-10: #E1D6F0;
+$cp-color-cape-highlight-20: #CBBAE8;
+$cp-color-cape-highlight-30: #B59DDC;
+$cp-color-cape-highlight-40: #9C7CCF;
+$cp-color-cape-highlight-50: #7C53C1;
+$cp-color-cape-highlight-60: #6635B6;
+$cp-color-cape-highlight-70: #522B92;
+$cp-color-cape-highlight-80: #45237B;
+$cp-color-cape-highlight-90: #351C5F;
+$cp-color-cape-highlight-95: #261343;
+$cp-color-cape-highlight-05: #F7F5FC;
+$cp-color-fast-red-10: #F1B4B7;
+$cp-color-fast-red-20: #EB8F93;
+$cp-color-fast-red-30: #E46A6E;
+$cp-color-fast-red-40: #DD444A;
+$cp-color-fast-red-50: #D61F26;
+$cp-color-fast-red-60: #B21A20;
+$cp-color-fast-red-70: #97161A;
+$cp-color-fast-red-80: #7C1316;
+$cp-color-fast-red-90: #610E11;
+$cp-color-fast-red-05: #F8DADB;
+$cp-color-brand-10: #FFDBEA;
+$cp-color-brand-20: #FFC2DB;
+$cp-color-brand-30: #FFA3C9;
+$cp-color-brand-40: #FF7AB2;
+$cp-color-brand-50: #FF529A;
+$cp-color-brand-60: #FF2B85;
+$cp-color-brand-70: #E21B70;
+$cp-color-brand-80: #C62167;
+$cp-color-brand-90: #A11B54;
+$cp-color-brand-95: #72133B;
+$cp-color-brand-05: #FFEBF3;
+$cp-color-brand-light-primary: #E21B70;
+$cp-color-brand-light-secondary: #FFFFFF;
+$cp-color-brand-light-onbranded: #FFFFFF;
+$cp-color-brand-light-accent: #E21B70;
+$cp-color-brand-light-alternate: #E21B70;
+$cp-color-brand-light-onalternate: #FFFFFF;
+$cp-color-brand-light-alpha-12: rgba(226, 27, 112, 0.12);
+$cp-color-brand-light-alpha-20: rgba(226, 27, 112, 0.20);
+$cp-color-brand-light-alpha-32: rgba(226, 27, 112, 0.32);
+$cp-color-brand-light-alpha-48: rgba(226, 27, 112, 0.48);
+$cp-color-brand-light-alpha-56: rgba(226, 27, 112, 0.56);
+$cp-color-brand-light-alpha-04: rgba(226, 27, 112, 0.04);
+$cp-color-brand-light-alpha-08: rgba(226, 27, 112, 0.08);
+$cp-color-brand-light-alpha-00: rgba(226, 27, 112, 0);
+$cp-color-brand-dark-primary: #FFA3C9;
+$cp-color-brand-dark-secondary: #FFFFFF;
+$cp-color-brand-dark-onbranded: #141415;
+$cp-color-brand-dark-accent: #FFA3C9;
+$cp-color-brand-dark-alternate: #FFA3C9;
+$cp-color-brand-dark-onalternate: #141415;
+$cp-color-brand-dark-alpha-12: rgba(255, 163, 201, 0.12);
+$cp-color-brand-dark-alpha-20: rgba(255, 163, 201, 0.20);
+$cp-color-brand-dark-alpha-32: rgba(255, 163, 201, 0.32);
+$cp-color-brand-dark-alpha-48: rgba(255, 163, 201, 0.48);
+$cp-color-brand-dark-alpha-56: rgba(255, 163, 201, 0.56);
+$cp-color-brand-dark-alpha-04: rgba(255, 163, 201, 0.04);
+$cp-color-brand-dark-alpha-08: rgba(255, 163, 201, 0.08);
+$cp-color-brand-dark-alpha-00: rgba(255, 163, 201, 0);
+$cp-font-family-roboto-ltr: Roboto, system-ui, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$cp-font-family-outfit-ltr: Outfit, system-ui, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$cp-font-family-noto-sans-ltr: 'Noto Sans', system-ui, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$cp-font-family-figtree-ltr: Figtree, system-ui, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$cp-font-family-glovo-sans-ltr: 'Glovo Sans', system-ui, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$cp-font-family-noto-sans-rtl: 'Noto Sans Arabic', system-ui, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$cp-font-size-mini: 8px;
+$cp-font-size-tiny: 10px;
+$cp-font-size-xsmall: 12px;
+$cp-font-size-small: 14px;
+$cp-font-size-medium: 16px;
+$cp-font-size-large: 20px;
+$cp-font-size-xlarge: 24px;
+$cp-font-size-2xlarge: 30px;
+$cp-font-size-3xlarge: 36px;
+$cp-font-size-4xlarge: 48px;
+$cp-font-size-5xlarge: 56px;
+$cp-font-weight-book: Book;
+$cp-font-weight-regular: 400;
+$cp-font-weight-medium: 500;
+$cp-font-weight-semi-bold: 600;
+$cp-font-weight-bold: 700;
+$cp-font-weight-extra-bold: 800;
+$cp-font-weight-black: 900;
+$cp-font-line-height-tighter: 1.25;
+$cp-font-line-height-tight: 1.34;
+$cp-font-line-height-snug: 1.45;
+$cp-font-line-height-normal: 1.5;
+$cp-font-line-height-loose: 1.6;
+$cp-font-letter-spacing-none: 0;
+$cp-font-letter-spacing-small: 0.2;
+$cp-font-letter-spacing-medium: 0.3;
+$cp-font-letter-spacing-large: 0.4;
+$cp-font-fallback: system-ui, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+$cp-spacing-none: 0;
+$cp-spacing-tiny: 2px;
+$cp-spacing-xsmall: 4px;
+$cp-spacing-small: 8px;
+$cp-spacing-medium: 12px;
+$cp-spacing-large: 16px;
+$cp-spacing-xlarge: 20px;
+$cp-spacing-2xlarge: 24px;
+$cp-spacing-3xlarge: 32px;
+$cp-spacing-4xlarge: 36px;
+$cp-spacing-5xlarge: 40px;
+$cp-spacing-6xlarge: 48px;
+$cp-spacing-7xlarge: 56px;
+$cp-border-radius-none: 0;
+$cp-border-radius-tiny: 2px;
+$cp-border-radius-small: 4px;
+$cp-border-radius-medium: 6px;
+$cp-border-radius-large: 8px;
+$cp-border-radius-xlarge: 12px;
+$cp-border-radius-2xlarge: 16px;
+$cp-border-radius-3xlarge: 20px;
+$cp-border-radius-4xlarge: 24px;
+$cp-border-radius-pill: 200px;
+$cp-border-width-none: 0;
+$cp-border-width-thin: 1px;
+$cp-border-width-small: 1.5px;
+$cp-border-width-medium: 2px;
+$cp-border-width-thick: 4px;
+$cp-border-color-normal: #E9EAEC; // Used for less prominent borders
+$cp-border-color-high: #CECED4; // Used for showing strong and more contrasting borders
+$cp-border-color-inverse: rgba(255, 255, 255, 0.32); // Used for inverse prominent borders
+$cp-elevation-low-onlight: 0 2px 8px 0 rgba(20, 20, 21, 0.08);
+$cp-elevation-low-ondark: 0 2px 8px 0 rgba(0, 0, 0, 0.72);
+$cp-elevation-high-onlight: 0 2px 16px 0 rgba(20, 20, 21, 0.12);
+$cp-elevation-high-ondark: 0 4px 12px 0 rgba(0, 0, 0, 0.88);
+$cp-elevation-highest-onlight: 0 4px 24px 0 rgba(20, 20, 21, 0.16);
+$cp-elevation-highest-ondark: 0 8px 16px 0 rgba(0, 0, 0, 0.96);
+$cp-opacity-lowest: 0;
+$cp-opacity-low: 0.08;
+$cp-opacity-normal: 0.16;
+$cp-opacity-high: 0.24;
+$cp-opacity-highest: 0.96;
+$cp-duration-xslow: 2000ms;
+$cp-duration-slow: 1000ms;
+$cp-duration-normal: 800ms;
+$cp-duration-fast: 500ms;
+$cp-duration-xfast: 200ms;
+$cp-duration-2xfast: 100ms;
+$cp-sizing-mini: 8px;
+$cp-sizing-tiny: 12px;
+$cp-sizing-xsmall: 16px;
+$cp-sizing-small: 20px;
+$cp-sizing-medium: 24px;
+$cp-sizing-large: 32px;
+$cp-sizing-xlarge: 40px;
+$cp-sizing-2xlarge: 48px;
+$cp-sizing-3xlarge: 56px;
+$cp-sizing-4xlarge: 64px;
+$cp-sizing-5xlarge: 80px;
+$cp-breakpoint-xsmall: 0px;
+$cp-breakpoint-small: 375px;
+$cp-breakpoint-medium: 768px;
+$cp-breakpoint-large: 1024px;
+$cp-breakpoint-xlarge: 1440px;
+$cp-breakpoint-2xlarge: 1920px;
+$cp-z-index-auto: auto; // auto z-index
+$cp-z-index-top: 9999; // Top z-index is for elements which appears on top of all others such as a dropdown leaf or tooltip on a dialog.
+$cp-z-index-overlay: 500; // Overlay z-index is for overlay components such as dialogs and side sheets.
+$cp-z-index-toast: 400; // Toast z-index is for messages that appear on top of pages.
+$cp-z-index-floating: 300; // Floating z-index is for components which have sticky attributes such as floating buttons, headers, navigation bars etc.
+$cp-z-index-high: 200; // High z-index is for tooltips and dropdowns that appear on top of default level components.
+$cp-z-index-default: 100; // The default z-index for components and also the elements inside components.
+$cp-z-index-bottom: 0; // Bottom z-index for is for page or surfaces.
+$cp-z-index-deep: -9999; // Deep z-index is used to stack something behind everything else.
+$cp-focus-inset-high: inset 0 0 0 2px #000000, inset 0 0 0 4px #FFFFFF;
+$cp-focus-inset-low: inset 0 0 0 2px #FFFFFF, inset 0 0 0 4px #000000;
+$cp-focus-outset-high: 0 0 0 3px #FFFFFF, 0 0 0 5px #000000;
+$cp-focus-outset-low: 0 0 0 3px #000000, 0 0 0 5px #FFFFFF;
+$cp-focus-enabled: 0 0 0 4px rgba(226, 27, 112, 0.4); // This token is a building block and should not be used as standalone. In order to indicate the focused elements, please check the focus tokens under composition tokens group
+$cp-focus-default: 0 0 0 5px rgba(226, 27, 112, 0.3); // Default focus style for interactive containers
+$cp-focus-default-inverse: 0 0 0 5px rgba(255, 194, 219, 0.4); // Inverse focus style for interactive containers
+$cp-focus-danger: 0 0 0 4px rgba(214, 45, 11, 0.4); // This token is a building block and should not be used as standalone. In order to indicate the focused elements, please check the focus tokens under composition tokens group
+$cp-focus-outside-default: 0 0 0 3px #FFFFFF, 0 0 0 5px #000000;
+$cp-focus-outside-inverse: 0 0 0 3px #000000, 0 0 0 5px #FFFFFF;
+$cp-focus-inside-default: inset 0 0 0 2px #000000, inset 0 0 0 4px #FFFFFF;
+$cp-desktop-display-x-large: 700 36px/1.25 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Token will be deprecated. Please use the displayXlarge with lowercase token name.
+$cp-desktop-display-xlarge: 700 36px/1.25 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Largest display text style. Reserved for main titles and headlines and used only once per screen
+$cp-desktop-display-large: 700 24px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Second largest display text style. Used as section headings or to emphasise key information on a screen (e.g. dashboard statistics)
+$cp-desktop-display-medium: 700 20px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Third largest display text style. Used as section headings or to emphasise important information on a screen (e.g. dashboard statistics)
+$cp-desktop-display-small: 700 16px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Smalles display text style. Used when an extra level or heading hierarchy is needed (e.g. subsections titles).
+$cp-desktop-display-xsmall: 700 14px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Smallest display text style. Used when an extra level or heading hierarchy is needed (e.g. subsections titles).
+$cp-desktop-subtitle-xlarge: 600 20px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Subtitle style used as larger heading sinside containers
+$cp-desktop-subtitle-large: 600 16px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Subtitle style used as headings inside containers
+$cp-desktop-subtitle-medium: 600 14px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Subtitle style used as medium headings inside containers
+$cp-desktop-subtitle-small: 600 12px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Subtitle style used as small headings inside containers
+$cp-desktop-body-large: 500 16px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // The default paragraph size used for long copy
+$cp-desktop-body-medium: 500 14px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // The secondary paragraph size used in less prominent and short copy
+$cp-desktop-body-small: 500 12px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // The tertiary paragraph size used only in least prominent short copy
+$cp-desktop-caption: 700 10px/1.6 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // The text style for small captions and labels
+$cp-base-spacing-none: 0;
+$cp-base-spacing-tiny: 2px;
+$cp-base-spacing-xsmall: 4px;
+$cp-base-spacing-small: 8px;
+$cp-base-spacing-medium: 12px;
+$cp-base-spacing-large: 16px;
+$cp-base-spacing-xlarge: 20px;
+$cp-base-spacing-2xlarge: 24px;
+$cp-base-spacing-3xlarge: 32px;
+$cp-base-spacing-4xlarge: 40px;
+$cp-base-spacing-5xlarge: 48px;
+$cp-base-sizing-mini: 12px;
+$cp-base-sizing-tiny: 16px;
+$cp-base-sizing-xsmall: 20px;
+$cp-base-sizing-small: 24px;
+$cp-base-sizing-medium: 32px;
+$cp-base-sizing-large: 48px;
+$cp-base-sizing-xlarge: 56px;
+$cp-base-sizing-2xlarge: 64px;
+$cp-base-border-radius-none: 0; // Border radius value used in sharp base elements
+$cp-base-border-radius-small: 6px; // Border radius value used in smallest children elements
+$cp-base-border-radius-medium: 8px; // Border radius value used in children elements
+$cp-base-border-radius-large: 12px; // Border radius value used in smaller containers
+$cp-base-border-radius-xlarge: 20px; // Border radius value used in mother containers such as cards, dialogs or overlays
+$cp-base-border-width-xsmall: 0; // Default border width for surface elements
+$cp-base-border-width-small: 1px; // Default border width for surface elements
+$cp-base-border-width-medium: 2px; // Border width for active or focused states of surface elements
+$cp-base-border-width-large: 4px; // Border width for stong highlights on surface elements
+$cp-base-opacity-lowest: 0;
+$cp-base-opacity-low: 0.08;
+$cp-base-opacity-normal: 0.16;
+$cp-base-opacity-high: 0.24;
+$cp-base-opacity-highest: 0.96;
+$cp-base-z-index-auto: auto; // auto z-index
+$cp-base-z-index-top: 9999; // Top z-index is for elements which appears on top of all others such as a dropdown leaf or tooltip on a dialog.
+$cp-base-z-index-overlay: 500; // Overlay z-index is for overlay components such as dialogs and side sheets.
+$cp-base-z-index-toast: 400; // Toast z-index is for messages that appear on top of pages.
+$cp-base-z-index-floating: 300; // Floating z-index is for components which have sticky attributes such as floating buttons, headers, navigation bars etc.
+$cp-base-z-index-high: 200; // High z-index is for tooltips and dropdowns that appear on top of default level components.
+$cp-base-z-index-default: 100; // The default z-index for components and also the elements inside components.
+$cp-base-z-index-bottom: 0; // Bottom z-index for is for page or surfaces.
+$cp-base-z-index-deep: -9999; // Deep z-index is used to stack something behind everything else.
+$cp-base-breakpoint-xsmall: 0px; // Breakpoint for smallest mobile screens which are less than 374px wide
+$cp-base-breakpoint-small: 375px; // Breakpoint for small screens which are between 375px to 767px wide
+$cp-base-breakpoint-medium: 768px; // Breakpoint for medium screens which are between 768px to 1023px wide
+$cp-base-breakpoint-large: 1024px; // Breakpoint for large screens which are between 1024px to 1439px wide
+$cp-base-breakpoint-xlarge: 1440px; // Breakpoint for extra large screens which are between 1440px to 1919px wide
+$cp-base-breakpoint-2xlarge: 1920px; // Breakpoint for largest screens which are wider than 1920 px
+$cp-base-color-flat: #FFFFFF; // The base color for default page backgrounds and card surface of the light modes
+$cp-base-color-lowest: #F4F5F6; // The base color used to slightly seperate a section or element
+$cp-base-color-low: #E9EAEC; // The base color used for differentiating a surface from the flat page level
+$cp-base-color-normal: #CECED4; // The base color used for achieving a strong contrast between the flat page level
+$cp-base-color-high: #6C6D73; // The base color for indicating a state change in the surface such as hovered elements
+$cp-base-color-highest: #1E1E20; // The base color used in the background of elements like a tooltip to make them pop
+$cp-base-color-overlay: rgba(20, 20, 21, 0.3); // This color is used for transparent background of overlay components such as dialogs and side sheets
+$cp-base-color-branded: #E21B70; // Platforms background color for full-screen messages
+$cp-base-color-branded-low: rgba(226, 27, 112, 0.08); // Platforms light background color for subtly branded backgrounds
+$cp-base-gradient-fadeout: rgba(255, 255, 255, 1); // The gradient color used to communicate a fade out effect
+$cp-base-gradient-fadein: rgba(255, 255, 255, 0.0); // The gradient color used to communicate a fade in effect
+$cp-base-elevation-low: 0 2px 8px 0 rgba(20, 20, 21, 0.08); // Default elevation for interactive containers
+$cp-base-elevation-high: 0 2px 16px 0 rgba(20, 20, 21, 0.12); // Elevation for floating elements
+$cp-base-elevation-highest: 0 4px 24px 0 rgba(20, 20, 21, 0.16); // Elevation for overlay elements
+$cp-base-focus-default-border-width: 1px;
+$cp-base-focus-default-border-color: #E21B70;
+$cp-base-focus-default-box-shadow: 0 0 0 4px rgba(226, 27, 112, 0.4);
+$cp-base-focus-default-inverse-border-width: 1px;
+$cp-base-focus-default-inverse-border-color: rgba(255, 255, 255, 0.32);
+$cp-base-focus-default-inverse-box-shadow: 0 0 0 4px rgba(226, 27, 112, 0.4);
+$cp-base-focus-danger-border-width: 1px;
+$cp-base-focus-danger-border-color: #D62D0B;
+$cp-base-focus-danger-box-shadow: 0 0 0 4px rgba(214, 45, 11, 0.4);
+$cp-base-focus-danger-inverse-border-width: 1px;
+$cp-base-focus-danger-inverse-border-color: rgba(255, 255, 255, 0.32);
+$cp-base-focus-danger-inverse-box-shadow: 0 0 0 4px rgba(214, 45, 11, 0.4);
+$cp-action-sizing-mini: 20px;
+$cp-action-sizing-tiny: 24px;
+$cp-action-sizing-xsmall: 32px;
+$cp-action-sizing-small: 40px;
+$cp-action-sizing-medium: 48px;
+$cp-action-sizing-large: 56px;
+$cp-action-border-radius-none: 0; // Border radius value used in sharp action elements
+$cp-action-border-radius-small: 6px; // Border radius value used in smallest children elements
+$cp-action-border-radius-medium: 8px; // Border radius value used in children elements
+$cp-action-border-radius-large: 12px; // Border radius value used in smaller containers
+$cp-action-border-radius-pill: 200px; // Border radius value used in chips and round elements
+$cp-action-border-width-small: 1px; // Default border width for action elements
+$cp-action-border-width-medium: 2px; // Border width for active or focused states of action elements
+$cp-action-border-width-large: 4px; // Border width for stong highlights on action elements
+$cp-action-spacing-none: 0;
+$cp-action-spacing-tiny: 2px;
+$cp-action-spacing-xsmall: 4px;
+$cp-action-spacing-small: 8px;
+$cp-action-spacing-medium: 12px;
+$cp-action-spacing-large: 16px;
+$cp-action-spacing-xlarge: 20px;
+$cp-action-spacing-2xlarge: 24px;
+$cp-action-color-branded-primary-enabled: #E21B70; // Theme accent color which is used for enabled, focused and selected states for actions
+$cp-action-color-branded-primary-hover: #FF529A; // Used for hover states of primary actions
+$cp-action-color-branded-primary-pressed: #E21B70; // Used for pressed states of primary actions
+$cp-action-color-branded-primary-disabled: rgba(20, 20, 21, 0.12); // Used for disabled states of primary actions
+$cp-action-color-branded-secondary-enabled: #E21B70; // Theme accent color which is used for secondary enabled, focused and selected states for actions
+$cp-action-color-branded-secondary-hover: #E21B70; // Used for hover states of secondary actions
+$cp-action-color-branded-secondary-pressed: #E21B70; // Used for pressed states of secondary actions
+$cp-action-color-branded-secondary-disabled: #b9bac1; // Used for disabled states of secondary actions
+$cp-action-color-branded-tertiary-enabled: rgba(255, 255, 255, 0.01); // Used for the fill color of enabled secondary action buttons
+$cp-action-color-branded-tertiary-hover: rgba(20, 20, 21, 0.04); // Used for the fill color of hovered secondary action buttons
+$cp-action-color-branded-tertiary-pressed: rgba(20, 20, 21, 0.08); // Used for the fill color of pressed secondary action buttons
+$cp-action-color-branded-tertiary-disabled: rgba(255, 255, 255, 0.01); // Used for the fill color of disabled secondary action buttons
+$cp-action-color-danger-primary-enabled: #D62D0B; // Used for enabled, focused and selected states of danger actions
+$cp-action-color-danger-primary-hover: #E54B2C; // Used for hover states of danger actions
+$cp-action-color-danger-primary-pressed: #BF280A; // Used for pressed states of danger actions
+$cp-action-color-danger-primary-disabled: rgba(20, 20, 21, 0.12); // Used for disabled states of danger actions
+$cp-action-color-danger-secondary-enabled: #D62D0B; // Theme accent color which is used for secondary enabled, focused and selected states for danger actions
+$cp-action-color-danger-secondary-hover: #D62D0B; // Used for hover states of secondary danger actions
+$cp-action-color-danger-secondary-pressed: #D62D0B; // Used for pressed states of secondary danger actions
+$cp-action-color-danger-secondary-disabled: #b9bac1; // Used for disabled states of secondary danger actions
+$cp-action-color-tertiary-enabled: rgba(255, 255, 255, 0.01); // Used for enabled states of tertiary actions such as icon buttons, secondary and tertiary buttons
+$cp-action-color-tertiary-hover: rgba(20, 20, 21, 0.04); // Used for hover states of tertiary actions such as icon buttons
+$cp-action-color-tertiary-pressed: rgba(20, 20, 21, 0.08); // Used for pressed states of tertiary actions such as icon buttons
+$cp-action-color-tertiary-disabled: rgba(255, 255, 255, 0.01); // Used for disabled states of tertiary actions such as icon buttons, secondary and tertiary buttons
+$cp-action-color-visited-enabled: #6635B6; // Used for visited states of action items such as visited links
+$cp-action-color-visited-hover: #7C53C1; // Used for hover states of visited action items to signify interactivity
+$cp-action-color-secondary-enabled: #93949D; // Alternate color which is used for all states of secondary actions
+$cp-action-color-secondary-hover: #93949D; // Alternate color which is used for hover states of secondary actions
+$cp-action-color-secondary-pressed: #93949D; // Alternate color which is used for pressed states of secondary actions
+$cp-action-color-secondary-disabled: #b9bac1; // Color style which is used for disabled states of secondary actions
+$cp-action-color-success-primary-enabled: #047538; // Color token used for enabled states of success indicating primary actions
+$cp-action-color-success-primary-hover: #048A42; // Color token used for hover states of success indicating primary actions
+$cp-action-color-success-primary-pressed: #03582A; // Color token used for pressed states of success indicating primary actions
+$cp-action-color-success-primary-disabled: rgba(20, 20, 21, 0.12); // Used for disabled states of primary actions
+$cp-action-color-success-secondary-enabled: #047538; // Theme accent color which is used for secondary enabled, focused and selected states for success actions
+$cp-action-color-success-secondary-hover: #047538; // Used for hover states of secondary success actions
+$cp-action-color-success-secondary-pressed: #047538; // Used for pressed states of secondary success actions
+$cp-action-color-success-secondary-disabled: #b9bac1; // Used for disabled states of secondary success actions
+$cp-action-color-info-enabled: #6635B6; // Color token used for enabled states of information indicating actions
+$cp-action-color-info-hover: #7C53C1; // Color token used for hover states of information indicating actions
+$cp-action-color-info-pressed: #522B92; // Color token used for pressed states of information indicating actions
+$cp-action-color-info-disabled: rgba(20, 20, 21, 0.12); // Used for disabled states of primary actions
+$cp-action-color-inverse-primary-enabled: #FFFFFF; // Color token used on the enabled states of inverted action buttons
+$cp-action-color-inverse-primary-hover: #E9EAEC; // Color token used on the hover states of inverted action buttons
+$cp-action-color-inverse-primary-pressed: #CECED4; // Color token used on the pressed states of inverted action buttons
+$cp-action-color-inverse-primary-disabled: rgba(255, 255, 255, 0.12); // Color token used on the disabled states of inverted action buttons
+$cp-action-color-inverse-tertiary-enabled: rgba(20, 20, 21, 0.01); // Color token used on the enabled states of inverted action secondary buttons
+$cp-action-color-inverse-tertiary-hover: rgba(255, 255, 255, 0.04); // Color token used on the hover states of inverted action secondary buttons
+$cp-action-color-inverse-tertiary-pressed: rgba(255, 255, 255, 0.08); // Color token used on the pressed states of inverted action secondary buttons
+$cp-action-color-inverse-tertiary-disabled: rgba(255, 255, 255, 0.01); // Color token used on the disabled states of inverted action secondary buttons
+$cp-action-color-inverse-secondary-enabled: rgba(255, 255, 255, 0.40); // Color token used on the enabled states of inverted action secondary buttons
+$cp-action-color-inverse-secondary-hover: rgba(255, 255, 255, 0.48); // Color token used on the hover states of inverted action secondary buttons
+$cp-action-color-inverse-secondary-pressed: rgba(255, 255, 255, 0.56); // Color token used on the pressed states of inverted action secondary buttons
+$cp-action-color-inverse-secondary-disabled: #6C6D73; // Color token used on the disabled states of inverted action secondary buttons
+$cp-control-sizing-mini: 16px;
+$cp-control-sizing-tiny: 24px;
+$cp-control-sizing-xsmall: 32px;
+$cp-control-sizing-small: 40px;
+$cp-control-sizing-medium: 48px;
+$cp-control-sizing-large: 56px;
+$cp-control-border-radius-none: 0; // Border radius value used in sharp control elements
+$cp-control-border-radius-xsmall: 4px; // Border radius value used in the smallest variants of control elements
+$cp-control-border-radius-small: 6px; // Border radius value used in smallest children elements
+$cp-control-border-radius-medium: 8px; // Border radius value used in children elements
+$cp-control-border-radius-large: 12px; // Border radius value used in smaller containers
+$cp-control-border-radius-pill: 200px; // Border radius value used in chips and round elements
+$cp-control-border-width-xsmall: 1px; // Default border width for control elements
+$cp-control-border-width-small: 1px; // Default border width for form elements
+$cp-control-border-width-medium: 2px; // Border width for active or focused states of control elements
+$cp-control-border-width-large: 4px; // Border width for stong highlights on control elements
+$cp-control-spacing-none: 0;
+$cp-control-spacing-tiny: 2px;
+$cp-control-spacing-xsmall: 4px;
+$cp-control-spacing-small: 8px;
+$cp-control-spacing-medium: 12px;
+$cp-control-spacing-large: 16px;
+$cp-control-spacing-xlarge: 20px;
+$cp-control-spacing-2xlarge: 24px;
+$cp-control-color-branded-primary-enabled: #93949D; // Default color for non-selected form controls, e.g. inputs, radio buttons, switches or checkboxes
+$cp-control-color-branded-primary-hover: #7F8088; // Hover state for non-selected form controls
+$cp-control-color-branded-primary-selected: #E21B70; // For selected form controls, e.g. checkboxes, radio buttons and switches
+$cp-control-color-branded-primary-selected-hover: hsl(334 78.7% 61.7%); // For hover states of selected form controls 
+$cp-control-color-branded-primary-disabled: #b9bac1; // Default color for disabled form controls, e.g. inputs, radio buttons, switches or checkboxes
+$cp-control-color-branded-secondary-enabled: rgba(255, 255, 255, 0.01); // Used as a surface color on the enabled states of secondary controls such as dropdowns, text inputs and other form elements
+$cp-control-color-branded-secondary-hover: rgba(20, 20, 21, 0.04); // Used for hover states of secondary controls such as hovered list surfaces
+$cp-control-color-branded-secondary-selected: rgba(226, 27, 112, 0.08); // Used for pressed or selected states of secondary controls
+$cp-control-color-branded-secondary-selected-hover: rgba(226, 27, 112, 0.12); // Used for hover states of selected secondary controls
+$cp-control-color-branded-secondary-disabled: rgba(20, 20, 21, 0.04); // Used for disabled states of secondary controls
+$cp-control-color-branded-secondary-auto-fill: rgba(255, 196, 0, 0.16); // Used for auto-filled states of the form fields
+$cp-control-color-branded-tertiary-selected: #E21B70; // For selected form controls, e.g. checkboxes, radio buttons and switches
+$cp-control-color-branded-tertiary-selected-hover: hsl(334 78.7% 61.7%); // For selected form controls, e.g. checkboxes, radio buttons and switches
+$cp-control-color-branded-tertiary-disabled: #b9bac1; // Default color for disabled form controls, e.g. inputs, radio buttons, switches or checkboxes
+$cp-control-color-danger-primary-enabled: #D62D0B; // Used as a border style on the enabled states of the controls to indicate an error
+$cp-control-color-danger-primary-hover: #E54B2C; // Used as a border style on the hover states of the controls to indicate an error
+$cp-control-color-danger-primary-selected: #D62D0B; // Used as a border style on the enabled states of the controls to indicate an error
+$cp-control-color-danger-primary-selected-hover: #E54B2C; // Used as a border style on the hover states of the controls to indicate an error
+$cp-control-color-danger-primary-pressed: #BF280A; // Used as a border style on the pressed states of the controls to indicate an error
+$cp-control-color-danger-tertiary-enabled: #D62D0B; // Used as a border style on the enabled states of the controls to indicate an error
+$cp-control-color-danger-tertiary-hover: #E54B2C; // Used as a border style on the hover states of the controls to indicate an error
+$cp-control-color-danger-tertiary-selected: #D62D0B; // Used as a border style on the enabled states of the controls to indicate an error
+$cp-control-color-danger-tertiary-selected-hover: #E54B2C; // Used as a border style on the hover states of the controls to indicate an error
+$cp-control-color-danger-tertiary-pressed: #BF280A; // Used as a border style on the pressed states of the controls to indicate an error
+$cp-control-color-danger-secondary-enabled: #D62D0B; // Used as a border style on the enabled states of the controls to indicate an error
+$cp-control-color-danger-secondary-hover: #E54B2C; // Used as a border style on the hover states of the controls to indicate an error
+$cp-control-color-inverse-primary-selected: #FFFFFF;
+$cp-control-color-inverse-primary-selected-hover: #FFFFFF;
+$cp-control-color-inverse-primary-disabled: #FFFFFF;
+$cp-control-color-inverse-secondary-selected: #FFFFFF;
+$cp-control-color-inverse-secondary-selected-hover: #FFFFFF;
+$cp-control-color-inverse-secondary-disabled: #FFFFFF;
+$cp-control-color-inverse-tertiary-selected: #FFFFFF;
+$cp-control-color-inverse-tertiary-selected-hover: #FFFFFF;
+$cp-control-color-inverse-tertiary-disabled: #FFFFFF;
+$cp-search-border-radius-small: 6px; // Border radius value used in smallest children elements
+$cp-search-border-radius-medium: 8px; // Border radius value used in children elements
+$cp-search-border-width-xsmall: 1px; // The default border width of small sized icons
+$cp-search-border-width-small: 1px; // The default border width of small sized icons
+$cp-search-border-width-medium: 1px; // The default border width for medium sized icons
+$cp-search-color-branded-primary-enabled: #93949D; // For selected form controls, e.g. checkboxes, radio buttons and switches
+$cp-search-color-branded-primary-hover: #7F8088; // For selected form controls, e.g. checkboxes, radio buttons and switches
+$cp-search-color-branded-primary-focused: #E21B70; // For selected form controls, e.g. checkboxes, radio buttons and switches
+$cp-search-color-branded-primary-disabled: #b9bac1; // Default color for disabled form controls, e.g. inputs, radio buttons, switches or checkboxes
+$cp-search-color-branded-secondary-enabled: rgba(255, 255, 255, 0.01); // Used as a surface color on the enabled states of secondary controls such as dropdowns, text inputs and other form elements
+$cp-search-color-branded-secondary-hover: rgba(255, 255, 255, 0.01); // Used as a surface color on the enabled states of secondary controls such as dropdowns, text inputs and other form elements
+$cp-search-color-branded-secondary-focused: rgba(255, 255, 255, 0.01); // Used for auto-filled states of the form fields
+$cp-search-color-branded-secondary-disabled: rgba(20, 20, 21, 0.04); // Used for disabled states of secondary controls
+$cp-search-color-accent-primary: #141415; // Default color for non-selected form controls, e.g. inputs, radio buttons, switches or checkboxes
+$cp-search-color-accent-tertiary: rgba(20, 20, 21, 0.56); // For selected form controls, e.g. checkboxes, radio buttons and switches
+$cp-search-color-accent-disabled: rgba(20, 20, 21, 0.40); // For selected form controls, e.g. checkboxes, radio buttons and switches
+$cp-motion-duration-xslow: 2000ms;
+$cp-motion-duration-slow: 1000ms;
+$cp-motion-duration-normal: 800ms;
+$cp-motion-duration-fast: 500ms;
+$cp-motion-duration-xfast: 200ms;
+$cp-motion-duration-2xfast: 100ms;
+$cp-motion-color-primary-branded: #E21B70; // Theme accent color used for highlighting the most important shape in the motion graphic
+$cp-motion-color-primary-onbranded: #FFFFFF; // The color tone used to achieve an inverted look
+$cp-mobile-display-x-large: 700 30px/1.25 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Token will be deprecated. Please use the displayXlarge with lowercase token name.
+$cp-mobile-display-xlarge: 700 30px/1.25 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Largest display text style. Reserved for main titles and headlines and used only once per screen.
+$cp-mobile-display-large: 700 24px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Second largest display text style. Used as section headings or to emphasise key information on a screen (e.g. dashboard statistics)
+$cp-mobile-display-medium: 700 20px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Third largest display text style. Used as section headings or to emphasise important information on a screen (e.g. dashboard statistics)
+$cp-mobile-display-small: 700 16px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Smalles display text style. Used when an extra level or heading hierarchy is needed (e.g. subsections titles)
+$cp-mobile-display-xsmall: 700 14px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Smalles display text style. Used when an extra level or heading hierarchy is needed (e.g. subsections titles)
+$cp-mobile-subtitle-xlarge: 600 20px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Subtitle style used as larger heading sinside containers
+$cp-mobile-subtitle-large: 600 16px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Subtitle style used as headings inside containers
+$cp-mobile-subtitle-medium: 600 14px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Subtitle style used as medium headings inside containers
+$cp-mobile-subtitle-small: 600 12px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Subtitle style used as small headings inside containers
+$cp-mobile-body-large: 500 16px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // The default paragraph size used for long copy
+$cp-mobile-body-medium: 500 14px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // The secondary paragraph size used in less prominent and short copy
+$cp-mobile-body-small: 500 12px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // The tertiary paragraph size used only in least prominent short copy
+$cp-mobile-caption: 700 10px/1.6 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // The text style for small captions and labels
+$cp-tablet-display-x-large: 700 30px/1.25 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Token will be deprecated. Please use the displayXlarge with lowercase token name.
+$cp-tablet-display-xlarge: 700 30px/1.25 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Largest display text style. Reserved for main titles and headlines and used only once per screen
+$cp-tablet-display-large: 700 24px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Second largest display text style. Used as section headings or to emphasise key information on a screen (e.g. dashboard statistics)
+$cp-tablet-display-medium: 700 20px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Third largest display text style. Used as section headings or to emphasise important information on a screen (e.g. dashboard statistics)
+$cp-tablet-display-small: 700 16px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Smalles display text style. Used when an extra level or heading hierarchy is needed (e.g. subsections titles)
+$cp-tablet-display-xsmall: 700 14px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Smalles display text style. Used when an extra level or heading hierarchy is needed (e.g. subsections titles)
+$cp-tablet-subtitle-xlarge: 600 20px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Subtitle style used as larger heading sinside containers
+$cp-tablet-subtitle-large: 600 16px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Subtitle style used as headings inside containers
+$cp-tablet-subtitle-medium: 600 14px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Subtitle style used as medium headings inside containers
+$cp-tablet-subtitle-small: 600 12px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // Subtitle style used as small headings inside containers
+$cp-tablet-body-large: 500 16px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // The default paragraph size used for long copy
+$cp-tablet-body-medium: 500 14px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // The secondary paragraph size used in less prominent and short copy
+$cp-tablet-body-small: 500 12px/1.5 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // The tertiary paragraph size used only in least prominent short copy
+$cp-tablet-caption: 700 10px/1.6 Figtree, system-ui, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; // The text style for small captions and labels
+$cp-icon-sizing-small: 16px; // The default size for small icons
+$cp-icon-sizing-medium: 24px; // The default size for medium icons
+$cp-icon-sizing-large: 32px; // The icon size which will be used in edge cases. If teams require 32px icons, they can override the size value of medium icons to achieve this size
+$cp-icon-border-width-small: 1px; // The default border width of small sized icons
+$cp-icon-border-width-medium: 1.5px; // The default border width for medium sized icons
+$cp-icon-border-width-large: 2px; // The border width for icons that equal or larger than 32px size. This token should be used as an override to the enlarged medium icon borders
+$cp-icon-color-primary: #141415; // Used for displaying prominent icons
+$cp-icon-color-secondary: #343437; // Used for displaying less prominent or supportive icons
+$cp-icon-color-tertiary: rgba(20, 20, 21, 0.56); // Used for displaying disabled icons
+$cp-icon-color-disabled: rgba(20, 20, 21, 0.40); // Used for displaying disabled icons
+$cp-icon-color-ondisabled: #FFFFFF; // Used for displaying disabled icons
+$cp-icon-color-inverse: #FFFFFF; // For icons over opposite-contrast backgrounds, such as over dark backgrounds
+$cp-icon-color-inverse-disabled: rgba(255, 255, 255, 0.40); // For disabled icons over opposite-contrast backgrounds, such as over dark backgrounds
+$cp-icon-color-branded: #E21B70; // Theme accent color which is used for enabled and selected states of icons 
+$cp-icon-color-onbranded: #FFFFFF; // Used for icons on surfaces using the theme accent color
+$cp-icon-color-danger: #D62D0B; // Used for icons which indicate danger or error
+$cp-icon-color-ondanger: #FFFFFF; // Used for the icons on surfaces which indicate danger or error
+$cp-icon-color-success: #047538; // Used for icons which indicate a postive outcome or active status
+$cp-icon-color-onsuccess: #FFFFFF; // Used for the icons on surfaces which indicate success
+$cp-icon-color-info: #6635B6; // Used for the icons which indicate informative status
+$cp-icon-color-oninfo: #FFFFFF; // Used for the icons on surfaces which indicate an informative status
+$cp-icon-color-warning: #BE7F00; // Used for the icons that indicate warning
+$cp-icon-color-onwarning: #141415; // Used for the icons on surfaces which indicate warning
+$cp-icon-color-onneutral: #FFFFFF; // Used for the icons on surfaces which indicate a neutral state
+$cp-tag-border-radius-small: 6px; // Border radius value used in smallest children elements
+$cp-tag-border-radius-medium: 8px; // Border radius value used in children elements
+$cp-alert-border-radius-medium: 8px; // Border radius value used in children elements
+$cp-alert-border-radius-large: 12px; // Border radius value used in smaller containers
+$cp-form-border-radius-small: 6px; // Border radius value used in smallest children elements
+$cp-form-border-radius-medium: 8px; // Border radius value used in children elements
+$cp-form-border-radius-large: 12px; // Border radius value used in smaller containers
+$cp-form-border-radius-pill: 200px; // Border radius value used in chips and round elements
+$cp-form-border-width-xsmall: 1px; // The default border width of small sized icons
+$cp-form-border-width-small: 1px; // The default border width of small sized icons
+$cp-form-border-width-medium: 1px; // The default border width for medium sized icons
+$cp-form-border-width-large: 2px; // The border width for icons that equal or larger than 32px size. This token should be used as an override to the enlarged medium icon borders
+$cp-form-color-branded-primary-enabled: #93949D; // Default color for non-selected form controls, e.g. inputs, radio buttons, switches or checkboxes
+$cp-form-color-branded-primary-hover: #7F8088; // Hover state for non-selected form controls
+$cp-form-color-branded-primary-focused: #E21B70; // For selected form controls, e.g. checkboxes, radio buttons and switches
+$cp-form-color-branded-primary-focused-alternate: rgba(255, 255, 255, 0); // For selected form controls, e.g. checkboxes, radio buttons and switches
+$cp-form-color-branded-primary-disabled: #b9bac1; // Default color for disabled form controls, e.g. inputs, radio buttons, switches or checkboxes
+$cp-form-color-branded-secondary-enabled: rgba(255, 255, 255, 0.01); // Used as a surface color on the enabled states of secondary controls such as dropdowns, text inputs and other form elements
+$cp-form-color-branded-secondary-hover: rgba(255, 255, 255, 0.01); // Used as a surface color on the enabled states of secondary controls such as dropdowns, text inputs and other form elements
+$cp-form-color-branded-secondary-hover-alternate: rgba(255, 255, 255, 0.01); // Used as a surface color on the enabled states of secondary controls such as dropdowns, text inputs and other form elements
+$cp-form-color-branded-secondary-disabled: rgba(20, 20, 21, 0.04); // Used for disabled states of secondary controls
+$cp-form-color-branded-secondary-auto-fill: rgba(255, 196, 0, 0.16); // Used for auto-filled states of the form fields
+$cp-form-color-danger-primary-enabled: #D62D0B; // Default color for non-selected form controls, e.g. inputs, radio buttons, switches or checkboxes
+$cp-form-color-danger-primary-hover: #E54B2C; // Hover state for non-selected form controls
+$cp-form-color-danger-primary-focused: #E21B70; // For selected form controls, e.g. checkboxes, radio buttons and switches
+$cp-form-color-danger-primary-focused-alternate: rgba(255, 255, 255, 0); // For selected form controls, e.g. checkboxes, radio buttons and switches
+$cp-form-color-danger-secondary-enabled: rgba(255, 255, 255, 0.01); // Used as a surface color on the enabled states of secondary controls such as dropdowns, text inputs and other form elements
+$cp-form-color-danger-secondary-hover: rgba(255, 255, 255, 0.01); // Used as a surface color on the enabled states of secondary controls such as dropdowns, text inputs and other form elements
+$cp-form-color-danger-secondary-hover-alternate: rgba(255, 255, 255, 0.01); // Used as a surface color on the enabled states of secondary controls such as dropdowns, text inputs and other form elements
+$cp-form-color-success-secondary-enabled: rgba(255, 255, 255, 0.01); // Used as a surface color on the enabled states of secondary controls such as dropdowns, text inputs and other form elements
+$cp-form-color-success-secondary-hover: rgba(255, 255, 255, 0.01); // Used as a surface color on the enabled states of secondary controls such as dropdowns, text inputs and other form elements
+$cp-form-color-success-secondary-hover-alternate: rgba(255, 255, 255, 0.01); // Used as a surface color on the enabled states of secondary controls such as dropdowns, text inputs and other form elements
+$cp-form-color-success-primary-enabled: #93949D; // Default color for non-selected form controls, e.g. inputs, radio buttons, switches or checkboxes
+$cp-form-color-success-primary-hover: #7F8088; // Hover state for non-selected form controls
+$cp-form-color-success-primary-focused: #E21B70; // For selected form controls, e.g. checkboxes, radio buttons and switches
+$cp-form-color-success-primary-focused-alternate: rgba(255, 255, 255, 0); // For selected form controls, e.g. checkboxes, radio buttons and switches
+$cp-form-color-accent-primary: #141415; // Default color for non-selected form controls, e.g. inputs, radio buttons, switches or checkboxes
+$cp-form-color-accent-secondary: #343437; // Hover state for non-selected form controls
+$cp-form-color-accent-tertiary: rgba(20, 20, 21, 0.56); // For selected form controls, e.g. checkboxes, radio buttons and switches
+$cp-form-color-accent-tertiary-alternate: rgba(20, 20, 21, 0.56); // For selected form controls, e.g. checkboxes, radio buttons and switches
+$cp-form-color-accent-disabled: rgba(20, 20, 21, 0.40); // For selected form controls, e.g. checkboxes, radio buttons and switches
+$cp-switch-border-width-xsmall: 0; // Default border width for surface elements
+$cp-switch-border-width-small: 0; // Default border width for surface elements
+$cp-switch-border-radius-small: 200px; // Border radius value used in smallest children elements
+$cp-switch-border-radius-pill: 200px; // Border radius value used in chips and round elements
+$cp-switch-color-active-disabled: #FFC2DB; // This token is specifically for the active, disabled state of the switch component
+$cp-switch-color-active-hover: #FF529A; // This token is specifically for the active, hover state of the switch component
+$cp-switch-color-active-enabled: #E21B70; // This token is specifically for the active, enabled state of the switch component
+$cp-switch-color-active-accent: #FFFFFF; // This token is specifically for the active, disabled state of the switch component
+$cp-switch-color-active-accent-low: #F4F5F6; // This token is specifically for the active, disabled state of the switch component
+$cp-switch-color-inactive-enabled: #6C6D73; // This token is specifically for the inactive, enabled state of the switch component
+$cp-switch-color-inactive-hover: #93949D; // This token is specifically for the inactive, hover state of the switch component
+$cp-switch-color-inactive-disabled: #b9bac1; // This token is specifically for the inactive, disabled state of the switch component
+$cp-switch-color-inactive-accent: #FFFFFF; // This token is specifically for the inactive, enabled state of the switch component
+$cp-switch-color-inactive-accent-low: #F4F5F6; // This token is specifically for the inactive, enabled state of the switch component
+$cp-stepper-border-width-small: 0; // Default border width for surface elements
+$cp-quantity-selector-border-radius-large: 200px;
+$cp-quantity-selector-color-primary: #93949D; // Used for quantity selector borders
+$cp-quantity-selector-color-secondary: rgba(255, 255, 255, 0.01); // Used for quantity selector background fills
+$cp-quantity-selector-color-tertiary: #141415; // Used for quantity selector icons
+$cp-tabs-border-radius-medium: 6px; // Border radius value used in smallest children elements
+$cp-tabs-border-radius-large: 8px; // Border radius value used in chips and round elements
+$cp-tabs-border-width-medium: 2px; // Default border width for surface elements
+$cp-tabs-color-active-high: #E21B70; // Tabs text color
+$cp-tabs-color-active-low: #E21B70; // Tabs divider color
+$cp-tabs-color-active-base: #FFFFFF; // tabs background color
+$cp-tabs-color-inactive-high: #141415; // Tabs text
+$cp-tabs-color-inactive-hover: rgba(20, 20, 21, 0.04); // This token is specifically for the inactive, hover state of the switch component
+$cp-tabs-color-inactive-disabled: rgba(20, 20, 21, 0.32); // Disabled text
+$cp-list-border-radius-medium: 0; // Border radius value used in smallest children elements
+$cp-list-color-high: #141415; // Tabs text
+$cp-list-color-low: #343437; // Tabs text
+$cp-list-color-selected-accent: #E21B70; // Tabs text color
+$cp-list-color-selected: rgba(226, 27, 112, 0.04); // Selected background color
+$cp-list-color-enabled: rgba(255, 255, 255, 0.01); // tabs background color
+$cp-list-color-hover: rgba(20, 20, 21, 0.04); // This token is specifically for the inactive, hover state of the switch component
+$cp-list-color-disabled-accent: rgba(20, 20, 21, 0.40); // List disabled text color
+$cp-card-border-radius-xlarge: 12px;
+$cp-card-color-selected: #E21B70; // card selected border
+$cp-card-color-selected-hover: hsl(334 78.7% 61.7%); // card selected hover border
+$cp-card-color-selected-high: rgba(226, 27, 112, 0.02); // Used as fill for selected and selected hover's outlined and elevated variants of card
+$cp-card-color-selected-low: rgba(226, 27, 112, 0.08); // Used as fill in  selected and selected hovers' fill variant of card
+$cp-text-color-primary: #141415; // Used for the primary headers and long text
+$cp-text-color-secondary: #343437; // Used for displaying less prominant copy
+$cp-text-color-tertiary: rgba(20, 20, 21, 0.56); // Used for displaying short text on disabled elements
+$cp-text-color-disabled: rgba(20, 20, 21, 0.40); // Used for displaying short text on disabled elements
+$cp-text-color-inverse: #FFFFFF; // For texts over opposite-contrast backgrounds, such as dark backgrounds
+$cp-text-color-inverse-disabled: rgba(255, 255, 255, 0.48); // For disabled texts over opposite-contrast backgrounds, such as dark backgrounds
+$cp-text-color-branded: #E21B70; // Theme accent color which is used for enabled and selected states for text 
+$cp-text-color-onbranded: #FFFFFF; // Used for texts on surfaces using the theme accent color
+$cp-text-color-danger: #D62D0B; // Used for short labels to indicate danger or error
+$cp-text-color-ondanger: #FFFFFF; // Used for the texts on surfaces which indicate danger or error
+$cp-text-color-success: #047538; // Used for short labels to indicate a postive outcome or active status
+$cp-text-color-onsuccess: #FFFFFF; // Used for the texts on surfaces which indicate success
+$cp-text-color-info: #6635B6; // Used for short labels to indicate an informative message or status
+$cp-text-color-oninfo: #FFFFFF; // Used for the texts on surfaces which indicate an information
+$cp-text-color-warning: #BE7F00; // Used for short texts to indicate warning
+$cp-text-color-onwarning: #141415; // Used for the texts on surfaces which indicate warning
+$cp-text-color-onneutral: #FFFFFF; // Used for the texts on surfaces which indicate a neutral state
+$cp-feedback-color-branded-high: #E21B70; // Theme accent color which is used for more prominent generic feedback
+$cp-feedback-color-branded-low: #FFEBF3; // Default background color for notification components
+$cp-feedback-color-branded-onbranded-low: #141415; // A subtle tone used for showing danger or error feedback 
+$cp-feedback-color-branded-accent-low: #E21B70; // Theme accent color which is used for more prominent generic feedback
+$cp-feedback-color-danger-high: #D62D0B; // A prominent tone used for showing danger or error feedback 
+$cp-feedback-color-danger-low: #FCEBE8; // A subtle tone used for showing danger or error feedback 
+$cp-feedback-color-danger-ondanger-low: #141415; // A subtle tone used for showing danger or error feedback 
+$cp-feedback-color-danger-accent-low: #D62D0B; // A prominent tone used for showing danger or error feedback 
+$cp-feedback-color-success-high: #048A42; // A prominent tone used for showing success or positive feedback
+$cp-feedback-color-success-low: #E5F5EC; // A subtle tone used for showing success or positive feedback 
+$cp-feedback-color-success-onsuccess-low: #141415; // A subtle tone used for showing danger or error feedback 
+$cp-feedback-color-success-accent-low: #048A42; // A subtle tone used for showing danger or error feedback 
+$cp-feedback-color-info-high: #6635B6; // A prominent tone used for showing informative feedback 
+$cp-feedback-color-info-low: #F7F5FC; // A subtle tone used for showing informative feedback
+$cp-feedback-color-info-oninfo-low: #141415; // A subtle tone used for showing danger or error feedback 
+$cp-feedback-color-info-accent-low: #6635B6; // A prominent tone used for showing informative feedback 
+$cp-feedback-color-warning-high: #FFC400; // A prominent tone used for showing warning feedback
+$cp-feedback-color-warning-low: #FFF8DF; // A subtle tone used for showing warning feedback
+$cp-feedback-color-warning-onwarning-low: #141415; // A subtle tone used for showing danger or error feedback 
+$cp-feedback-color-warning-accent-low: #BE7F00; // A prominent tone used for showing warning feedback
+$cp-feedback-color-disabled-high: #343437; // For 'Item Unavailable' and other inactive status indicators
+$cp-feedback-color-disabled-low: rgba(20, 20, 21, 0.12); // Default background color for neutral messages
+$cp-feedback-color-disabled-ondisabled-low: #141415; // A subtle tone used for showing danger or error feedback 
+$cp-feedback-color-disabled-accent-low: rgba(20, 20, 21, 0.40); // For 'Item Unavailable' and other inactive status indicators
+$cp-feedback-color-neutral-high: #343437; // For 'Item Unavailable' and other inactive status indicators
+$cp-feedback-color-neutral-low: #F4F5F6; // Default background color for neutral messages
+$cp-feedback-color-neutral-ondisabled-low: #141415; // A subtle tone used for showing danger or error feedback 
+$cp-feedback-color-neutral-accent-low: #343437; // For 'Item Unavailable' and other inactive status indicators
+$cp-feedback-color-inverse-high: #343437; // For 'Item Unavailable' and other inactive status indicators
+$cp-feedback-color-inverse-low: #FFFFFF; // Default background color for neutral messages
+$cp-feedback-color-inverse-ondisabled-low: #141415; // A subtle tone used for showing danger or error feedback 
+$cp-feedback-color-inverse-accent-low: #343437; // For 'Item Unavailable' and other inactive status indicators
+$cp-feedback-color-subtle-high: #141415; // For 'Item Unavailable' and other inactive status indicators
+$cp-feedback-color-subtle-accent: #141415; // For 'Item Unavailable' and other inactive status indicators
+$cp-feedback-color-subtle-low: #E9EAEC; // Default background color for neutral messages
+$cp-illustration-color-primary: #E21B70; // Theme accent color which is used as a primary color in illustrations
+$cp-illustration-color-secondary: #434347; // Used for secondary or supportive colors of illustrations
+$cp-illustration-color-tertiary: #FFEBF3; // Used for tertiary or surface colors of illustrations such as an illustration with a color fill background
+$cp-illustration-color-danger: #D62D0B; // Used instead of a theme accent color when a danger or error state has to be indicated
+$cp-loading-color-secondary-branded: rgba(20, 20, 21, 0.16); // The background surface of loading spinner which adapts to various surfaces
+$cp-loading-color-secondary-onbranded: rgba(255, 255, 255, 0.16); // The background surface of loading spinner which adapts to various surfaces
+$cp-loading-color-primary-branded: #E21B70;
+$cp-loading-color-primary-onbranded: #FFFFFF;
+$cp-skeleton-color-animation: linear-gradient(-90deg, #ffffff00 0%, #ffffffd6 50%, #ffffff00 100%); // Used for animation layer of the skeletons
+$cp-skeleton-color-static: rgba(20, 20, 21, 0.08); // Used for static layer of the skeletons
+$cp-chart-color-branded-highest: #C62167; // Theme branded color used as the highest color for charts
+$cp-chart-color-branded-high: #FF2B85; // Theme branded color used as the high color for charts
+$cp-chart-color-branded-medium: #FF7AB2; // Theme branded color used as the medium color for charts
+$cp-chart-color-branded-low: #FFC2DB; // Theme branded color used as the low color for charts
+$cp-chart-color-branded-lowest: #FFDBEA; // Theme branded color used as the lowest color for charts
+$cp-chart-color-danger-highest: #A62309; // Theme danger color used as the highest color for charts
+$cp-chart-color-danger-high: #D62D0B; // Theme danger color used as the high color for charts
+$cp-chart-color-danger-medium: #EC6B51; // Theme danger color used as the medium color for charts
+$cp-chart-color-danger-low: #F4B7AB; // Theme danger color used as the low color for charts
+$cp-chart-color-danger-lowest: #F9D9D2; // Theme danger color used as the lowest color for charts
+$cp-chart-color-success-highest: #03582A; // Theme success color used as the highest color for charts
+$cp-chart-color-success-high: #048A42; // Theme success color used as the high color for charts
+$cp-chart-color-success-medium: #31B46E; // Theme success color used as the medium color for charts
+$cp-chart-color-success-low: #95D5B2; // Theme success color used as the low color for charts
+$cp-chart-color-success-lowest: #BDE5D0; // Theme success color used as the lowest color for charts
+$cp-chart-color-info-highest: #45237B; // Theme info color used as the highest color for charts
+$cp-chart-color-info-high: #6635B6; // Theme info color used as the high color for charts
+$cp-chart-color-info-medium: #9C7CCF; // Theme info color used as the medium color for charts
+$cp-chart-color-info-low: #CBBAE8; // Theme info color used as the low color for charts
+$cp-chart-color-info-lowest: #E1D6F0; // Theme info color used as the lowest color for charts
+$cp-chart-color-warning-highest: #BE7F00; // Theme warning color used as the highest color for charts
+$cp-chart-color-warning-high: #FFC400; // Theme warning color used as the high color for charts
+$cp-chart-color-warning-medium: #FFD95C; // Theme warning color used as the medium color for charts
+$cp-chart-color-warning-low: #FFEAA3; // Theme warning color used as the low color for charts
+$cp-chart-color-warning-lowest: #FFF1C2; // Theme warning color used as the lowest color for charts
+$cp-chart-color-neutral-highest: #343437; // Theme neutral color used as the highest color for charts
+$cp-chart-color-neutral-high: #56565C; // Theme neutral color used as the high color for charts
+$cp-chart-color-neutral-medium: #7F8088; // Theme neutral color used as the medium color for charts
+$cp-chart-color-neutral-low: #b9bac1; // Theme neutral color used as the low color for charts
+$cp-chart-color-neutral-lowest: #CECED4; // Theme neutral color used as the lowest color for charts
+$cp-chip-color-branded-primary-enabled: #93949D; // Used for enabled states of chip borders
+$cp-chip-color-branded-primary-hover: #93949D; // Used for hover states of chip borders
+$cp-chip-color-branded-primary-pressed: #93949D; // Used for pressed states of chip borders
+$cp-chip-color-branded-primary-selected: #E21B70; // Used for selected states of chip borders
+$cp-chip-color-branded-primary-selected-hover: hsl(334 78.7% 61.7%); // Used for selected hover states of chip borders
+$cp-chip-color-branded-primary-disabled: #b9bac1; // Used for disabled states of chip borders
+$cp-chip-color-branded-secondary-enabled: rgba(255, 255, 255, 0.01); // Used for enabled states of chip fills
+$cp-chip-color-branded-secondary-hover: rgba(20, 20, 21, 0.04); // Used for hover states of chip fills
+$cp-chip-color-branded-secondary-pressed: rgba(20, 20, 21, 0.08); // Used for pressed states of chip fills
+$cp-chip-color-branded-secondary-selected: rgba(226, 27, 112, 0.08); // Used for selected states of chip fills
+$cp-chip-color-branded-secondary-selected-alternate: rgba(20, 20, 21, 0.04); // Used for selected and selected hover states close interaction backgrounds.
+$cp-chip-color-branded-secondary-selected-hover: rgba(20, 20, 21, 0.04); // Used for selected hover states of chip fills
+$cp-chip-color-branded-secondary-disabled: rgba(255, 255, 255, 0.01); // Used for disabled states of chip fills
+$cp-chip-color-branded-tertiary-enabled: #141415; // Used for enabled states of chip labels and icons
+$cp-chip-color-branded-tertiary-hover: #141415; // Used for hover states of chip labels and icons
+$cp-chip-color-branded-tertiary-pressed: #141415; // Used for pressed states of chip labels and icons
+$cp-chip-color-branded-tertiary-selected: #E21B70; // Used for selected states of chip labels and icons
+$cp-chip-color-branded-tertiary-selected-alternate: #141415; // Only used for selected states of chip close icons
+$cp-chip-color-branded-tertiary-selected-hover: #E21B70; // Used for selected hover states of chip labels and icons
+$cp-chip-color-branded-tertiary-disabled: rgba(20, 20, 21, 0.40); // Used for disabled states of chip labels and icons
+$cp-rating-color-primary-branded: #E21B70; // Used for branded star
+$cp-rating-color-primary-branded-alternate: #E21B70; // Used for branded star border
+$cp-rating-color-primary-classic: #EC6B51; // Used for classic star
+$cp-rating-color-primary-classic-alternate: #EC6B51; // Used for classic star border
+$cp-rating-color-secondary-high: #93949D; // Used for interactive borders
+$cp-rating-color-secondary-low: #CECED4; // Used for non-interactive background
+$cp-link-color-active-enabled: #FF529A; // This token is specifically for the active, enabled state of the switch component
+$cp-link-color-active-hover: #E21B70; // This token is specifically for the active, hover state of the switch component
+$cp-link-color-visited-enabled: #7C53C1; // This token is specifically for the active, enabled state of the switch component
+$cp-link-color-visited-hover: #522B92; // This token is specifically for the active, hover state of the switch component
+$cp-brand-color-foodora-primary: #DF1067;
+$cp-brand-color-foodora-secondary: #FFFFE7;
+$cp-brand-color-foodpanda-primary: #FF2B85;
+$cp-brand-color-foodpanda-secondary: #FF2B85;
+$cp-brand-color-talabat-primary: #FF5A00;
+$cp-brand-color-talabat-secondary: #FFFFFF;
+$cp-brand-color-efood-primary: #ED2E2E;
+$cp-brand-color-efood-secondary: #FFFFFF;
+$cp-brand-color-hungerstation-primary: #5E2D20;
+$cp-brand-color-hungerstation-secondary: #FFEA00;
+$cp-brand-color-pedidosya-primary: #EA044E;
+$cp-brand-color-yemeksepeti-primary: #EA004B;
+$cp-brand-color-foody-primary: #FF5A00;
+$cp-brand-color-foody-secondary: #FFFFFF;
+$cp-brand-color-insta-shop-primary: #EE2E5E;
+$cp-brand-color-baedal-minjok-primary: #3AC5C9;
+$cp-brand-color-tabsquare-primary: #FF6B00;
+$cp-brand-color-glovo-primary: #009E81;
+$cp-brand-color-glovo-secondary: #F2CC38;
+$cp-brand-color-neutral-primary: #08397F;
+$cp-brand-color-delivery-hero-primary: #D61F26;
+$cp-brand-color-delivery-hero-secondary: #4629FF;
+$cp-brand-color-delivery-hero-tertiary: #A2FAA3;
+$cp-brand-color-dame-jidlo-primary: #E20613;
+$cp-brand-color-dame-jidlo-secondary: #FFFFFF;
+$cp-brand-color-mjam-primary: #2EFF55;
+$cp-brand-color-mjam-secondary: #1D160F;
+$cp-brand-color-everyday-roastery-primary: #231F20;
+$cp-brand-color-we-got-we-primary: #2B00D8;
+$cp-brand-color-we-got-we-secondary: #FFD700;
+$cp-brand-color-we-got-we-tertiary: #211D1D;

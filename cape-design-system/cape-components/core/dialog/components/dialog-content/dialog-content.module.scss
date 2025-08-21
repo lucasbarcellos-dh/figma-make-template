@@ -1,0 +1,58 @@
+@use 'sass:map';
+@use '../../../common/utils/breakpoints';
+
+.root {
+  --cp-dialog-transform-offset: 50px;
+  --cp-dialog-content-outer-spacing: 40px;
+  --cp-dialog-padding-top: var(--cp-base-spacing-small);
+
+  /* ================================
+   * Default Styles
+   * ================================ */
+  z-index: var(--cp-z-index-default);
+  border-radius: var(--cp-base-border-radius-xlarge);
+  background: var(--cp-base-color-flat);
+  box-shadow: var(--cp-base-elevation-high);
+  min-width: 1rem;
+  min-height: 1rem;
+  overflow: hidden;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-out;
+  padding-top: var(--cp-dialog-padding-top);
+  margin: var(--cp-dialog-content-outer-spacing);
+
+  &[data-status='open'],
+  &[data-status='close'] {
+    transition-duration: var(--cp-duration-xfast);
+  }
+
+  &[data-status='initial'],
+  &[data-status='close'] {
+    transition-timing-function: ease-in;
+    opacity: 0;
+    transform: translateY(var(--cp-dialog-transform-offset));
+  }
+
+  @media (max-width: map.get(breakpoints.$breakpoints, sm)) {
+    --cp-dialog-content-outer-spacing: 20px;
+    --cp-dialog-padding-top: var(--cp-base-spacing-xsmall);
+  }
+
+  @media (min-width: map.get(breakpoints.$breakpoints, md)) and (max-width: map.get(breakpoints.$breakpoints, lg)) {
+    --cp-dialog-content-outer-spacing: 32px;
+  }
+}
+
+.backdrop {
+  &[data-status='initial'],
+  &[data-status='open'] {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &[data-status='initial'],
+  &[data-status='close'] {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

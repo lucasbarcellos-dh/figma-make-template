@@ -1,0 +1,174 @@
+@use 'sass:map';
+@use '../common/utils/breakpoints';
+
+@mixin typography-variant($variant) {
+  font: var(--cp-mobile-#{$variant});
+
+  @media (min-width: map.get(breakpoints.$breakpoints, md)) and (max-width: map.get(breakpoints.$breakpoints, lg)) {
+    font: var(--cp-tablet-#{$variant});
+  }
+
+  @media (min-width: map.get(breakpoints.$breakpoints, lg)) {
+    font: var(--cp-desktop-#{$variant});
+  }
+}
+
+.root {
+  /* Color Variable */
+  --cp-typography-color: var(--cp-text-color-primary);
+
+  /* ================================
+   * Default Styles
+   * color = 'primary'
+   * ================================ */
+
+  color: var(--cp-typography-color);
+  margin: 0;
+
+  /* ================================
+   * Typography Variants
+   * ================================ */
+
+  &[data-variant='display3XLarge'] {
+    @include typography-variant(display3xlarge);
+  }
+
+  &[data-variant='display2XLarge'] {
+    @include typography-variant(display2xlarge);
+  }
+
+  &[data-variant='displayXLarge'] {
+    @include typography-variant(display-x-large);
+
+    // TODO: Remove this after X and XL is fixed in typography between b2c and b2b
+    @include typography-variant(display-xlarge);
+  }
+
+  &[data-variant='displayLarge'] {
+    @include typography-variant(display-large);
+  }
+
+  &[data-variant='displayMedium'] {
+    @include typography-variant(display-medium);
+  }
+
+  &[data-variant='displaySmall'] {
+    @include typography-variant(display-small);
+  }
+
+  &[data-variant='displayXSmall'] {
+    @include typography-variant(display-xsmall);
+  }
+
+  &[data-variant='display2XSmall'] {
+    @include typography-variant(display2xsmall);
+  }
+
+  &[data-variant='subtitle2XLarge'] {
+    @include typography-variant(subtitle2xlarge);
+  }
+
+  &[data-variant='subtitleXLarge'] {
+    @include typography-variant(subtitle-xlarge);
+  }
+
+  &[data-variant='subtitleLarge'] {
+    @include typography-variant(subtitle-large);
+  }
+
+  &[data-variant='subtitleMedium'] {
+    @include typography-variant(subtitle-medium);
+  }
+
+  &[data-variant='subtitleSmall'] {
+    @include typography-variant(subtitle-small);
+  }
+
+  &[data-variant='bodyLarge'] {
+    @include typography-variant(body-large);
+  }
+
+  &[data-variant='bodyMedium'] {
+    @include typography-variant(body-medium);
+  }
+
+  &[data-variant='bodySmall'] {
+    @include typography-variant(body-small);
+  }
+
+  &[data-variant='labelLarge'] {
+    @include typography-variant(label-large);
+  }
+
+  &[data-variant='labelMedium'] {
+    @include typography-variant(label-medium);
+  }
+
+  &[data-variant='labelSmall'] {
+    @include typography-variant(label-small);
+  }
+
+  &[data-variant='caption'] {
+    @include typography-variant(caption);
+  }
+
+  /* ================================
+   * Typography Colors
+   * ================================ */
+
+  &[data-color='primary'] {
+    --cp-typography-color: var(--cp-text-color-primary);
+  }
+
+  &[data-color='secondary'] {
+    --cp-typography-color: var(--cp-text-color-secondary);
+  }
+
+  &[data-color='disabled'] {
+    --cp-typography-color: var(--cp-text-color-disabled);
+  }
+
+  &[data-color='inverse'] {
+    --cp-typography-color: var(--cp-text-color-inverse);
+  }
+
+  &[data-color='branded'] {
+    --cp-typography-color: var(--cp-text-color-branded);
+  }
+
+  &[data-color='onbranded'] {
+    --cp-typography-color: var(--cp-text-color-onbranded);
+  }
+
+  &[data-color='danger'] {
+    --cp-typography-color: var(--cp-text-color-danger);
+  }
+
+  &[data-color='ondanger'] {
+    --cp-typography-color: var(--cp-text-color-ondanger);
+  }
+
+  &[data-color='success'] {
+    --cp-typography-color: var(--cp-text-color-success);
+  }
+
+  &[data-color='onsuccess'] {
+    --cp-typography-color: var(--cp-text-color-onsuccess);
+  }
+
+  &[data-color='info'] {
+    --cp-typography-color: var(--cp-text-color-info);
+  }
+
+  &[data-color='oninfo'] {
+    --cp-typography-color: var(--cp-text-color-oninfo);
+  }
+
+  &[data-color='onwarning'] {
+    --cp-typography-color: var(--cp-text-color-onwarning);
+  }
+
+  &[data-color='onneutral'] {
+    --cp-typography-color: var(--cp-text-color-onneutral);
+  }
+}

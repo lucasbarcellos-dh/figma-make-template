@@ -1,0 +1,93 @@
+.root {
+  --cp-tag-size: var(--cp-control-sizing-xsmall);
+  --cp-tag-font: var(--cp-desktop-subtitle-medium);
+  --cp-tag-icon-color: var(--cp-feedback-color-branded-accent-low);
+  --cp-tag-text-color: var(--cp-feedback-color-branded-accent-low);
+  --cp-tag-background-color: var(--cp-feedback-color-branded-low);
+  --cp-tag-spacing: var(--cp-base-spacing-small);
+
+  /* ================================
+   * Default Styles
+   * status = 'branded'
+   * size = 'medium'
+   * ================================ */
+  height: var(--cp-tag-size);
+  border-radius: var(--cp-tag-border-radius-small);
+  padding-inline: var(--cp-tag-spacing);
+  background-color: var(--cp-tag-background-color);
+  color: var(--cp-tag-text-color);
+  font: var(--cp-tag-font);
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &[data-size='small'] {
+    --cp-tag-size: var(--cp-control-sizing-tiny);
+    --cp-tag-spacing: var(--cp-base-spacing-xsmall);
+    --cp-tag-font: var(--cp-desktop-subtitle-small);
+  }
+
+  &[data-status='success'] {
+    --cp-tag-background-color: var(--cp-feedback-color-success-low);
+    --cp-tag-text-color: var(--cp-feedback-color-success-accent-low);
+    --cp-tag-icon-color: var(--cp-feedback-color-success-accent-low);
+  }
+
+  &[data-status='error'] {
+    --cp-tag-background-color: var(--cp-feedback-color-danger-low);
+    --cp-tag-text-color: var(--cp-feedback-color-danger-accent-low);
+    --cp-tag-icon-color: var(--cp-feedback-color-danger-accent-low);
+  }
+
+  &[data-status='warning'] {
+    --cp-tag-background-color: var(--cp-feedback-color-warning-low);
+    --cp-tag-text-color: var(--cp-feedback-color-warning-accent-low);
+    --cp-tag-icon-color: var(--cp-feedback-color-warning-accent-low);
+  }
+
+  &[data-status='info'] {
+    --cp-tag-background-color: var(--cp-feedback-color-info-low);
+    --cp-tag-text-color: var(--cp-feedback-color-info-accent-low);
+    --cp-tag-icon-color: var(--cp-feedback-color-info-accent-low);
+  }
+
+  &[data-status='disabled'] {
+    --cp-tag-background-color: var(--cp-feedback-color-disabled-low);
+    --cp-tag-text-color: var(--cp-feedback-color-disabled-accent-low);
+    --cp-tag-icon-color: var(--cp-feedback-color-disabled-accent-low);
+  }
+
+  &[data-status='inverse'] {
+    --cp-tag-background-color: var(--cp-feedback-color-inverse-low);
+    --cp-tag-text-color: var(--cp-feedback-color-inverse-accent-low);
+    --cp-tag-icon-color: var(--cp-feedback-color-inverse-accent-low);
+  }
+
+  &[data-status='neutral'] {
+    --cp-tag-background-color: var(--cp-feedback-color-neutral-low);
+    --cp-tag-text-color: var(--cp-feedback-color-neutral-accent-low);
+    --cp-tag-icon-color: var(--cp-feedback-color-neutral-accent-low);
+  }
+}
+
+.label {
+  height: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: var(--cp-control-spacing-xsmall);
+}
+
+.icon {
+  width: var(--cp-icon-sizing-small);
+  height: var(--cp-icon-sizing-small);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}

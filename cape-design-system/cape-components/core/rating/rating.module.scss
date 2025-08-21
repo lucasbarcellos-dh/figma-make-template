@@ -1,0 +1,99 @@
+.root {
+  --cp-rating-star-fill: none;
+  --cp-rating-star-stroke: var(--cp-rating-color-secondary-high);
+  --cp-rating-star-spacing: var(--cp-base-spacing-medium);
+  --cp-rating-interaction-size-scale: 1.2;
+
+  /* ================================
+   * Default Styles
+   * ================================ */
+  box-sizing: border-box;
+  display: flex;
+  gap: var(--cp-rating-star-spacing);
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  .label {
+    display: inline-flex;
+  }
+
+  .icon {
+    svg {
+      cursor: pointer;
+      transition: transform var(--cp-duration-xfast) ease;
+
+      path {
+        fill: var(--cp-rating-star-fill);
+        stroke: var(--cp-rating-star-stroke);
+        stroke-width: 1.5px;
+      }
+
+      &:hover {
+        transform: scale(var(--cp-rating-interaction-size-scale));
+      }
+    }
+
+    &[data-filled='half'] {
+      position: relative;
+
+      svg:last-child {
+        position: absolute;
+        top: 0;
+        left: 0;
+        clip-path: inset(0 0 0 50%);
+
+        path {
+          --cp-rating-star-fill: var(--cp-base-color-normal);
+          --cp-rating-star-stroke: var(--cp-base-color-normal);
+        }
+      }
+    }
+
+    [dir='rtl'] &[data-filled='half'] svg {
+      transform: scaleX(-1);
+    }
+  }
+
+  .input {
+    &:disabled ~ .icon svg {
+      --cp-rating-star-fill: var(--cp-rating-color-secondary-low);
+      --cp-rating-star-stroke: var(--cp-rating-color-secondary-low);
+
+      pointer-events: none;
+    }
+
+    &:focus-visible ~ .icon svg {
+      transform: scale(var(--cp-rating-interaction-size-scale));
+    }
+  }
+
+  &[data-hover] .label:not([data-hover] ~ .label) svg,
+  &[data-value]:not([data-hover]) .label:not([data-checked] ~ .label) svg {
+    --cp-rating-star-fill: var(--cp-rating-color-primary-classic);
+    --cp-rating-star-stroke: var(--cp-rating-color-primary-classic-alternate);
+  }
+
+  &[data-variant='branded'] {
+    --cp-rating-star-fill: none;
+
+    &[data-hover] .label:not([data-hover] ~ .label) svg,
+    &[data-value]:not([data-hover]) .label:not([data-checked] ~ .label) svg {
+      --cp-rating-star-fill: var(--cp-rating-color-primary-branded);
+      --cp-rating-star-stroke: var(--cp-rating-color-primary-branded-alternate);
+    }
+  }
+
+  &[data-size='small'],
+  &[data-readonly] {
+    --cp-rating-star-spacing: var(--cp-base-spacing-tiny);
+  }
+}

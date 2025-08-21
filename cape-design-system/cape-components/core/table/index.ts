@@ -1,0 +1,12 @@
+export { Table } from './table';
+export type { TableProps } from './type';
+export { TableContainer } from './components/table-container';
+export { TableHeader } from './components/table-header';
+export { TableHead } from './components/table-head';
+export { TableBody } from './components/table-body';
+export { TableRow } from './components/table-row';
+export { TableCell } from './components/table-cell';
+export { TableFooter } from './components/table-footer';
+export { TableCaption } from './components/table-caption';
+export { TableResizeHandle } from './components/table-resize-handle';
+export { TableSortIcon } from './components/table-sort-icon';

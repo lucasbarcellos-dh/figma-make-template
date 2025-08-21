@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  
+  /* Cape color mappings - Light mode */
+  --background: #ffffff;
+  --foreground: #141415;
+  --card: #ffffff;
+  --card-foreground: #141415;
+  --popover: #ffffff;
+  --popover-foreground: #141415;
+  --primary: #D61F26;
+  --primary-foreground: #ffffff;
+  --secondary: #F4F5F6;
+  --secondary-foreground: #141415;
+  --muted: #E9EAEC;
+  --muted-foreground: #6C6D73;
+  --accent: #F8EDF2;
+  --accent-foreground: #D61F26;
+  --destructive: #D62D0B;
+  --destructive-foreground: #ffffff;
+  --border: #E9EAEC;
+  --input: transparent;
+  --input-background: #F4F5F6;
+  --switch-background: #CECED4;
+  --ring: #D61F26;
+  --ring-opacity: rgba(70, 41, 255, 0.5);
+  
+  /* Cape success colors */
+  --success: #05A34E;
+  --success-foreground: #ffffff;
+  
+  /* Cape warning colors */
+  --warning: #FFC400;
+  --warning-foreground: #8F5D00;
+  
+  /* Cape feedback colors - Light backgrounds for alerts */
+  --feedback-branded-low: #F8EDF2;
+  --feedback-danger-low: #FCEBE8;
+  --feedback-success-low: #E5F5EC;
+  --feedback-warning-low: #FFF8DF;
+  --feedback-info-low: #F7F5FC;
+  --feedback-neutral-low: #E9EAEC;
+  
+  /* Cape Chip colors */
+  --chip-border-default: #93949D;
+  --chip-background-default: rgba(255, 255, 255, 0.01);
+  --chip-background-hover: rgba(214, 31, 38, 0.04);
+  --chip-background-selected: rgba(214, 31, 38, 0.08);
+  
+  /* Chart colors */
+  --chart-1: #D61F26;
+  --chart-2: #05A34E;
+  --chart-3: #FFC400;
+  --chart-4: #D62D0B;
+  --chart-5: #6635B6;
+  
+  /* Cape border radius */
+  --radius: 0.5rem;
+  
+  /* Font weights */
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Sidebar colors */
+  --sidebar: #F4F5F6;
+  --sidebar-foreground: #141415;
+  --sidebar-primary: #D61F26;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #F8EDF2;
+  --sidebar-accent-foreground: #D61F26;
+  --sidebar-border: #E9EAEC;
+  --sidebar-ring: #D61F26;
+}
+
+.dark {
+  /* Cape color mappings - Dark mode */
+  --background: #1E1E20;
+  --foreground: #F4F5F6;
+  --card: #1E1E20;
+  --card-foreground: #F4F5F6;
+  --popover: #1E1E20;
+  --popover-foreground: #F4F5F6;
+  --primary: #6047FF;
+  --primary-foreground: #ffffff;
+  --secondary: #28282A;
+  --secondary-foreground: #F4F5F6;
+  --muted: #343437;
+  --muted-foreground: #93949D;
+  --accent: #26178C;
+  --accent-foreground: #DAD6FF;
+  --destructive: #E54B2C;
+  --destructive-foreground: #ffffff;
+  --border: #434347;
+  --input: #28282A;
+  --input-background: #28282A;
+  --switch-background: #56565C;
+  --ring: #6047FF;
+  --ring-opacity: rgba(96, 71, 255, 0.5);
+  
+  /* Success colors for dark mode */
+  --success: #31B46E;
+  --success-foreground: #ffffff;
+  
+  /* Warning colors for dark mode */
+  --warning: #FFCF33;
+  --warning-foreground: #8F5D00;
+  
+  /* Cape feedback colors - Dark mode backgrounds for alerts */
+  --feedback-branded-low: #26178C;
+  --feedback-danger-low: #601405;
+  --feedback-success-low: #012D15;
+  --feedback-warning-low: #664200;
+  --feedback-info-low: #261343;
+  --feedback-neutral-low: #434347;
+  
+  /* Cape Chip colors - Dark mode */
+  --chip-border-default: #93949D;
+  --chip-background-default: rgba(20, 20, 21, 0.01);
+  --chip-background-hover: rgba(255, 255, 255, 0.04);
+  --chip-background-selected: rgba(96, 71, 255, 0.16);
+  
+  /* Chart colors for dark mode */
+  --chart-1: #6047FF;
+  --chart-2: #31B46E;
+  --chart-3: #FFCF33;
+  --chart-4: #E54B2C;
+  --chart-5: #7C53C1;
+  
+  /* Sidebar colors for dark mode */
+  --sidebar: #28282A;
+  --sidebar-foreground: #F4F5F6;
+  --sidebar-primary: #6047FF;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #26178C;
+  --sidebar-accent-foreground: #DAD6FF;
+  --sidebar-border: #434347;
+  --sidebar-ring: #6047FF;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-info: var(--accent);
+  --color-info-foreground: var(--accent-foreground);
+  --color-feedback-branded-low: var(--feedback-branded-low);
+  --color-feedback-danger-low: var(--feedback-danger-low);
+  --color-feedback-success-low: var(--feedback-success-low);
+  --color-feedback-warning-low: var(--feedback-warning-low);
+  --color-feedback-info-low: var(--feedback-info-low);
+  --color-feedback-neutral-low: var(--feedback-neutral-low);
+  --color-chip-border-default: var(--chip-border-default);
+  --color-chip-background-default: var(--chip-background-default);
+  --color-chip-background-hover: var(--chip-background-hover);
+  --color-chip-background-selected: var(--chip-background-selected);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  
+  /* Cape border radius scale */
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+  
+  /* Sidebar variables */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  *:focus-visible {
+    outline: 2px solid var(--ring-opacity);
+    outline-offset: 2px;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+}
+
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: 1.875rem;
+      font-weight: var(--font-weight-semibold);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: var(--font-weight-semibold);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: 1rem;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: 0.875rem;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: 0.875rem;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: 0.875rem;
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+  font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}

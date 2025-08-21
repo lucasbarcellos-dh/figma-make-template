@@ -1,0 +1,87 @@
+.root {
+  --cp-stepper-indicator-size: var(--cp-base-sizing-small);
+  --cp-stepper-font: var(--cp-desktop-subtitle-medium);
+  --cp-step-background: var(--cp-feedback-color-branded-high);
+
+  /* ================================
+   * Default Styles
+   * ================================ */
+  box-sizing: border-box;
+  list-style-type: '';
+  margin: 0;
+  padding: 0;
+  counter-reset: step;
+}
+
+.step {
+  box-sizing: border-box;
+  counter-increment: step;
+  position: relative;
+  font: var(--cp-stepper-font);
+  color: var(--cp-feedback-color-subtle-accent);
+  display: grid;
+  grid-template-columns: var(--cp-stepper-indicator-size) 1fr;
+  gap: var(--cp-base-spacing-medium);
+
+  &::before {
+    content: counter(step);
+    width: var(--cp-stepper-indicator-size);
+    height: var(--cp-stepper-indicator-size);
+    background-color: var(--cp-step-background);
+    border-radius: var(--cp-control-border-radius-pill);
+    color: var(--cp-text-color-onbranded);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  &:not(:last-child)::after {
+    --vertical-spacing: calc(
+      var(--cp-stepper-indicator-size) + var(--cp-base-spacing-xsmall) * 2
+    );
+
+    content: '';
+    position: absolute;
+    left: calc(var(--cp-stepper-indicator-size) / 2);
+    top: calc(var(--cp-stepper-indicator-size) + var(--cp-base-spacing-xsmall));
+    height: calc(100% - var(--vertical-spacing));
+    width: var(--cp-base-border-width-medium);
+    background-color: var(--cp-border-color-high);
+    border-radius: var(--cp-base-border-width-medium);
+
+    [dir='rtl'] & {
+      left: auto;
+      right: calc(var(--cp-stepper-indicator-size) / 2);
+    }
+  }
+
+  .text {
+    padding-block: var(--cp-base-spacing-tiny) var(--cp-base-spacing-medium);
+    margin-block-end: var(--cp-base-spacing-medium);
+  }
+}
+
+.root[data-size='small'] {
+  --cp-stepper-indicator-size: var(--cp-base-sizing-xsmall);
+  --cp-stepper-font: var(--cp-desktop-subtitle-small);
+
+  .step {
+    gap: var(--cp-base-spacing-small);
+  }
+
+  .text {
+    margin-block-end: var(--cp-base-spacing-small);
+  }
+}
+
+// Support for Safari 11
+@supports not (gap: 1rem) {
+  .step {
+    grid-gap: var(--cp-base-spacing-medium);
+  }
+
+  .root[data-size='small'] .step {
+    grid-gap: var(--cp-base-spacing-small);
+  }
+}

@@ -1,0 +1,37 @@
+.root {
+  --cp-divider-color: var(--cp-border-color-normal);
+  --cp-divider-size: var(--cp-control-border-width-small);
+
+  /* ================================
+   * Default Styles
+   * ================================ */
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  border-style: solid;
+  border-color: var(--cp-divider-color);
+
+  &[data-orientation='horizontal'] {
+    width: 100%;
+    min-width: 1rem;
+    border-block-end-width: var(--cp-divider-size);
+  }
+
+  &[data-orientation='vertical'] {
+    height: 100%;
+    min-height: 1rem;
+    border-inline-start-width: var(--cp-divider-size);
+  }
+
+  &[data-size='medium'] {
+    --cp-divider-size: var(--cp-control-border-width-medium);
+  }
+
+  &[data-variant='dark'] {
+    --cp-divider-color: var(--cp-border-color-high);
+  }
+
+  &[data-variant='inverse'] {
+    --cp-divider-color: var(--cp-border-color-inverse);
+  }
+}

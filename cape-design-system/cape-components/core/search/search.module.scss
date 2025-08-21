@@ -1,0 +1,89 @@
+.root {
+  box-sizing: border-box;
+  position: relative;
+}
+
+// use this class to override the tokens of TextInput
+.search {
+  background-color: var(--cp-search-color-branded-secondary-enabled);
+  border-color: var(--cp-search-color-branded-primary-enabled);
+  border-width: var(--cp-search-border-width-xsmall);
+  border-radius: var(--cp-search-border-radius-medium);
+
+  svg {
+    fill: var(--cp-search-color-accent-primary);
+  }
+
+  &:hover {
+    background-color: var(--cp-search-color-branded-secondary-hover);
+    border-color: var(--cp-search-color-branded-primary-hover);
+    border-width: var(--cp-search-border-width-small);
+  }
+
+  &:focus-within {
+    background-color: var(--cp-search-color-branded-secondary-focused);
+    border-color: var(--cp-search-color-branded-primary-enabled);
+    border-width: var(--cp-search-border-width-medium);
+    box-shadow: var(--cp-focus-outside-default);
+  }
+
+  &[data-disabled='true'] {
+    background-color: var(--cp-search-color-branded-secondary-disabled);
+    border-color: var(--cp-search-color-branded-primary-disabled);
+    border-width: var(--cp-search-border-width-medium);
+
+    svg {
+      fill: var(--cp-search-color-accent-disabled);
+    }
+  }
+
+  &[data-size='xsmall'] {
+    border-radius: var(--cp-search-border-radius-small);
+  }
+
+  &[data-validation-state="error"],
+  &[data-error="true"] {
+    border-color: var(--cp-form-color-danger-primary-enabled);
+  }
+
+  &[data-validation-state="success"] {
+    border-color: var(cp-form-color-success-primary-enabled);
+  }
+}
+
+.input {
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-appearance: none;
+  color: var(--cp-search-color-accent-primary);
+
+  &::placeholder {
+    color: var(--cp-search-color-accent-tertiary);
+  }
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.search[data-disabled='true'] .input{
+  color: var(--cp-search-color-accent-disabled);
+}
+
+.result {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: var(--cp-base-border-radius-medium);
+  background: var(--cp-base-color-flat);
+  box-shadow: var(--cp-base-elevation-high);
+  margin-block-start: var(--cp-base-spacing-xsmall);
+  z-index: 999;
+  overflow-y: auto;
+}

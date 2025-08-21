@@ -1,4 +1,4 @@
-# Figma Make Base
+# Figma Make Template (Partner Portal)
 
 A simple React TypeScript project with shadcn/ui components and Tailwind CSS.
 

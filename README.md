@@ -20,8 +20,6 @@ npm install
 npm run dev
 ```
 
-3. Open your browser to [http://localhost:5173](http://localhost:5173)
-
 ### Available Scripts
 
 - `npm run dev` - Start development server

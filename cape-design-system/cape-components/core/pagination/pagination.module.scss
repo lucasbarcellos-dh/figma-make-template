@@ -1,0 +1,15 @@
+.root {
+  /* ================================
+   * Default Styles
+   * ================================ */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: var(--cp-control-spacing-small);
+
+  // TODO: Fix SVG issue with the button component.
+  button svg {
+    height: var(--cp-icon-sizing-medium, 24px);
+    width: var(--cp-icon-sizing-medium, 24px);
+  }
+}

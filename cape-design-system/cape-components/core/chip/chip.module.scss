@@ -1,0 +1,199 @@
+.root {
+  --cp-chip-padding-inline: var(--cp-action-spacing-xsmall);
+  --cp-chip-label-padding-inline: var(--cp-control-spacing-xsmall);
+  --cp-chip-slot-padding-inline: var(--cp-control-spacing-xsmall);
+  --cp-chip-border-color: var(--cp-chip-color-branded-primary-enabled);
+  --cp-chip-border-radius: var(--cp-action-border-radius-pill);
+  --cp-chip-border-width: var(--cp-action-border-width-small);
+  --cp-chip-background: var(--cp-chip-color-branded-secondary-enabled);
+  --cp-chip-box-shadow: none;
+  --cp-chip-size: var(--cp-control-sizing-tiny);
+  --cp-chip-label-font: var(--cp-desktop-body-small);
+  --cp-chip-label-font-color: var(--cp-chip-color-branded-tertiary-enabled);
+  --cp-chip-label-letter-spacing: var(--cp-font-letter-spacing-large);
+  --cp-chip-icon-color: var(--cp-chip-color-branded-tertiary-enabled);
+  --cp-chip-slot-size: var(--cp-control-sizing-mini);
+  --cp-chip-close-button-color: var(--cp-chip-color-branded-tertiary-enabled);
+
+  /* ================================
+     * Chip Default Styles
+     * ================================ */
+  display: inline-flex;
+  padding-inline: var(--cp-chip-padding-inline);
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: var(--cp-chip-border-color);
+  border-width: var(--cp-chip-border-width);
+  border-style: solid;
+  border-radius: var(--cp-chip-border-radius);
+  background-color: var(--cp-chip-background);
+  box-shadow: var(--cp-chip-box-shadow);
+  user-select: none;
+  min-height: var(--cp-chip-size);
+  box-sizing: border-box;
+  outline: none;
+
+  &[data-interactive='true'] {
+    cursor: pointer;
+
+    &:hover {
+      --cp-chip-border-color: var(--cp-chip-color-branded-primary-hover);
+      --cp-chip-background: var(--cp-chip-color-branded-secondary-hover);
+      --cp-chip-icon-color: var(--cp-chip-color-branded-tertiary-hover);
+      --cp-chip-close-button-color: var(--cp-chip-color-branded-tertiary-hover);
+      --cp-chip-label-font-color: var(--cp-chip-color-branded-tertiary-hover);
+    }
+
+    &:focus-visible {
+      --cp-chip-background: var(--cp-chip-color-branded-secondary-enabled);
+      --cp-chip-border-width: var(--cp-base-focus-default-border-width);
+      --cp-chip-border-color: var(--cp-chip-color-branded-primary-enabled);
+      --cp-chip-box-shadow: var(--cp-focus-default);
+    }
+
+    &:active {
+      --cp-chip-background: var(--cp-chip-color-branded-secondary-pressed);
+      --cp-chip-border-color: var(--cp-chip-color-branded-primary-pressed);
+      --cp-chip-label-font-color: var(--cp-chip-color-branded-tertiary-pressed);
+      --cp-chip-icon-color: var(--cp-chip-color-branded-tertiary-pressed);
+      --cp-chip-close-button-color: var(
+        --cp-chip-color-branded-tertiary-pressed
+      );
+      --cp-chip-box-shadow: none;
+    }
+
+    &[data-selected='true'] {
+      outline: var(--cp-action-border-width-medium) solid var(--cp-chip-color-branded-primary-selected);
+      outline-offset: calc(var(--cp-action-border-width-medium) * -1);
+
+      --cp-chip-border-color: var(--cp-chip-color-branded-primary-selected);
+      --cp-chip-label-font-color: var(
+        --cp-chip-color-branded-tertiary-selected
+      );
+      --cp-chip-icon-color: var(--cp-chip-color-branded-tertiary-selected);
+      --cp-chip-background: var(--cp-chip-color-branded-secondary-selected);
+      --cp-chip-close-button-color: var(
+        --cp-chip-color-branded-tertiary-selected-alternate
+      );
+
+      &:hover {
+        outline-color: var(--cp-chip-color-branded-primary-selected-hover);
+        
+        --cp-chip-border-color: var(
+          --cp-chip-color-branded-primary-selected-hover
+        );
+        --cp-chip-background: var(
+          --cp-chip-color-branded-secondary-selected-hover
+        );
+        --cp-chip-label-font-color: var(
+          --cp-chip-color-branded-tertiary-selected-hover
+        );
+        --cp-chip-icon-color: var(
+          --cp-chip-color-branded-tertiary-selected-hover
+        );
+        --cp-chip-close-button-color: var(
+          --cp-chip-color-branded-tertiary-selected-alternate
+        );
+      }
+    }
+  }
+
+  &[data-disabled='true'] {
+    --cp-chip-label-font-color: var(--cp-chip-color-branded-tertiary-disabled);
+    --cp-chip-icon-color: var(--cp-chip-color-branded-tertiary-disabled);
+    --cp-chip-border-color: var(--cp-chip-color-branded-primary-disabled);
+    --cp-chip-background: var(--cp-chip-color-branded-secondary-disabled);
+    --cp-chip-close-button-color: var(
+      --cp-chip-color-branded-tertiary-disabled
+    );
+
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &[data-size='xsmall'] {
+    --cp-chip-padding-inline: var(--cp-action-spacing-xsmall);
+    --cp-chip-size: var(--cp-control-sizing-tiny);
+    --cp-chip-label-font: var(--cp-desktop-subtitle-small);
+    --cp-chip-label-letter-spacing: var(--cp-font-letter-spacing-large);
+    --cp-chip-label-padding-inline: var(--cp-control-spacing-xsmall);
+    --cp-chip-slot-padding-inline: var(--cp-control-spacing-tiny);
+    --cp-chip-slot-size: var(--cp-control-sizing-mini);
+  }
+
+  &[data-size='small'] {
+    --cp-chip-padding-inline: var(--cp-action-spacing-small);
+    --cp-chip-size: var(--cp-control-sizing-xsmall);
+    --cp-chip-label-font: var(--cp-desktop-subtitle-medium);
+    --cp-chip-label-letter-spacing: var(--cp-font-letter-spacing-small);
+    --cp-chip-label-padding-inline: var(--cp-control-spacing-xsmall);
+    --cp-chip-slot-padding-inline: var(--cp-control-spacing-tiny);
+    --cp-chip-slot-size: var(--cp-control-sizing-mini);
+  }
+
+  &[data-size='medium'] {
+    --cp-chip-padding-inline: var(--cp-action-spacing-small);
+    --cp-chip-size: var(--cp-control-sizing-small);
+    --cp-chip-label-font: var(--cp-desktop-subtitle-large);
+    --cp-chip-label-letter-spacing: var(--cp-font-letter-spacing-small);
+    --cp-chip-label-padding-inline: var(--cp-control-spacing-small);
+    --cp-chip-slot-padding-inline: var(--cp-control-spacing-xsmall);
+    --cp-chip-slot-size: var(--cp-action-sizing-tiny);
+  }
+
+  &[data-size='large'] {
+    --cp-chip-padding-inline: var(--cp-action-spacing-small);
+    --cp-chip-size: var(--cp-control-sizing-medium);
+    --cp-chip-label-font: var(--cp-desktop-subtitle-large);
+    --cp-chip-label-letter-spacing: var(--cp-font-letter-spacing-medium);
+    --cp-chip-label-padding-inline: var(--cp-control-spacing-small);
+    --cp-chip-slot-padding-inline: var(--cp-control-spacing-xsmall);
+    --cp-chip-slot-size: var(--cp-action-sizing-tiny);
+  }
+
+  .label {
+    font: var(--cp-chip-label-font);
+    letter-spacing: var(--cp-chip-label-letter-spacing);
+    color: var(--cp-chip-label-font-color);
+    padding-inline: var(--cp-chip-label-padding-inline);
+
+    &[data-selected='true'][data-interactive='true'] {
+      --cp-chip-label-font-color: var(
+        --cp-chip-color-branded-tertiary-selected
+      );
+    }
+  }
+
+  .slot {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--cp-chip-slot-size);
+    width: var(--cp-chip-slot-size);
+
+    svg {
+      color: var(--cp-chip-icon-color);
+      width: 100%;
+      height: auto;
+    }
+
+    &[data-slot-placement='start'] {
+      padding-inline-start: var(--cp-chip-slot-padding-inline);
+    }
+
+    &[data-slot-placement='end'] {
+      padding-inline-end: var(--cp-chip-slot-padding-inline);
+    }
+  }
+
+  .close svg {
+    --cp-icon-button-content-color: var(--cp-chip-close-button-color);
+  }
+
+  .close:hover {
+    --cp-icon-button-background: var(
+      --cp-chip-color-branded-secondary-selected-alternate
+    );
+  }
+}

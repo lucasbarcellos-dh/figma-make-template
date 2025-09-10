@@ -1,0 +1,198 @@
+.root {
+  /* ================================
+   * Card variables
+   * ================================ */
+
+  --cp-card-box-shadow: none;
+  --cp-card-border-radius: var(--cp-card-border-radius-xlarge);
+  --cp-card-border-width: var(--cp-base-border-width-small);
+  --cp-card-border-color: var(--cp-control-color-branded-primary-enabled);
+  --cp-card-background-color: var(--cp-base-color-flat);
+
+  /* ================================
+  * Default Styles
+  * ================================ */
+
+  min-width: 2rem;
+  min-height: 1rem;
+  border-radius: var(--cp-card-border-radius);
+  border: var(--cp-card-border-width) solid var(--cp-card-border-color);
+  background-color: var(--cp-card-background-color);
+  box-shadow: var(--cp-card-box-shadow);
+  padding-block: var(--cp-base-spacing-medium);
+  overflow: hidden;
+
+  &[data-disabled='true'] {
+    pointer-events: none;
+
+    --cp-card-border-color: var(--cp-base-color-lowest);
+    --cp-card-background-color: var(--cp-base-color-lowest);
+  }
+
+  /* Interactive Outlined card with the following states: hover, selected, selected-hover, active & focus-visible */
+  &[data-interactive='true'] {
+    cursor: pointer;
+
+    &:hover {
+      --cp-card-border-color: var(--cp-control-color-branded-primary-hover);
+      --cp-card-background-color: var(--cp-base-color-flat);
+    }
+
+    &:focus-visible {
+      outline: none;
+
+      --cp-card-box-shadow: var(--cp-focus-outside-default);
+    }
+
+    &[data-selected='true'] {
+      --cp-card-border-width: var(--cp-base-border-width-medium);
+      --cp-card-border-color: var(--cp-card-color-selected);
+      --cp-card-background-color: var(--cp-card-color-selected-high);
+    }
+
+    &[data-selected='true']:hover {
+      --cp-card-border-width: var(--cp-base-border-width-medium);
+      --cp-card-border-color: var(--cp-card-color-selected-hover);
+      --cp-card-background-color: var(--cp-card-color-selected-high);
+    }
+
+    &:active,
+    &[data-selected='true']:active {
+      --cp-card-border-color: var(--cp-control-color-branded-primary-hover);
+      --cp-card-background-color: var(--cp-base-color-lowest);
+    }
+  }
+
+  &[data-variant='filled'] {
+    --cp-card-border-color: var(--cp-base-color-lowest);
+    --cp-card-background-color: var(--cp-base-color-lowest);
+
+    &[data-disabled='true'] {
+      --cp-card-border-color: var(--cp-base-color-lowest);
+      --cp-card-background-color: var(--cp-base-color-lowest);
+    }
+
+    /* Interactive Filled card with the following states: hover, selected, selected-hover, active & focus-visible */
+    &[data-interactive='true'] {
+      &:hover {
+        --cp-card-border-color: var(--cp-control-color-branded-primary-enabled);
+        --cp-card-background-color: var(--cp-base-color-lowest);
+      }
+
+      &:focus-visible {
+        --cp-card-border-color: var(--cp-focus-outside-border-color);
+        --cp-card-background-color: var(--cp-base-color-lowest);
+        --cp-card-box-shadow: var(--cp-focus-outside-default);
+      }
+
+      &[data-selected='true'] {
+        --cp-card-border-width: var(--cp-base-border-width-medium);
+        --cp-card-border-color: var(--cp-card-color-selected);
+        --cp-card-background-color: var(--cp-card-color-selected-low);
+      }
+
+      &[data-selected='true']:hover {
+        --cp-card-border-width: var(--cp-base-border-width-medium);
+        --cp-card-border-color: var(--cp-card-color-selected-hover);
+        --cp-card-background-color: var(--cp-card-color-selected-low);
+      }
+
+      &:active,
+      &[data-selected='true']:active {
+        --cp-card-border-color: var(--cp-control-color-branded-primary-hover);
+        --cp-card-background-color: var(--cp-base-color-lowest);
+      }
+    }
+  }
+
+  &[data-variant='elevated'] {
+    --cp-card-border-color: var(--cp-base-color-flat);
+    --cp-card-background-color: var(--cp-base-color-flat);
+    --cp-card-box-shadow: var(--cp-base-elevation-low);
+
+    &[data-disabled='true'] {
+      --cp-card-border-color: var(--cp-base-color-lowest);
+      --cp-card-background-color: var(--cp-base-color-lowest);
+      --cp-card-box-shadow: none;
+    }
+
+    /* Interactive Elevated card with the following states: hover, selected, selected-hover, active & focus-visible */
+    &[data-interactive='true'] {
+      &:hover {
+        --cp-card-border-color: var(--cp-base-color-flat);
+        --cp-card-background-color: var(--cp-base-color-flat);
+        --cp-card-box-shadow: var(--cp-base-elevation-high);
+      }
+
+      &:focus-visible {
+        --cp-card-border-color: var(--cp-focus-outside-border-color);
+        --cp-card-background-color: var(--cp-base-color-flat);
+        --cp-card-box-shadow: var(--cp-focus-outside-default);
+      }
+
+      &[data-selected='true'] {
+        --cp-card-border-width: var(--cp-base-border-width-medium);
+        --cp-card-border-color: var(--cp-card-color-selected);
+        --cp-card-background-color: var(--cp-card-color-selected-high);
+        --cp-card-box-shadow: var(--cp-base-elevation-low);
+      }
+
+      // Prioritize the focus ring than the card shadow of selected state
+      &[data-selected='true']:focus-visible {
+        --cp-card-box-shadow: var(--cp-focus-outside-default);
+        --cp-card-background-color: var(--cp-base-color-flat);
+        --cp-card-border-color: var(--cp-card-color-selected-hover);
+      }
+
+      &[data-selected='true']:hover {
+        --cp-card-border-width: var(--cp-base-border-width-medium);
+        --cp-card-border-color: var(--cp-card-color-selected-hover);
+        --cp-card-background-color: var(--cp-card-color-selected-high);
+        --cp-card-box-shadow: var(--cp-base-elevation-high);
+      }
+
+      &:active,
+      &[data-selected='true']:active {
+        --cp-card-border-color: var(--cp-base-color-lowest);
+        --cp-card-background-color: var(--cp-base-color-lowest);
+        --cp-card-box-shadow: var(--cp-base-elevation-low);
+      }
+    }
+  }
+}
+
+.header,
+.body,
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding-block: var(--cp-base-spacing-medium);
+  padding-inline: var(--cp-base-spacing-xlarge);
+}
+
+.header {
+  gap: var(--cp-base-spacing-small);
+}
+
+.body {
+  gap: var(--cp-base-spacing-2xlarge);
+}
+
+.footer {
+  flex-direction: row;
+  gap: var(--cp-base-spacing-small);
+}
+
+@supports not (inset: 0) {
+  .header > * + * {
+    margin-block-start: var(--cp-base-spacing-small);
+  }
+
+  .body > * + * {
+    margin-block-start: var(--cp-base-spacing-2xlarge);
+  }
+
+  .footer > * + * {
+    margin-inline-start: var(--cp-base-spacing-small);
+  }
+}

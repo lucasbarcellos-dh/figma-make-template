@@ -1,0 +1,99 @@
+.root {
+  --cp-indicator-size: var(--cp-base-sizing-small);
+  --cp-indicator-color-text: var(--cp-text-color-onbranded);
+  --cp-indicator-color-background: var(--cp-feedback-color-branded-high);
+  --cp-indicator-font: var(--cp-desktop-subtitle-medium);
+  --cp-indicator-icon-size: var(--cp-control-sizing-mini);
+  --cp-indicator-spacing: var(--cp-base-spacing-small);
+
+  /* ================================
+   * Default Styles
+   * has children, status = 'branded', size = 'medium'
+   * ================================ */
+  box-sizing: border-box;
+  border-radius: var(--cp-control-border-radius-pill);
+  width: fit-content;
+  min-height: var(--cp-indicator-size);
+  min-width: var(--cp-indicator-size);
+  background-color: var(--cp-indicator-color-background);
+  color: var(--cp-indicator-color-text);
+  padding-inline: var(--cp-indicator-spacing);
+  font: var(--cp-indicator-font);
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+
+  svg {
+    color: currentcolor;
+    width: var(--cp-indicator-icon-size);
+    height: var(--cp-indicator-icon-size);
+  }
+
+  /* With different statuses */
+  &[data-status='neutral'] {
+    --cp-indicator-color-background: var(--cp-feedback-color-disabled-high);
+    --cp-indicator-color-text: var(--cp-text-color-onneutral);
+  }
+
+  &[data-status='error'] {
+    --cp-indicator-color-background: var(--cp-feedback-color-danger-high);
+    --cp-indicator-color-text: var(--cp-text-color-ondanger);
+  }
+
+  &[data-status='warning'] {
+    --cp-indicator-color-background: var(--cp-feedback-color-warning-high);
+    --cp-indicator-color-text: var(--cp-text-color-onwarning);
+  }
+
+  &[data-status='success'] {
+    --cp-indicator-color-background: var(--cp-feedback-color-success-high);
+    --cp-indicator-color-text: var(--cp-text-color-onsuccess);
+  }
+
+  &[data-status='subtle'] {
+    --cp-indicator-color-background: var(--cp-feedback-color-disabled-low);
+    --cp-indicator-color-text: var(--cp-text-color-primary);
+  }
+
+  /* Indicator sizes and fonts for default type (has children) */
+  &[data-size='small'] {
+    --cp-indicator-size: var(--cp-base-sizing-xsmall);
+    --cp-indicator-font: var(--cp-desktop-caption);
+    --cp-indicator-spacing: 6px;
+  }
+
+  &[data-size='large'] {
+    --cp-indicator-size: var(--cp-base-sizing-medium);
+    --cp-indicator-icon-size: var(--cp-control-sizing-tiny);
+    --cp-indicator-font: var(--cp-desktop-subtitle-large);
+  }
+
+  /* The indicator has fixed sizes when represented as a dot (without children). */
+  &:empty {
+    width: var(--cp-indicator-size);
+    height: var(--cp-indicator-size);
+  }
+
+  &:empty[data-size='small'] {
+    --cp-indicator-size: 4px;
+  }
+
+  &:empty[data-size='medium'] {
+    --cp-indicator-size: var(--cp-base-sizing-mini);
+  }
+
+  &:empty[data-size='large'] {
+    --cp-indicator-size: var(--cp-base-sizing-tiny);
+  }
+
+  /* No inline spacing when Indicator type is "dot" or it has an icon. */
+  &:has(svg)[data-size] {
+    --cp-indicator-spacing: 0;
+  }
+
+  &[data-spacing='none'],
+  &:empty {
+    --cp-indicator-spacing: 0;
+  }
+}

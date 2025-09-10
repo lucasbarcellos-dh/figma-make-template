@@ -1,0 +1,174 @@
+.root {
+  --cp-text-area-size: var(--cp-control-sizing-medium);
+  --cp-text-area-spacing-inline: var(--cp-control-spacing-medium);
+  --cp-text-area-spacing-block: var(--cp-control-spacing-medium);
+  --cp-text-area-control-spacing-inline: var(--cp-control-spacing-xsmall);
+  --cp-text-area-control-spacing-block: var(--cp-control-spacing-none);
+  --cp-text-area-border-radius: var(--cp-form-border-radius-medium);
+  --cp-text-area-border-color: var(--cp-form-color-branded-primary-enabled);
+  --cp-text-area-outline-color: var(
+    --cp-form-color-branded-primary-focused-outline
+  );
+  --cp-text-area-background: var(--cp-form-color-branded-secondary-enabled);
+  --cp-text-area-font: var(--cp-desktop-body-large);
+  --cp-text-area-border-width: var(--cp-form-border-width-small);
+
+  /* ================================
+   * Default Styles
+   * size = 'medium'
+   * ================================ */
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  gap: var(--cp-control-spacing-xsmall);
+  overflow: hidden;
+  align-items: start;
+  padding-inline: var(--cp-text-area-spacing-inline);
+  padding-block: var(--cp-text-area-spacing-block);
+  border: var(--cp-text-area-border-width) solid
+    var(--cp-text-area-border-color);
+  border-radius: var(--cp-text-area-border-radius);
+  background-color: var(--cp-text-area-background);
+  font: var(--cp-text-area-font);
+  resize: both;
+
+  &:hover {
+    --cp-text-area-border-color: var(--cp-form-color-branded-primary-hover);
+    --cp-text-area-background: var(--cp-form-color-branded-secondary-hover);
+  }
+
+  &:focus-within {
+    --cp-text-area-border-color: var(--cp-form-color-branded-primary-focused);
+    --cp-text-area-border-width: var(--cp-form-border-width-small);
+
+    outline: var(--cp-form-border-width-small) solid
+      var(--cp-text-area-outline-color);
+  }
+
+  &[data-error='true'],
+  &[data-validation-state='error'] {
+    --cp-text-area-border-color: var(--cp-form-color-danger-primary-enabled);
+    --cp-text-area-background: var(--cp-form-color-danger-secondary-enabled);
+  }
+
+  &[data-error='true']:hover,
+  &[data-validation-state='error']:hover {
+    --cp-text-area-border-color: var(--cp-form-color-danger-primary-hover);
+    --cp-text-area-background: var(--cp-form-color-danger-secondary-hover);
+  }
+
+  &[data-error='true']:focus-within,
+  &[data-validation-state='error']:focus-within {
+    --cp-text-area-border-color: var(--cp-form-color-danger-primary-focused);
+    --cp-text-area-outline-color: var(
+      --cp-form-color-danger-primary-focused-outline
+    );
+  }
+
+  &[data-validation-state='success'] {
+    --cp-text-area-border-color: var(--cp-form-color-success-primary-enabled);
+    --cp-text-area-background: var(--cp-form-color-success-secondary-enabled);
+  }
+
+  &[data-validation-state='success']:hover {
+    --cp-text-area-border-color: var(--cp-form-color-success-primary-hover);
+    --cp-text-area-background: var(--cp-form-color-success-secondary-hover);
+  }
+
+  &[data-validation-state='success']:focus-within {
+    --cp-text-area-border-color: var(--cp-form-color-success-primary-focused);
+    --cp-text-area-outline-color: var(
+      --cp-form-color-success-primary-focused-outline
+    );
+  }
+
+  &[data-size='xsmall'] {
+    --cp-text-area-size: var(--cp-control-sizing-xsmall);
+    --cp-text-area-spacing-inline: var(--cp-control-spacing-small);
+    --cp-text-area-spacing-block: var(--cp-control-spacing-xsmall);
+    --cp-text-area-font: var(--cp-desktop-body-medium);
+    --cp-text-area-control-spacing-inline: var(--cp-control-spacing-tiny);
+    --cp-text-area-control-spacing-block: var(--cp-control-spacing-tiny);
+    --cp-text-area-border-radius: var(--cp-form-border-radius-small);
+  }
+
+  &[data-size='small'] {
+    --cp-text-area-size: var(--cp-control-sizing-small);
+    --cp-text-area-spacing-inline: var(--cp-control-spacing-small);
+    --cp-text-area-spacing-block: var(--cp-control-spacing-small);
+    --cp-text-area-font: var(--cp-desktop-body-large);
+    --cp-text-area-control-spacing-inline: var(--cp-control-spacing-xsmall);
+    --cp-text-area-control-spacing-block: var(--cp-control-spacing-none);
+  }
+
+  &[data-size='large'] {
+    --cp-text-area-size: var(--cp-control-sizing-large);
+    --cp-text-area-spacing-inline: var(--cp-control-spacing-medium);
+    --cp-text-area-spacing-block: var(--cp-control-spacing-medium);
+    --cp-text-area-font: var(--cp-desktop-subtitle-xlarge);
+    --cp-text-area-control-spacing-inline: var(--cp-control-spacing-xsmall);
+    --cp-text-area-control-spacing-block: var(--cp-control-spacing-none);
+  }
+
+  &[data-disabled='true'] {
+    --cp-text-area-border-color: var(--cp-form-color-branded-primary-disabled);
+    --cp-text-area-background: var(--cp-form-color-branded-secondary-disabled);
+    --cp-text-area-border-width: var(--cp-form-border-width-xsmall);
+  }
+}
+
+.control {
+  --cp-text-area-value-color: var(--cp-form-color-accent-primary);
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex: 1 1;
+  padding-inline: var(--cp-text-area-control-spacing-inline);
+  padding-block: var(--cp-text-area-control-spacing-block) 0;
+  border: none;
+  background-color: transparent;
+  color: var(--cp-text-area-value-color);
+  outline: none;
+  font: inherit;
+  line-height: inherit;
+  resize: none;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: var(--cp-form-color-accent-tertiary-alternate);
+  }
+
+  &:disabled {
+    --cp-text-area-value-color: var(--cp-form-color-accent-disabled);
+  }
+}
+
+.slot {
+  display: flex;
+  gap: var(--cp-control-spacing-small);
+  box-sizing: border-box;
+  padding-block-start: var(--cp-control-spacing-tiny);
+
+  &[data-disabled='true'] {
+    svg {
+      fill: var(--cp-icon-color-disabled);
+    }
+  }
+}
+
+/* Legacy browser support */
+@supports not (inset: 0) {
+  .slot + .slot,
+  .slot > * + * {
+    margin-inline-start: var(--cp-control-spacing-xsmall);
+  }
+
+  .root > .slot:first-child {
+    margin-inline-end: var(--cp-control-spacing-xsmall);
+  }
+
+  .root > .slot:last-child {
+    margin-inline-start: var(--cp-control-spacing-xsmall);
+  }
+}

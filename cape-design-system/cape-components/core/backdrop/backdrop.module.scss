@@ -1,0 +1,25 @@
+.root {
+  --cp-backdrop-duration: var(--cp-duration-xfast);
+
+  /* ================================
+   * Default Styles
+   * ================================ */
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity var(--cp-backdrop-duration) ease,
+    visibility var(--cp-backdrop-duration) ease;
+  background-color: var(--cp-base-color-overlay);
+  z-index: var(--cp-backdrop-z-index);
+  -webkit-tap-highlight-color: transparent;
+
+  &[data-open='true'] {
+    opacity: 1;
+    visibility: visible;
+  }
+}

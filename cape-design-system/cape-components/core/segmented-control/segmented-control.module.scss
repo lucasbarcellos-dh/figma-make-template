@@ -1,0 +1,151 @@
+.root {
+  --cp-segmented-control-size: var(--cp-action-sizing-xsmall);
+  --cp-segmented-control-font: var(--cp-desktop-subtitle-small);
+  --cp-segmented-control-padding-block: var(--cp-control-spacing-tiny);
+  --cp-segmented-control-padding-inline: var(--cp-control-spacing-tiny);
+  --cp-segmented-control-content-padding-inline: var(--cp-control-spacing-tiny);
+  --cp-segmented-control-content-padding-block: var(--cp-control-spacing-none);
+  --cp-segmented-control-item-background: transparent;
+
+  border-radius: var(--cp-control-border-radius-medium);
+  background: var(--cp-action-color-branded-secondary-disabled);
+  display: flex;
+  gap: var(--cp-control-spacing-tiny);
+  padding-inline: var(--cp-segmented-control-padding-inline);
+  padding-block: var(--cp-segmented-control-padding-block);
+  height: var(--cp-segmented-control-size);
+  min-height: var(--cp-segmented-control-size);
+
+  /* ================================
+   * Default Styles
+   * ================================ */
+  box-sizing: border-box;
+
+  &[data-size='xsmall'] {
+    --cp-segmented-control-size: var(--cp-control-sizing-xsmall);
+    --cp-segmented-control-font: var(--cp-desktop-subtitle-small);
+    --cp-segmented-control-border-radius: var(
+      --cp-control-border-radius-xsmall
+    );
+    --cp-segmented-control-content-padding-inline: var(
+      --cp-control-spacing-small
+    );
+  }
+
+  &[data-size='small'] {
+    --cp-segmented-control-size: var(--cp-action-sizing-small);
+    --cp-segmented-control-font: var(--cp-desktop-subtitle-medium);
+    --cp-segmented-control-content-padding-inline: var(
+      --cp-control-spacing-small
+    );
+  }
+
+  &[data-size='medium'] {
+    --cp-segmented-control-size: var(--cp-action-sizing-medium);
+    --cp-segmented-control-font: var(--cp-desktop-subtitle-large);
+    --cp-segmented-control-content-padding-inline: var(
+      --cp-control-spacing-medium
+    );
+  }
+
+  &[data-size='large'] {
+    --cp-segmented-control-padding-block: var(--cp-control-spacing-xsmall);
+    --cp-segmented-control-padding-inline: var(--cp-control-spacing-xsmall);
+    --cp-segmented-control-size: var(--cp-control-sizing-large);
+    --cp-segmented-control-font: var(--cp-desktop-subtitle-xlarge);
+    --cp-segmented-control-content-padding-inline: var(
+      --cp-control-spacing-medium
+    );
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  gap: var(--cp-action-spacing-xsmall);
+  min-width: 0;
+  padding-inline: var(--cp-segmented-control-content-padding-inline);
+  padding-block: var(--cp-segmented-control-content-padding-block);
+  border-radius: var(--cp-control-border-radius-small);
+  color: var(--cp-text-color-primary);
+  font: var(--cp-segmented-control-font);
+  transition: background-color var(--cp-motion-duration-2xfast);
+  cursor: pointer;
+
+  /* ================================
+   * Control Item Default Styles
+   * ================================ */
+  box-sizing: border-box;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  background-color: var(--cp-segmented-control-item-background);
+
+  &:hover {
+    --cp-segmented-control-item-background: var(
+      --cp-control-color-branded-secondary-hover
+    );
+  }
+
+  &:active {
+    --cp-segmented-control-item-background: transparent;
+  }
+
+  &[data-active='true'] {
+    --cp-segmented-control-item-background: var(--cp-base-color-flat);
+
+    box-shadow: var(--cp-elevation-low-onlight);
+
+    &:hover {
+      --cp-segmented-control-item-background: var(--cp-base-color-flat);
+
+      box-shadow: var(--cp-elevation-low-onlight);
+    }
+  }
+
+  &:focus-visible {
+    box-shadow: var(--cp-focus-default);
+  }
+
+  &:disabled {
+    color: var(--cp-text-color-disabled);
+    pointer-events: none;
+  }
+
+  & > * {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.content {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.slot {
+  display: flex;
+  gap: var(--cp-action-spacing-small);
+}
+
+@supports not (inset: 0) {
+  .item + .item {
+    margin-left: var(--cp-action-spacing-tiny);
+  }
+
+  .item > * + * {
+    margin-left: var(--cp-action-spacing-xsmall);
+  }
+
+  .slot + .slot {
+    margin-left: var(--cp-action-spacing-small);
+  }
+
+  .slot > * + * {
+    margin-left: var(--cp-action-spacing-small);
+  }
+}

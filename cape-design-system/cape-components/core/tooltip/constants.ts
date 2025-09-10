@@ -1,0 +1,6 @@
+export const TOOLTIP_ARROW_RADIUS = 2;
+export const TOOLTIP_ARROW_WIDTH = 12;
+export const TOOLTIP_ARROW_HEIGHT = 6;
+
+export const DEFAULT_TOOLTIP_OFFSET = 12;
+export const DEFAULT_TOOLTIP_ZINDEX = 100;

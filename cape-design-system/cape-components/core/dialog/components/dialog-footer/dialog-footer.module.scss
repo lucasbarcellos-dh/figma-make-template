@@ -1,0 +1,19 @@
+@use "sass:map";
+@use '../../../common/utils/breakpoints';
+
+.root {
+  --cp-dialog-footer-padding: var(--cp-spacing-large)
+  var(--cp-spacing-2xlarge) var(--cp-spacing-2xlarge)
+  var(--cp-spacing-2xlarge);
+
+  /* ================================
+   * Default Styles
+   * ================================ */
+  box-sizing: border-box;
+  padding: var(--cp-dialog-footer-padding);
+
+  @media (max-width: map.get(breakpoints.$breakpoints, md)) {
+    --cp-dialog-footer-padding: var(--cp-spacing-large)
+    var(--cp-spacing-xlarge) var(--cp-spacing-xlarge) var(--cp-spacing-xlarge);
+  }
+}

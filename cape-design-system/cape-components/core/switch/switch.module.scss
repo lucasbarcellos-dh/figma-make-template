@@ -1,0 +1,218 @@
+.root {
+  /* Root Variables */
+  --cp-switch-height: var(--cp-control-sizing-tiny);
+  --cp-switch-container-spacing: var(--cp-control-spacing-xsmall);
+  --cp-switch-container-width: var(--cp-control-sizing-xsmall);
+  --cp-switch-container-height: var(--cp-base-sizing-xsmall);
+  --cp-switch-base-background-color: var(--cp-switch-color-inactive-enabled);
+  --cp-switch-base-box-shadow: none;
+  --cp-switch-control-size: var(--cp-base-sizing-mini);
+  --cp-switch-control-background-color: var(--cp-switch-color-inactive-accent);
+  --cp-switch-touch-area-width: var(--cp-base-spacing-small);
+  --cp-switch-touch-area-height: var(--cp-base-spacing-medium);
+  --cp-switch-label-font: var(--cp-desktop-subtitle-large);
+  --cp-switch-label-color: var(--cp-text-color-primary);
+  --cp-switch-label-spacing: var(--cp-control-spacing-large);
+  --cp-switch-border-radius: var(--cp-switch-border-radius-pill);
+  --cp-switch-border-width: var(--cp-switch-border-width-small);
+  --cp-switch-border-color: var(--cp-switch-color-inactive-accent);
+
+  /* ================================
+   * root element default styles
+   * size = 'medium'
+   * ================================ */
+
+  box-sizing: border-box;
+  display: inline-flex;
+  position: relative;
+  height: var(--cp-switch-height);
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  cursor: pointer;
+
+  .label {
+    font: var(--cp-switch-label-font);
+    color: var(--cp-switch-label-color);
+    padding-inline-start: var(--cp-switch-label-spacing);
+  }
+
+  .label-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    visibility: hidden;
+  }
+
+  .container {
+    display: flex;
+    position: relative;
+    padding: var(--cp-switch-container-spacing);
+    align-items: center;
+    width: var(--cp-switch-container-width);
+    height: var(--cp-switch-container-height);
+    box-sizing: border-box;
+  }
+
+  .control {
+    width: var(--cp-switch-control-size);
+    height: var(--cp-switch-control-size);
+    transition: var(--cp-duration-xfast);
+    transform: translateX(0);
+    border-radius: var(--cp-switch-border-radius-small);
+    background-color: var(--cp-switch-control-background-color);
+  }
+
+  .base {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--cp-switch-container-width);
+    height: var(--cp-switch-container-height);
+    border-radius: var(--cp-switch-border-radius-pill);
+    transition: var(--cp-duration-xfast);
+    box-shadow: var(--cp-switch-base-box-shadow);
+    background-color: var(--cp-switch-base-background-color);
+    border: var(--cp-switch-border-width) solid var(--cp-switch-border-color);
+  }
+
+  .input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: calc(var(--cp-switch-touch-area-height) * -1)
+        calc(var(--cp-switch-touch-area-width) * -1);
+    }
+
+    &:checked ~ .control {
+      --cp-switch-control-background-color: var(
+        --cp-switch-color-active-accent
+      );
+
+      transform: translateX(100%);
+    }
+
+    &:checked + .base {
+      --cp-switch-base-background-color: var(--cp-switch-color-active-enabled);
+      --cp-switch-border-width: var(--cp-switch-border-width-xsmall);
+      --cp-switch-border-color: var(--cp-switch-color-active-accent);
+    }
+
+    &:focus-visible + .base {
+      --cp-switch-base-box-shadow: var(--cp-focus-default);
+    }
+
+    &:hover {
+      --cp-switch-control-background-color: var(
+        --cp-switch-color-inactive-accent
+      );
+      --cp-switch-border-width: var(--cp-switch-border-width-xsmall);
+    }
+
+    &:disabled ~ .control {
+      --cp-switch-control-background-color: var(
+        --cp-switch-color-inactive-accent-low
+      );
+    }
+
+    &:hover:checked {
+      & ~ .control {
+        --cp-switch-control-background-color: var(
+          --cp-switch-color-active-accent
+        );
+      }
+
+      & ~ .base {
+        --cp-switch-base-background-color: var(--cp-switch-color-active-hover);
+      }
+    }
+
+    &:disabled:checked {
+      & ~ .control {
+        --cp-switch-control-background-color: var(
+          --cp-switch-color-active-accent-low
+        );
+      }
+
+      & ~ .base {
+        --cp-switch-border-color: var(--cp-switch-color-active-accent-low);
+      }
+    }
+
+    [dir='rtl'] &:checked ~ .control {
+      transform: translateX(-100%);
+    }
+
+    /* Legacy browser styles */
+    @supports not (inset: 0) {
+      &:focus + .base {
+        --cp-switch-base-box-shadow: var(--cp-focus-default);
+      }
+    }
+
+    /* For Safari versions between 14.1> and <15.4 */
+    @supports not selector(:focus-visible) {
+      &:focus + .base {
+        --cp-switch-base-box-shadow: var(--cp-focus-default);
+      }
+    }
+  }
+
+  &[data-size='large'] {
+    --cp-switch-height: var(--cp-control-sizing-xsmall);
+    --cp-switch-container-width: var(--cp-control-sizing-small);
+    --cp-switch-container-height: var(--cp-base-sizing-small);
+    --cp-switch-control-size: var(--cp-base-sizing-tiny);
+    --cp-switch-label-font: var(--cp-desktop-subtitle-xlarge);
+  }
+
+  &[data-disabled='true'] {
+    cursor: default;
+    pointer-events: none;
+
+    --cp-switch-base-background-color: var(--cp-switch-color-inactive-disabled);
+    --cp-switch-label-color: var(--cp-text-color-disabled);
+    --cp-switch-border-color: var(--cp-switch-color-inactive-accent-low);
+
+    .input:checked + .base {
+      --cp-switch-base-background-color: var(--cp-switch-color-active-disabled);
+    }
+
+    .input:checked + .control {
+      --cp-switch-base-background-color: var(
+        --cp-switch-color-active-accent-low
+      );
+    }
+
+    &:hover {
+      --cp-switch-base-background-color: var(
+        --cp-switch-color-inactive-accent-low
+      );
+    }
+  }
+
+  &[data-readonly='true'] {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &:hover {
+    --cp-switch-base-background-color: var(--cp-switch-color-inactive-hover);
+    --cp-switch-control-background-color: var(
+      --cp-switch-color-inactive-accent
+    );
+  }
+}

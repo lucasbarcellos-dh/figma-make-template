@@ -1,0 +1,234 @@
+.root {
+  --cp-radio-control-size: var(--cp-base-sizing-xsmall);
+  --cp-radio-inner-control-size-small: 6px;
+  --cp-radio-inner-control-size-medium: 8px;
+  --cp-radio-inner-control-size-large: 10px;
+  --cp-radio-inner-control-size: var(--cp-radio-inner-control-size-medium);
+  --cp-radio-control-background-color: var(
+    --cp-control-color-branded-secondary-enabled
+  );
+  --cp-radio-inner-control-background-color: transparent;
+  --cp-radio-label-font: var(--cp-desktop-subtitle-large);
+  --cp-radio-label-color: var(--cp-text-color-primary);
+  --cp-radio-label-spacing: var(--cp-control-spacing-large);
+  --cp-radio-border-width: var(--cp-control-border-width-small);
+  --cp-radio-border-color: var(--cp-control-color-branded-primary-enabled);
+  --cp-radio-control-box-shadow: none;
+
+  /* ================================
+ * root element default styles
+ * size = 'medium'
+ * ================================ */
+
+  box-sizing: border-box;
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+
+  .label {
+    display: flex;
+    font: var(--cp-radio-label-font);
+    color: var(--cp-radio-label-color);
+    padding-inline-start: var(--cp-radio-label-spacing);
+  }
+
+  .label-hidden {
+    position: absolute;
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    width: 1px;
+  }
+
+  .container {
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--cp-radio-control-size);
+    height: var(--cp-radio-control-size);
+    background-color: var(--cp-radio-control-background-color);
+    border-radius: 50%;
+    border: var(--cp-radio-border-width) solid var(--cp-radio-border-color);
+    box-sizing: border-box;
+    box-shadow: var(--cp-radio-control-box-shadow);
+
+    &::after {
+      content: '';
+      width: var(--cp-radio-inner-control-size);
+      height: var(--cp-radio-inner-control-size);
+      border-radius: 50%;
+      background-color: var(--cp-radio-inner-control-background-color);
+      border: none;
+    }
+
+    &[data-error='true'] {
+      --cp-radio-border-color: var(--cp-control-color-danger-primary-selected);
+    }
+  }
+
+  .input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    opacity: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:checked + .control {
+      --cp-radio-control-background-color: var(
+        --cp-control-color-branded-tertiary-selected
+      );
+      --cp-radio-border-color: var(--cp-control-color-branded-primary-selected);
+
+      &::after {
+        --cp-radio-inner-control-background-color: var(
+          --cp-control-color-inverse-primary-selected
+        );
+      }
+    }
+
+    &:checked + .control[data-error='true'] {
+      --cp-radio-control-background-color: var(
+        --cp-control-color-danger-tertiary-selected
+      );
+      --cp-radio-border-color: var(--cp-control-color-danger-primary-selected);
+
+      &::after {
+        --cp-radio-inner-control-background-color: var(
+          --cp-control-color-inverse-secondary-selected
+        );
+      }
+    }
+
+    &:focus-visible + .control {
+      --cp-radio-control-box-shadow: var(--cp-base-focus-default-box-shadow);
+    }
+
+    /* Legacy browser styles */
+    @supports not (inset: 0) {
+      &:focus + .control {
+        --cp-radio-control-box-shadow: var(--cp-base-focus-default-box-shadow);
+      }
+    }
+
+    /* For Safari versions between 14.1> and <15.4 */
+    @supports not selector(:focus-visible) {
+      &:focus + .control {
+        --cp-radio-control-box-shadow: var(--cp-base-focus-default-box-shadow);
+      }
+    }
+  }
+
+  &:hover {
+    --cp-radio-control-background-color: var(
+      --cp-control-color-branded-secondary-enabled,
+    );
+    --cp-radio-inner-control-background-color: none;
+    --cp-radio-border-color: var(--cp-control-color-branded-primary-hover);
+
+    .input:not(:checked) + .control[data-error='true'] {
+      --cp-radio-border-color: var(
+        --cp-control-color-danger-primary-selected-hover
+      );
+    }
+
+    .input:checked + .control {
+      --cp-radio-control-background-color: var(
+        --cp-control-color-branded-tertiary-selected-hover
+      );
+      --cp-radio-border-color: var(
+        --cp-control-color-branded-primary-selected-hover
+      );
+
+      &::after {
+        --cp-radio-inner-control-background-color: var(
+          --cp-control-color-inverse-primary-selected-hover
+        );
+      }
+    }
+
+    .input:checked + .control[data-error='true'] {
+      --cp-radio-control-background-color: var(
+        --cp-control-color-danger-tertiary-selected-hover
+      );
+      --cp-radio-border-color: var(
+        --cp-control-color-danger-primary-selected-hover
+      );
+
+      &::after {
+        --cp-radio-inner-control-background-color: var(
+          --cp-control-color-inverse-secondary-selected-hover
+        );
+      }
+    }
+  }
+
+  &[data-size='large'] {
+    --cp-radio-control-size: var(--cp-control-sizing-tiny);
+    --cp-radio-inner-control-size: var(--cp-radio-inner-control-size-large);
+    --cp-radio-label-font: var(--cp-desktop-subtitle-xlarge);
+  }
+
+  &[data-size='small'] {
+    --cp-radio-control-size: var(--cp-control-sizing-mini);
+    --cp-radio-inner-control-size: var(--cp-radio-inner-control-size-small);
+    --cp-radio-label-spacing: var(--cp-control-spacing-medium);
+    --cp-radio-label-font: var(--cp-desktop-subtitle-medium);
+  }
+
+  &[data-disabled='true'] {
+    cursor: default;
+    pointer-events: none;
+
+    --cp-radio-control-background-color: var(
+      --cp-control-color-branded-secondary-disabled
+    );
+    --cp-radio-label-color: var(--cp-text-color-disabled);
+    --cp-radio-border-color: var(--cp-control-color-branded-primary-disabled);
+
+    .input:checked + .control {
+      --cp-radio-control-background-color: var(
+        --cp-control-color-branded-tertiary-disabled
+      );
+      --cp-radio-border-color: var(--cp-control-color-branded-primary-disabled);
+
+      &::after {
+        --cp-radio-inner-control-background-color: var(
+          --cp-control-color-inverse-primary-disabled
+        );
+      }
+    }
+
+    .input:not(:checked) + .control::after {
+      --cp-radio-inner-control-background-color: none;
+    }
+  }
+
+  &[data-readonly='true'] {
+    cursor: default;
+    pointer-events: none;
+  }
+}

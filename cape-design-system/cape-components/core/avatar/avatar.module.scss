@@ -1,0 +1,76 @@
+.root {
+  --cp-avatar-size: var(--cp-action-sizing-small);
+  --cp-avatar-icon-size: var(--cp-control-sizing-tiny);
+  --cp-avatar-border-radius: var(--cp-action-border-radius-pill);
+  --cp-avatar-font: var(--cp-desktop-subtitle-medium);
+  --cp-avatar-background-color: var(--cp-base-color-lowest);
+
+  /* ================================
+   * Default Styles
+   * size = 'medium'
+   * ================================ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: inherit;
+  border-radius: var(--cp-avatar-border-radius);
+  width: var(--cp-avatar-size);
+  min-width: var(--cp-avatar-size);
+  height: var(--cp-avatar-size);
+  min-height: var(--cp-avatar-size);
+  background-color: var(--cp-avatar-background-color);
+  color: var(--cp-text-color-primary);
+  font: var(--cp-avatar-font);
+  position: relative;
+  overflow: hidden;
+
+  .icon {
+    width: var(--cp-avatar-icon-size);
+    height: var(--cp-avatar-icon-size);
+    display: inline-flex;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &[data-size='small'] {
+    --cp-avatar-size: var(--cp-action-sizing-xsmall);
+  }
+
+  &[data-size='large'] {
+    --cp-avatar-size: var(--cp-action-sizing-medium);
+    --cp-avatar-font: var(--cp-desktop-subtitle-xlarge);
+    --cp-avatar-icon-size: var(--cp-action-sizing-xsmall);
+  }
+
+  &::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--cp-avatar-size);
+    min-width: var(--cp-avatar-size);
+    height: var(--cp-avatar-size);
+    min-height: var(--cp-avatar-size);
+    border-radius: var(--cp-avatar-border-radius);
+    border: var(--cp-avatar-border);
+  }
+
+  .image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--cp-avatar-border-radius);
+  }
+
+  &[data-variant='outlined'] {
+    --cp-avatar-border: var(--cp-action-border-width-small) solid
+      var(--cp-action-color-secondary-enabled);
+    --cp-avatar-background-color: var(--cp-base-color-flat);
+  }
+}

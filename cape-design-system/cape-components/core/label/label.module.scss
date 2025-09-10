@@ -1,0 +1,27 @@
+.root {
+  --cp-label-font: var(--cp-desktop-subtitle-medium);
+  --cp-label-color: var(--cp-form-color-accent-secondary);
+
+  /* ================================
+   * Default Styles
+   * variant = 'branded'
+   * ================================ */
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline-start: var(--cp-base-spacing-tiny);
+  color: var(--cp-label-color);
+  font: var(--cp-label-font);
+
+  &[data-size='xsmall'] {
+    --cp-label-font: var(--cp-desktop-subtitle-small);
+  }
+
+  &[data-size='large'] {
+    --cp-label-font: var(--cp-desktop-subtitle-large);
+  }
+
+  &[disabled] {
+    --cp-label-color: var(--cp-text-color-disabled);
+  }
+}

@@ -1,0 +1,191 @@
+@use "sass:selector";
+
+@mixin level($child) {
+  @at-root #{selector.unify(&, $child)} {
+    @content;
+  }
+}
+
+.root {
+    /* ================================
+    * Default Styles
+    * color = 'primary'
+    * ================================ */
+    --cp-heading-color: var(--cp-text-color-primary);
+
+    color: var(--cp-heading-color);
+    margin: 0;
+    font: var(--cp-heading-font);
+
+    /* =====================================
+    * Default Font Token per Heading Level (B2B)
+    * ===================================== */
+    @include level('h1') {
+        --cp-heading-font: var(--cp-desktop-display-x-large, --cp-desktop-display-xlarge);
+    }
+
+    @include level('h2') {
+        --cp-heading-font: var(--cp-desktop-display-large);
+    }
+
+    @include level('h3') {
+        --cp-heading-font: var(--cp-desktop-display-medium);
+    }
+
+    @include level('h4') {
+        --cp-heading-font: var(--cp-desktop-display-small);
+    }
+
+    @include level('h5') {
+        --cp-heading-font: var(--cp-desktop-subtitle-large);
+    }
+
+    @include level('h6') {
+        --cp-heading-font: var(--cp-desktop-subtitle-medium);
+    }
+
+    /* =====================================
+    * Variant Overrides (B2B)
+    * ===================================== */
+    &[data-variant='displayXLarge'] {
+        --cp-heading-font: var(--cp-desktop-display-x-large, --cp-desktop-display-xlarge);
+    }
+
+    &[data-variant='displayLarge'] {
+        --cp-heading-font: var(--cp-desktop-display-large);
+    }
+
+    &[data-variant='displayMedium'] {
+        --cp-heading-font: var(--cp-desktop-display-medium);
+    }
+
+    &[data-variant='displaySmall'] {
+        --cp-heading-font: var(--cp-desktop-display-small);
+    }
+
+    &[data-variant='subtitleXLarge'] {
+        --cp-heading-font: var(--cp-desktop-subtitle-xlarge);
+    }
+
+    &[data-variant='subtitleLarge'] {
+        --cp-heading-font: var(--cp-desktop-subtitle-large);
+    }
+
+    &[data-variant='subtitleMedium'] {
+        --cp-heading-font: var(--cp-desktop-subtitle-medium);
+    }
+
+    /* =====================================
+    * Variant Overrides (B2C)
+    * ===================================== */
+
+    [data-theme$='-b2c'] & {
+        @include level('h1') {
+            --cp-heading-font: var(--cp-desktop-display3xlarge);
+        }
+
+        @include level('h2') {
+            --cp-heading-font: var(--cp-desktop-display2xlarge);
+        }
+
+        @include level('h3') {
+            --cp-heading-font: var(--cp-desktop-display-xlarge);
+        }
+
+        @include level('h4') {
+            --cp-heading-font: var(--cp-desktop-display-large);
+        }
+
+        @include level('h5') {
+            --cp-heading-font: var(--cp-desktop-display-medium);
+        }
+
+        @include level('h6') {
+            --cp-heading-font: var(--cp-desktop-display-small);
+        }
+
+        &[data-variant='display3XLarge'] {
+            --cp-heading-font: var(--cp-desktop-display3xlarge);
+        }
+
+        &[data-variant='display2XLarge'] {
+            --cp-heading-font: var(--cp-desktop-display2xlarge);
+        }
+
+        &[data-variant='displayXLarge'] {
+            --cp-heading-font: var(--cp-desktop-display-xlarge);
+        }
+
+        &[data-variant='displayLarge'] {
+            --cp-heading-font: var(--cp-desktop-display-large);
+        }
+
+        &[data-variant='displayMedium'] {
+            --cp-heading-font: var(--cp-desktop-display-medium);
+        }
+
+        &[data-variant='displaySmall'] {
+            --cp-heading-font: var(--cp-desktop-display-small);
+        }
+    }
+
+    /* ================================
+    * Heading Colors
+    * ================================ */
+
+    &[data-color='primary'] {
+        --cp-heading-color: var(--cp-text-color-primary);
+    }
+
+    &[data-color='secondary'] {
+        --cp-heading-color: var(--cp-text-color-secondary);
+    }
+
+    &[data-color='disabled'] {
+        --cp-heading-color: var(--cp-text-color-disabled);
+    }
+
+    &[data-color='inverse'] {
+        --cp-heading-color: var(--cp-text-color-inverse);
+    }
+
+    &[data-color='branded'] {
+        --cp-heading-color: var(--cp-text-color-branded);
+    }
+
+    &[data-color='onbranded'] {
+        --cp-heading-color: var(--cp-text-color-onbranded);
+    }
+
+    &[data-color='danger'] {
+        --cp-heading-color: var(--cp-text-color-danger);
+    }
+
+    &[data-color='ondanger'] {
+        --cp-heading-color: var(--cp-text-color-ondanger);
+    }
+
+    &[data-color='success'] {
+        --cp-heading-color: var(--cp-text-color-success);
+    }
+
+    &[data-color='onsuccess'] {
+        --cp-heading-color: var(--cp-text-color-onsuccess);
+    }
+
+    &[data-color='info'] {
+        --cp-heading-color: var(--cp-text-color-info);
+    }
+
+    &[data-color='oninfo'] {
+        --cp-heading-color: var(--cp-text-color-oninfo);
+    }
+
+    &[data-color='onwarning'] {
+        --cp-heading-color: var(--cp-text-color-onwarning);
+    }
+
+    &[data-color='onneutral'] {
+        --cp-heading-color: var(--cp-text-color-onneutral);
+    }
+}

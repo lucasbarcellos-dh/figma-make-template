@@ -1,0 +1,68 @@
+.root {
+  --cp-quantity-selector-size: var(--cp-control-sizing-small);
+  --cp-quantity-selector-value-spacing-inline: var(--cp-control-spacing-xsmall);
+  --cp-quantity-selector-value-spacing-block: var(--cp-control-spacing-small);
+  --cp-quantity-selector-value-size: var(--cp-control-sizing-xsmall);
+  --cp-quantity-selector-value-font: var(--cp-desktop-subtitle-large);
+
+  /* ================================
+   * Default Styles
+   * size = "medium"
+   * ================================ */
+  box-sizing: border-box;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  height: var(--cp-quantity-selector-size);
+  background-color: var(--cp-quantity-selector-color-secondary);
+  color: var(--cp-text-color-primary);
+  border: var(--cp-control-border-width-small) solid
+    var(--cp-quantity-selector-color-primary);
+  border-radius: var(--cp-quantity-selector-border-radius-large);
+  padding-inline: calc(
+    var(--cp-control-spacing-xsmall) - var(--cp-control-border-width-small)
+  );
+
+  /* This style is needed because designers mentioned that the hover styles should NOT persist on touch devices. */
+  @media (hover: none) {
+    button:hover {
+      background-color: inherit;
+    }
+
+    button:active {
+      background-color: var(--cp-action-color-tertiary-hover);
+    }
+  }
+
+  button:not(:disabled) svg {
+    color: var(--cp-quantity-selector-color-tertiary);
+  }
+
+  &[data-size='small'] {
+    --cp-quantity-selector-size: var(--cp-control-sizing-xsmall);
+    --cp-quantity-selector-value-size: var(--cp-control-sizing-tiny);
+    --cp-quantity-selector-value-spacing-inline: var(--cp-control-spacing-tiny);
+    --cp-quantity-selector-value-spacing-block: var(
+      --cp-control-spacing-xsmall
+    );
+    --cp-quantity-selector-value-font: var(--cp-desktop-subtitle-medium);
+  }
+
+  &[data-size='large'] {
+    --cp-quantity-selector-size: var(--cp-control-sizing-medium);
+    --cp-quantity-selector-value-spacing-block: var(
+      --cp-control-spacing-medium
+    );
+  }
+}
+
+.value {
+  box-sizing: border-box;
+  min-width: var(--cp-quantity-selector-value-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: var(--cp-quantity-selector-value-font);
+  padding-inline: var(--cp-quantity-selector-value-spacing-inline);
+  padding-block: var(--cp-quantity-selector-value-spacing-block);
+}

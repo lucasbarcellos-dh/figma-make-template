@@ -2,9 +2,8 @@
 export default {
   content: [
     "./index.html",
-    "./App.tsx",
     "./main.tsx",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./figma-make-dist/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: "class",
   theme: {

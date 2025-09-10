@@ -1,56 +1,24 @@
-# Figma Make Template (Partner Portal)
+# Figma Make Template - Cape Design System
 
-A simple React TypeScript project with shadcn/ui components and Tailwind CSS.
+A customized shadcn/ui template adapted to use the Cape Design System for Figma Make.
 
-## Quick Start
+## Purpose
 
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
+This project transforms Figma Make's base shadcn/ui code to match Cape's design patterns and tokens, creating a reusable template.
 
-### Setup
+## Development Setup
 
-1. Install dependencies:
 ```bash
 npm install
-```
-
-2. Start the development server:
-```bash
 npm run dev
 ```
 
-### Available Scripts
+## Project Structure
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
+- `figma-make-dist/` - Clean template files for Figma Make transfer
+- `cape-design-system/` - Cape design tokens and components for reference
+- Development files (configs, etc.) remain in root
 
-### Project Structure
+## Usage
 
-```
-figma-make-base/
-├── components/
-│   ├── figma/          # Figma-specific components
-│   └── ui/             # shadcn/ui components
-├── styles/
-│   └── globals.css     # Global styles and CSS variables
-├── App.tsx             # Main application component
-└── main.tsx           # Application entry point
-```
-
-### Design System
-
-This project uses:
-- **Figtree** font family
-- Custom CSS variables for theming
-- Dark mode support
-- shadcn/ui component library
-- Tailwind CSS for styling
-
-### Notes
-
-- The project maintains Figma Make folder structure for easy integration
-- Components use CSS variables for consistent theming
-- All UI components are compatible with the Figma Make design system 
+The `figma-make-dist/` folder contains the final template files to upload back to Figma Make with Cape styling applied to all shadcn components. 

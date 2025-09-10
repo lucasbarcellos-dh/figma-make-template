@@ -21,4 +21,21 @@ npm run dev
 
 ## Usage
 
-The `figma-make-dist/` folder contains the final template files to upload back to Figma Make with Cape styling applied to all shadcn components. 
+The `figma-make-dist/` folder contains the final template files to upload back to Figma Make with Cape styling applied to all shadcn components.
+
+### Uploading to Figma Make
+
+1. Copy all files from `figma-make-dist/` folder
+2. Paste them into Figma Make with this prompt:
+
+```
+Replace all current code with the contents from the figma-make-dist folder I've uploaded. This folder contains:
+
+- components/ui/ - Updated shadcn components styled with Cape Design System
+- components/figma/ - Figma-specific components  
+- styles/globals.css - Updated global styles and design tokens
+- App.tsx - Component showcase/demo page
+- Guidelines.md - Usage guidelines
+
+Please maintain the exact folder structure and replace all existing files with these updated versions that implement the Cape Design System styling.
+``` 

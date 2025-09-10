@@ -67,6 +67,16 @@ const Checkbox = React.forwardRef<
 >(({ className, size, label, indeterminate, error, id, ...props }, ref) => {
   const checkboxId = id || React.useId();
 
+  // Handle indeterminate state properly
+  React.useEffect(() => {
+    if (ref && typeof ref === 'object' && ref.current) {
+      const checkboxElement = ref.current as HTMLButtonElement;
+      if (checkboxElement) {
+        checkboxElement.indeterminate = Boolean(indeterminate);
+      }
+    }
+  }, [indeterminate, ref]);
+
   const CheckboxComponent = (
     <CheckboxPrimitive.Root
       ref={ref}

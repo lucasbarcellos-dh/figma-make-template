@@ -46,7 +46,7 @@ export default function UITemplateBasic({
         />
         
         {/* Main Content */}
-        <main className="flex-1 overflow-auto">
+        <main className="flex-1 overflow-auto px-10 py-6">
           {children}
         </main>
       </div>

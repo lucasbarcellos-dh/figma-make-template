@@ -3,7 +3,7 @@ export default {
   content: [
     "./index.html",
     "./main.tsx",
-    "./figma-make-dist/**/*.{js,ts,jsx,tsx}",
+    "./cape-template/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: "class",
   theme: {

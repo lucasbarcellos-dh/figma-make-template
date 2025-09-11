@@ -44,7 +44,7 @@ interface MetricCardProps {
               className="box-border content-stretch flex flex-row gap-2 items-center justify-start p-0 relative shrink-0 w-full"
               data-name="Header"
             >
-              <div className="basis-0 flex flex-col font-['Figtree:SemiBold',_sans-serif] grow justify-center leading-[0] min-h-px min-w-px not-italic relative shrink-0 text-[#141415] text-[16px] text-left">
+              <div className="basis-0 flex flex-col font-semibold grow justify-center leading-[0] min-h-px min-w-px not-italic relative shrink-0 text-[#141415] text-[16px] text-left">
                 <p className="block leading-[1.5]">{title}</p>
               </div>
               <div className="relative shrink-0 size-4" data-name="info-circle">
@@ -77,7 +77,7 @@ interface MetricCardProps {
               >
                 {/* Value */}
                 <div
-                  className="box-border content-stretch flex flex-row font-['Figtree:Bold',_sans-serif] gap-1.5 items-baseline justify-start leading-[0] not-italic pl-0 pr-2 py-0 relative shrink-0 text-[#141415] text-left text-nowrap"
+                  className="box-border content-stretch flex flex-row font-bold gap-1.5 items-baseline justify-start leading-[0] not-italic pl-0 pr-2 py-0 relative shrink-0 text-[#141415] text-left text-nowrap"
                   data-name="Value"
                 >
                   <div className="flex flex-col justify-center relative shrink-0 text-[24px]">
@@ -94,7 +94,7 @@ interface MetricCardProps {
                   data-name="Variation"
                 >
                   <div 
-                    className="font-['Figtree:SemiBold',_sans-serif] leading-[0] not-italic relative shrink-0 text-[16px] text-left text-nowrap"
+                    className="font-semibold leading-[0] not-italic relative shrink-0 text-[16px] text-left text-nowrap"
                     style={{ color: variationColor }}
                   >
                     <p className="block leading-[1.5] whitespace-pre">{variation}</p>
@@ -142,13 +142,13 @@ interface MetricCardProps {
               )}
               
               {/* Subtitle */}
-              <div className="flex flex-col font-['Figtree:Medium',_sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#343437] text-[14px] text-left w-full">
+              <div className="flex flex-col font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#343437] text-[14px] text-left w-full">
                 <p className="block leading-[1.45]">{subtitle}</p>
               </div>
             </div>
             
             {/* Footer */}
-            <div className="flex flex-col font-['Figtree:Medium',_sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-[rgba(20,20,21,0.32)] text-left text-nowrap">
+            <div className="flex flex-col font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-[rgba(20,20,21,0.32)] text-left text-nowrap">
               <p className="block leading-[1.34] whitespace-pre">{footer}</p>
             </div>
           </div>

@@ -28,7 +28,7 @@ export default function HeaderPartnerPortal({
   onProfileClick
 }: HeaderPartnerPortalProps) {
   return (
-    <div className="flex flex-col gap-6 w-full px-12">
+    <div className="flex flex-col gap-6 w-full px-10">
       <div className="flex items-start justify-between gap-4 w-full">
         {/* Start - Title Section */}
         <div className="flex-1 pt-10 pb-0">

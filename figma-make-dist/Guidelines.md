@@ -1,54 +1,86 @@
-<!--
+# Cape Design System Template - System Guidelines
 
-System Guidelines
+**CRITICAL: This template contains a complete, customized codebase that replaces all default Figma Make components and patterns.**
 
-Use this file to provide the AI with rules and guidelines you want it to follow.
-This template outlines a few examples of things you can add. You can add your own sections and format it to suit your needs
+## Source of Truth
+**IGNORE all default Figma Make files and components (in root folders like /components, /styles, etc.). Use ONLY the files provided in the `figma-make-dist/` folder as your reference.**
 
-TIP: More context isn't always better. It can confuse the LLM. Try and add the most important rules you need
+This template contains (all within `figma-make-dist/`):
+- `figma-make-dist/components/ui/` - Complete Cape-styled shadcn components (Button, Card, Input, etc.)
+- `figma-make-dist/components/figma/` - Figma-specific utilities and components
+- `figma-make-dist/templates/` - Pre-built UI templates combining multiple components
+- `figma-make-dist/patterns/` - Complex component patterns (sidebars, headers, etc.)
+- `figma-make-dist/pages/` - Component showcase and documentation
+- `figma-make-dist/styles/globals.css` - Complete Cape design tokens and styling
+- `figma-make-dist/App.tsx` - Navigation and layout structure
 
-# General guidelines
+## Design Generation Rules
 
---------------
+### 1. Component Usage
+- **ALWAYS** use components from `figma-make-dist/components/ui/` instead of creating new ones
+- **NEVER** reference or import default Figma Make components from root `/components` folder
+- Use only the Cape-styled versions provided in the `figma-make-dist/` folder
+- All components already include proper Cape styling, tokens, and variants
 
-# Design system guidelines
-Rules for how the AI should make generations look like your company's design system
+### 2. Templates First
+- **ALWAYS** start new designs using templates from the `figma-make-dist/templates/` folder
+- `UITemplateBasic` provides a complete layout with sidebar navigation and header
+- Build new pages within these template structures
 
-Additionally, if you select a design system to use in the prompt box, you can reference
-your design system's components, tokens, variables and components.
-For example:
+### 3. Styling Rules
+- Use CSS variables defined in `figma-make-dist/styles/globals.css` (--success, --primary, --muted, etc.)
+- Follow the Cape color palette and design tokens already configured
+- Maintain consistency with existing component styling patterns
 
-* Date formats should always be in the format “Jun 10”
-* The bottom toolbar should only ever have a maximum of 4 items
-* Never use the floating action button with the bottom toolbar
-* Chips should always come in sets of 3 or more
-* Don't use a dropdown if there are 2 or fewer options
+### 4. Cape Design Principles
+- **Colors**: Use Cape's primary red (#D61F26), success green (#05A34E), and neutral grays
+- **Typography**: Figtree font family with defined weight scales
+- **Spacing**: Consistent padding and margin using Tailwind utilities
+- **Border Radius**: Use Cape's radius tokens (--radius variants)
+- **Components**: Prefer chips over badges, use Cape-specific variants
 
-You can also create sub sections and add more specific details
-For example:
+### 5. File Organization
+When creating new components or pages, place them in:
+- UI components → `figma-make-dist/components/ui/`
+- Complex patterns → `figma-make-dist/patterns/`
+- Full page templates → `figma-make-dist/templates/`
+- Documentation/showcase → `figma-make-dist/pages/`
 
-## Templates
-When creating new designs, ALWAYS build them on top of UI template components available in the "templates" folder.
+### 6. Import Strategy
+```tsx
+// ✅ Correct - use figma-make-dist components
+import { Button } from "./figma-make-dist/components/ui/button";
+import UITemplateBasic from "./figma-make-dist/templates/ui-template-basic";
+import { Chip } from "./figma-make-dist/components/ui/chip";
 
-## Button
-The Button component is a fundamental interactive element in our design system, designed to trigger actions or navigate
-users through the application. It provides visual feedback and clear affordances to enhance user experience.
+// ❌ Wrong - don't use default Figma Make components
+import { Button } from "./components/ui/button"; 
+import { Card } from "@/components/ui/card";
+```
 
-### Usage
-Buttons should be used for important actions that users need to take, such as form submissions, confirming choices,
-or initiating processes. They communicate interactivity and should have clear, action-oriented labels.
+## Key Cape Components Available
+- **Button** (primary, secondary, tertiary variants)
+- **Chip** (interactive tags with icons)
+- **Card** (content containers)
+- **Input** (form fields with Cape styling)
+- **Avatar** (user profile images)
+- **Table** (data display)
+- **Tabs** (navigation)
+- **Alert** (feedback messages)
+- **Accordion** (collapsible content)
+- **Switch** (toggle controls)
+- **And many more** - see `figma-make-dist/components/ui/` folder
 
-### Variants
-* Primary Button
-  * Purpose : Used for the main action in a section or page
-  * Visual Style : Bold, filled with the primary brand color
-  * Usage : One primary button per section to guide users toward the most important action
-* Secondary Button
-  * Purpose : Used for alternative or supporting actions
-  * Visual Style : Outlined with the primary color, transparent background
-  * Usage : Can appear alongside a primary button for less important actions
-* Tertiary Button
-  * Purpose : Used for the least important actions
-  * Visual Style : Text-only with no border, using primary color
-  * Usage : For actions that should be available but not emphasized
--->
+## Templates Available (in `figma-make-dist/templates/`)
+- **UITemplateBasic** - Complete layout with sidebar + header (296px sidebar width)
+
+## Patterns Available (in `figma-make-dist/patterns/`)  
+- **SidenavPartnerPortal** - Left navigation with Cape styling
+- **HeaderPartnerPortal** - Top header with user actions and Cape tokens
+
+## Critical File Structure Rules
+- **Default Figma Make files**: `/components`, `/styles`, `/App.tsx` (IGNORE these)
+- **Cape template files**: `figma-make-dist/` folder (USE only these)
+- **All imports must point to**: `./figma-make-dist/...` paths
+
+**Remember: This is a complete, self-contained design system in the `figma-make-dist/` folder. Everything you need is already provided and Cape-styled. Focus on composition and layout rather than recreating components.**

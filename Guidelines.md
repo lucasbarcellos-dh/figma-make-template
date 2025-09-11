@@ -28,28 +28,33 @@ This template contains (all within `cape-template/`):
 - Build new pages within these template structures
 - **Content Spacing**: Template handles padding (40px/px-10) - use `p-0` or no padding classes on your content
 
-### 3. Styling Rules
+### 3. Content Organization with Sections
+- **ALWAYS** organize first-level page content using the `ContentSection` pattern from `cape-template/patterns/content-section`
+- **Use ContentSection for top-level page organization only** - content inside sections doesn't need additional ContentSection wrapping
+- **Never create manual content containers** for first-level content - use ContentSection instead
+
+### 4. Styling Rules
 - **CRITICAL**: Always import Cape styles first: `import "./cape-template/styles/globals.css";`
 - Use CSS variables defined in `cape-template/styles/globals.css` (--success, --primary, --muted, etc.)
 - Follow the Cape color palette and design tokens already configured
 - Maintain consistency with existing component styling patterns
 - **Font**: All text should use Figtree font family (defined in Cape globals.css)
 
-### 4. Cape Design Principles
+### 5. Cape Design Principles
 - **Colors**: Use Cape's primary red (#D61F26), success green (#05A34E), and neutral grays
 - **Typography**: Figtree font family with defined weight scales
 - **Spacing**: Consistent padding and margin using Tailwind utilities
 - **Border Radius**: Use Cape's radius tokens (--radius variants)
 - **Components**: Prefer chips over badges, use Cape-specific variants
 
-### 5. File Organization
+### 6. File Organization
 When creating new components or pages, place them in:
 - UI components → `cape-template/components/ui/`
 - Complex patterns → `cape-template/patterns/`
 - Full page templates → `cape-template/templates/`
 - Documentation/showcase → `cape-template/pages/`
 
-### 6. Import Strategy
+### 7. Import Strategy
 ```tsx
 // ✅ Correct - ALWAYS import Cape styles first
 import "./cape-template/styles/globals.css";
@@ -58,11 +63,28 @@ import "./cape-template/styles/globals.css";
 import { Button } from "./cape-template/components/ui/button";
 import UITemplateBasic from "./cape-template/templates/ui-template-basic";
 import { Chip } from "./cape-template/components/ui/chip";
+import { ContentSection } from "./cape-template/patterns/content-section";
 
-// ✅ Correct - content structure (no padding, template handles it)
+// ✅ Correct - content structure using ContentSection for first-level organization
 <UITemplateBasic title="Dashboard">
   <div className="space-y-6"> {/* No padding classes */}
-    <h2>Content goes here</h2>
+    <ContentSection title="User Stats">
+      <div className="space-y-4"> {/* Regular divs and styling inside sections */}
+        <p>User information here</p>
+        <div className="grid grid-cols-2 gap-4">
+          <div className="p-4 bg-muted rounded">Stat 1</div>
+          <div className="p-4 bg-muted rounded">Stat 2</div>
+        </div>
+      </div>
+    </ContentSection>
+    
+    <ContentSection title="Analytics">
+      <div className="grid grid-cols-3 gap-4">
+        {/* Metrics cards - no nested ContentSections */}
+        <MetricCard title="Orders" value="1,248" />
+        <MetricCard title="Revenue" value="$45,230" />
+      </div>
+    </ContentSection>
   </div>
 </UITemplateBasic>
 
@@ -75,6 +97,19 @@ import { Card } from "@/components/ui/card";
 
 // ❌ Wrong - don't add padding (template handles it)
 <div className="p-6"> {/* Don't do this */}
+
+// ❌ Wrong - don't create manual first-level content containers
+<div className="border rounded-lg p-4"> {/* Use ContentSection for first-level */}
+  <h3>Manual Section</h3>
+  <p>Content here</p>
+</div>
+
+// ❌ Wrong - don't nest ContentSections inside ContentSections
+<ContentSection title="Main Section">
+  <ContentSection title="Nested Section"> {/* Don't do this */}
+    <p>Over-organized content</p>
+  </ContentSection>
+</ContentSection>
 ```
 
 ## Key Cape Components Available
@@ -96,6 +131,7 @@ import { Card } from "@/components/ui/card";
 ## Patterns Available (in `cape-template/patterns/`)  
 - **SidenavPartnerPortal** - Left navigation with Cape styling
 - **HeaderPartnerPortal** - Top header with user actions and Cape tokens
+- **ContentSection** - Standardized content containers with borders and section headers
 
 ## Critical File Structure Rules
 - **Default Figma Make files**: `/components`, `/styles`, `/App.tsx` (IGNORE these)

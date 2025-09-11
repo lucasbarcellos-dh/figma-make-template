@@ -69,7 +69,6 @@ function TableHeader({ className, sticky, ...props }: TableHeaderProps) {
       data-slot="table-header"
       data-sticky={sticky ? "true" : "false"}
       className={cn(
-        "bg-white",
         sticky && "sticky top-0 z-10 shadow-sm",
         "[&_tr]:border-b [&_tr]:border-gray-300",
         className
@@ -136,7 +135,7 @@ function TableHead({ className, ...props }: React.ComponentProps<"th">) {
     <th
       data-slot="table-head"
       className={cn(
-        "text-left align-top font-semibold text-gray-900",
+        "text-left align-top font-semibold text-gray-900 px-4",
         "whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
         className,
       )}
@@ -150,7 +149,7 @@ function TableCell({ className, ...props }: React.ComponentProps<"td">) {
     <td
       data-slot="table-cell"
       className={cn(
-        "align-top text-gray-900",
+        "align-top text-gray-900 px-4",
         "whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
         className,
       )}

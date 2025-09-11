@@ -13,6 +13,7 @@ import { NavigationPage } from "./pages/NavigationPage";
 // Import patterns
 import SidenavPartnerPortal from "./patterns/sidenav-partner-portal";
 import HeaderPartnerPortal from "./patterns/header-partner-portal";
+import ContentSectionPage from "./patterns/content-section";
 
 // Import templates
 import UITemplateBasic from "./templates/ui-template-basic";
@@ -42,6 +43,7 @@ function App() {
     { id: "navigation", label: "Navigation", component: NavigationPage, section: "components" },
     
     // Patterns section
+    { id: "patterns-showcase", label: "Content Sections", component: ContentSectionPage, section: "patterns" },
     { id: "sidenav-partner", label: "Partner Portal Sidenav", component: SidenavPartnerPortal, section: "patterns" },
     { id: "header-partner", label: "Partner Portal Header", component: HeaderPartnerPortal, section: "patterns" },
     
@@ -62,14 +64,6 @@ function App() {
     const currentItem = navigationItems.find(item => item.id === currentPage);
     if (currentItem && currentItem.component) {
       const PageComponent = currentItem.component;
-      // For patterns and templates, render without additional wrapper padding
-      if (currentItem.section === "patterns" || currentItem.section === "templates") {
-        return (
-          <div className="h-[calc(100vh-2rem)] -m-8">
-            <PageComponent />
-          </div>
-        );
-      }
       return <PageComponent />;
     }
     return <OverviewPage />; // fallback

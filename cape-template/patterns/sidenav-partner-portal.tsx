@@ -122,24 +122,28 @@ export default function SidenavPartnerPortal() {
   ];
 
   return (
-    <div className="flex h-full w-full bg-white">
-      <aside className="flex flex-col w-full bg-white border-r border-[#f4f5f6]">
-        {/* Header with Logo */}
-        <PartnerLogo />
-        
-        {/* Navigation Sections */}
-        <nav className="flex-1 overflow-y-auto">
-          <div className="flex flex-col gap-5">
-            {navigationSections.map((section, index) => (
-              <SidenavSection 
-                key={index}
-                title={section.title}
-                items={section.items}
-              />
-            ))}
-          </div>
-        </nav>
-      </aside>
+    <div className="space-y-12">
+      <section className="space-y-4">
+        <div className="flex h-full w-full bg-white">
+          <aside className="flex flex-col w-full bg-white border-r border-[#f4f5f6]">
+            {/* Header with Logo */}
+            <PartnerLogo />
+            
+            {/* Navigation Sections */}
+            <nav className="flex-1 overflow-y-auto">
+              <div className="flex flex-col gap-5">
+                {navigationSections.map((section, index) => (
+                  <SidenavSection 
+                    key={index}
+                    title={section.title}
+                    items={section.items}
+                  />
+                ))}
+              </div>
+            </nav>
+          </aside>
+        </div>
+      </section>
     </div>
   );
 }

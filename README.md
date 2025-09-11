@@ -33,9 +33,10 @@ Replace all current code with the contents from the figma-make-dist folder I've 
 
 - components/ui/ - Updated shadcn components styled with Cape Design System
 - components/figma/ - Figma-specific components  
+- pages/ - Component showcase pages
 - styles/globals.css - Updated global styles and design tokens
-- App.tsx - Component showcase/demo page
+- App.tsx - Main application with organized navigation
 - Guidelines.md - Usage guidelines
 
-Please maintain the exact folder structure and replace all existing files with these updated versions that implement the Cape Design System styling.
+Please maintain the exact folder structure and replace all existing files with these updated versions that implement the Cape Design System styling with organized component categories.
 ``` 

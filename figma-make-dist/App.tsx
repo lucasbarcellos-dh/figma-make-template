@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, Component, Layout } from "lucide-react";
+import { Menu, Component, Layout, Layers } from "lucide-react";
 
 // Import all page components
 import { OverviewPage } from "./pages/OverviewPage";
@@ -14,7 +14,10 @@ import { NavigationPage } from "./pages/NavigationPage";
 import SidenavPartnerPortal from "./patterns/sidenav-partner-portal";
 import HeaderPartnerPortal from "./patterns/header-partner-portal";
 
-type NavSection = "components" | "patterns";
+// Import templates
+import UITemplateBasic from "./templates/ui-template-basic";
+
+type NavSection = "components" | "patterns" | "templates";
 
 interface NavigationItem {
   id: string;
@@ -41,10 +44,14 @@ function App() {
     // Patterns section
     { id: "sidenav-partner", label: "Partner Portal Sidenav", component: SidenavPartnerPortal, section: "patterns" },
     { id: "header-partner", label: "Partner Portal Header", component: HeaderPartnerPortal, section: "patterns" },
+    
+    // Templates section
+    { id: "ui-template-basic", label: "UI Template Basic", component: UITemplateBasic, section: "templates" },
   ];
 
   const componentItems = navigationItems.filter(item => item.section === "components");
   const patternItems = navigationItems.filter(item => item.section === "patterns");
+  const templateItems = navigationItems.filter(item => item.section === "templates");
 
   const navigateToPage = (pageId: string) => {
     setCurrentPage(pageId);
@@ -55,8 +62,8 @@ function App() {
     const currentItem = navigationItems.find(item => item.id === currentPage);
     if (currentItem && currentItem.component) {
       const PageComponent = currentItem.component;
-      // For patterns, render without additional wrapper padding
-      if (currentItem.section === "patterns") {
+      // For patterns and templates, render without additional wrapper padding
+      if (currentItem.section === "patterns" || currentItem.section === "templates") {
         return (
           <div className="h-[calc(100vh-2rem)] -m-8">
             <PageComponent />
@@ -120,6 +127,12 @@ function App() {
               "Patterns",
               <Layout className="w-4 h-4" />,
               patternItems
+            )}
+            
+            {renderNavSection(
+              "Templates",
+              <Layers className="w-4 h-4" />,
+              templateItems
             )}
           </nav>
         </div>

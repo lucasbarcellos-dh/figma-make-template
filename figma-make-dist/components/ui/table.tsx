@@ -12,15 +12,15 @@ const tableVariants = cva(
       size: {
         small: [
           "[&_th]:min-h-12 [&_td]:min-h-12",
-          "[&_th]:px-2 [&_th]:py-2",
-          "[&_td]:px-2 [&_td]:py-2",
+          "[&_th]:py-2",
+          "[&_td]:py-2",
           "[&_th]:text-sm [&_td]:text-sm",
           "[&_th]:leading-[145%] [&_td]:leading-[145%]"
         ],
         medium: [
           "[&_th]:min-h-14 [&_td]:min-h-14", 
-          "[&_th]:px-2 [&_th]:py-3",
-          "[&_td]:px-2 [&_td]:py-3", 
+          "[&_th]:py-3",
+          "[&_td]:py-3", 
           "[&_th]:text-sm [&_td]:text-base",
           "[&_th]:leading-[150%] [&_td]:leading-[150%]"
         ]

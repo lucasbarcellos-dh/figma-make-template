@@ -11,9 +11,9 @@ const tabsVariants = cva(
   {
     variants: {
       size: {
-        small: "[&_[data-slot=tabs-list]]:gap-2 [&_[data-slot=tabs-trigger]]:text-sm [&_[data-slot=tabs-trigger]]:px-2 [&_[data-slot=tabs-trigger]]:py-2",
-        medium: "[&_[data-slot=tabs-list]]:gap-2 [&_[data-slot=tabs-trigger]]:text-base [&_[data-slot=tabs-trigger]]:px-2 [&_[data-slot=tabs-trigger]]:py-2",
-        large: "[&_[data-slot=tabs-list]]:gap-3 [&_[data-slot=tabs-trigger]]:text-lg [&_[data-slot=tabs-trigger]]:px-2 [&_[data-slot=tabs-trigger]]:py-2"
+        small: "[&_[data-slot=tabs-list]]:gap-4 [&_[data-slot=tabs-trigger]]:text-sm [&_[data-slot=tabs-trigger]]:py-2",
+        medium: "[&_[data-slot=tabs-list]]:gap-4 [&_[data-slot=tabs-trigger]]:text-base [&_[data-slot=tabs-trigger]]:py-2",
+        large: "[&_[data-slot=tabs-list]]:gap-4 [&_[data-slot=tabs-trigger]]:text-lg [&_[data-slot=tabs-trigger]]:py-2"
       },
       divider: {
         true: "[&_[data-slot=tabs-list]]:border-b [&_[data-slot=tabs-list]]:--border",

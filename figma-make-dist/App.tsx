@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu } from "lucide-react";
+import { Menu, Component, Layout } from "lucide-react";
 
 // Import all page components
 import { OverviewPage } from "./pages/OverviewPage";
@@ -10,20 +10,41 @@ import { OverlayPage } from "./pages/OverlayPage";
 import { FeedbackPage } from "./pages/FeedbackPage";
 import { NavigationPage } from "./pages/NavigationPage";
 
+// Import patterns
+import SidenavPartnerPortal from "./patterns/sidenav-partner-portal";
+import HeaderPartnerPortal from "./patterns/header-partner-portal";
+
+type NavSection = "components" | "patterns";
+
+interface NavigationItem {
+  id: string;
+  label: string;
+  component: React.ComponentType;
+  section: NavSection;
+}
+
 function App() {
   // Navigation state
   const [currentPage, setCurrentPage] = useState("overview");
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  const navigationItems = [
-    { id: "overview", label: "Overview", component: OverviewPage },
-    { id: "action", label: "Action", component: ActionPage },
-    { id: "form", label: "Form", component: FormPage },
-    { id: "content", label: "Content", component: ContentPage },
-    { id: "overlay", label: "Overlay", component: OverlayPage },
-    { id: "feedback", label: "Feedback", component: FeedbackPage },
-    { id: "navigation", label: "Navigation", component: NavigationPage },
+  const navigationItems: NavigationItem[] = [
+    // Components section
+    { id: "overview", label: "Overview", component: OverviewPage, section: "components" },
+    { id: "action", label: "Action", component: ActionPage, section: "components" },
+    { id: "form", label: "Form", component: FormPage, section: "components" },
+    { id: "content", label: "Content", component: ContentPage, section: "components" },
+    { id: "overlay", label: "Overlay", component: OverlayPage, section: "components" },
+    { id: "feedback", label: "Feedback", component: FeedbackPage, section: "components" },
+    { id: "navigation", label: "Navigation", component: NavigationPage, section: "components" },
+    
+    // Patterns section
+    { id: "sidenav-partner", label: "Partner Portal Sidenav", component: SidenavPartnerPortal, section: "patterns" },
+    { id: "header-partner", label: "Partner Portal Header", component: HeaderPartnerPortal, section: "patterns" },
   ];
+
+  const componentItems = navigationItems.filter(item => item.section === "components");
+  const patternItems = navigationItems.filter(item => item.section === "patterns");
 
   const navigateToPage = (pageId: string) => {
     setCurrentPage(pageId);
@@ -34,9 +55,45 @@ function App() {
     const currentItem = navigationItems.find(item => item.id === currentPage);
     if (currentItem && currentItem.component) {
       const PageComponent = currentItem.component;
+      // For patterns, render without additional wrapper padding
+      if (currentItem.section === "patterns") {
+        return (
+          <div className="h-[calc(100vh-2rem)] -m-8">
+            <PageComponent />
+          </div>
+        );
+      }
       return <PageComponent />;
     }
     return <OverviewPage />; // fallback
+  };
+
+  const renderNavSection = (title: string, icon: React.ReactNode, items: NavigationItem[]) => {
+    if (items.length === 0) return null;
+    
+    return (
+      <div className="space-y-1">
+        <div className="flex items-center gap-2 px-3 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+          {icon}
+          <span>{title}</span>
+        </div>
+        {items.map((item) => (
+          <button
+            key={item.id}
+            onClick={() => navigateToPage(item.id)}
+            className={`
+              w-full flex items-center gap-3 px-3 py-2 text-left rounded-md transition-colors
+              ${currentPage === item.id 
+                ? 'bg-primary text-primary-foreground' 
+                : 'hover:bg-accent hover:text-accent-foreground'
+              }
+            `}
+          >
+            <span className="flex-1">{item.label}</span>
+          </button>
+        ))}
+      </div>
+    );
   };
 
   return (
@@ -49,32 +106,22 @@ function App() {
       `}>
         <div className="flex flex-col h-full">
           <div className="p-6 border-b">
-            <h2 className="text-lg font-semibold">Components</h2>
+            <h2 className="text-lg font-semibold">Cape Design System</h2>
           </div>
           
-          <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
-            {navigationItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => navigateToPage(item.id)}
-                className={`
-                  w-full flex items-center gap-3 px-3 py-2 text-left rounded-md transition-colors
-                  ${currentPage === item.id 
-                    ? 'bg-primary text-primary-foreground' 
-                    : 'hover:bg-accent hover:text-accent-foreground'
-                  }
-                `}
-              >
-                <span className="flex-1">{item.label}</span>
-              </button>
-            ))}
+          <nav className="flex-1 p-4 space-y-6 overflow-y-auto">
+            {renderNavSection(
+              "Components",
+              <Component className="w-4 h-4" />,
+              componentItems
+            )}
+            
+            {renderNavSection(
+              "Patterns",
+              <Layout className="w-4 h-4" />,
+              patternItems
+            )}
           </nav>
-          
-          <div className="p-4 border-t">
-            <p className="text-xs text-muted-foreground">
-              Cape Design System Components
-            </p>
-          </div>
         </div>
       </aside>
 

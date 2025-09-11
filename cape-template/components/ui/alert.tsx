@@ -1,50 +1,17 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { X } from "lucide-react";
+import { X, CheckCircle, Info, AlertTriangle, XCircle, Star } from "lucide-react";
 
 import { cn } from "./utils";
 
-// Default icons for each variant (using Lucide icons as placeholders)
+// Default icons for each variant using Lucide icons
 const defaultIcons = {
-  branded: (
-    <svg className="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <circle cx="12" cy="12" r="10"/>
-      <path d="m9 12 2 2 4-4"/>
-    </svg>
-  ),
-  info: (
-    <svg className="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <circle cx="12" cy="12" r="10"/>
-      <path d="m9 12 2 2 4-4"/>
-    </svg>
-  ),
-  success: (
-    <svg className="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z"/>
-      <path d="m9 12 2 2 4-4"/>
-    </svg>
-  ),
-  warning: (
-    <svg className="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
-      <path d="M12 9v4"/>
-      <path d="m12 17.02.01 0"/>
-    </svg>
-  ),
-  error: (
-    <svg className="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <circle cx="12" cy="12" r="10"/>
-      <path d="m15 9-6 6"/>
-      <path d="m9 9 6 6"/>
-    </svg>
-  ),
-  neutral: (
-    <svg className="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <circle cx="12" cy="12" r="10"/>
-      <path d="M12 16v-4"/>
-      <path d="m12 8.02.01 0"/>
-    </svg>
-  ),
+  branded: <Star className="size-4" />,
+  info: <Info className="size-4" />,
+  success: <CheckCircle className="size-4" />,
+  warning: <AlertTriangle className="size-4" />,
+  error: <XCircle className="size-4" />,
+  neutral: <Info className="size-4" />,
 };
 
 const alertVariants = cva(

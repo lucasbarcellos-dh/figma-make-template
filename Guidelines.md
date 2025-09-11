@@ -32,6 +32,8 @@ This template contains (all within `cape-template/`):
 - **ALWAYS** organize first-level page content using the `ContentSection` pattern from `cape-template/patterns/content-section`
 - **Use ContentSection for top-level page organization only** - content inside sections doesn't need additional ContentSection wrapping
 - **Never create manual content containers** for first-level content - use ContentSection instead
+- **Container Guidelines**: When a section contains already-contained elements (Cards, Tables, etc.), render them directly without additional container wrapping since they are already self-contained
+- **Spacing Guidelines**: Components with internal padding (Tables, Lists, etc.) should be rendered directly without additional spacing containers, as they already provide proper internal spacing
 
 ### 4. Styling Rules
 - **CRITICAL**: Always import Cape styles first: `import "./cape-template/styles/globals.css";`
@@ -109,6 +111,66 @@ import { Card } from "@/components/ui/card";
   <ContentSection title="Nested Section"> {/* Don't do this */}
     <p>Over-organized content</p>
   </ContentSection>
+</ContentSection>
+
+// ✅ Correct - Cards and self-contained components don't need extra containers
+<ContentSection title="Overview">
+  <div className="grid grid-cols-4 gap-4">
+    <MetricCard title="Total Orders" value="1,248" /> {/* Cards are already contained */}
+    <MetricCard title="Revenue" value="$45,230" />
+    <MetricCard title="Active Users" value="892" />
+    <MetricCard title="Conversion Rate" value="3.4%" />
+  </div>
+</ContentSection>
+
+// ❌ Wrong - don't wrap already-contained elements in additional containers
+<ContentSection title="Overview">
+  <div className="border rounded-lg p-4"> {/* Unnecessary container */}
+    <div className="grid grid-cols-4 gap-4">
+      <MetricCard title="Total Orders" value="1,248" />
+      <MetricCard title="Revenue" value="$45,230" />
+    </div>
+  </div>
+</ContentSection>
+
+// ✅ Correct - Tables and Lists render directly without extra spacing
+<ContentSection title="Recent Orders">
+  <Table> {/* Table has internal padding - no wrapper needed */}
+    <TableHeader>
+      <TableRow>
+        <TableHead>Order ID</TableHead>
+        <TableHead>Customer</TableHead>
+        <TableHead>Amount</TableHead>
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      <TableRow>
+        <TableCell>ORD-001</TableCell>
+        <TableCell>Alice Johnson</TableCell>
+        <TableCell>$245.00</TableCell>
+      </TableRow>
+    </TableBody>
+  </Table>
+</ContentSection>
+
+// ❌ Wrong - don't add extra spacing around components with internal padding
+<ContentSection title="Recent Orders">
+  <div className="p-4"> {/* Unnecessary padding */}
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHead>Order ID</TableHead>
+          <TableHead>Customer</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>ORD-001</TableCell>
+          <TableCell>Alice Johnson</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  </div>
 </ContentSection>
 ```
 

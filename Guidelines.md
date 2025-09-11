@@ -34,6 +34,7 @@ This template contains (all within `cape-template/`):
 - **Never create manual content containers** for first-level content - use ContentSection instead
 - **Container Guidelines**: When a section contains already-contained elements (Cards, Tables, etc.), render them directly without additional container wrapping since they are already self-contained
 - **Spacing Guidelines**: Components with internal padding (Tables, Lists, etc.) should be rendered directly without additional spacing containers, as they already provide proper internal spacing
+- **REFERENCE EXAMPLES**: See `cape-template/patterns/content-section` for concrete examples of correct structure with Cards, Tables, and Lists
 
 ### 4. Styling Rules
 - **CRITICAL**: Always import Cape styles first: `import "./cape-template/styles/globals.css";`

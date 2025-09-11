@@ -1,5 +1,4 @@
 import { 
-  CircleCheckBig,
   HelpCircle, 
   Bell
 } from "lucide-react";
@@ -29,10 +28,10 @@ export default function HeaderPartnerPortal({
   onProfileClick
 }: HeaderPartnerPortalProps) {
   return (
-    <div className="flex flex-col gap-6 pb-8 pt-0 w-full">
+    <div className="flex flex-col gap-6 w-full px-12">
       <div className="flex items-start justify-between gap-4 w-full">
         {/* Start - Title Section */}
-        <div className="flex-1 pt-2 pb-0 mb-[-8px]">
+        <div className="flex-1 pt-10 pb-0">
           <h1 className="text-[36px] font-bold text-[#141415] leading-[1.25]" style={{ fontFamily: 'Figtree, sans-serif' }}>
             {title}
           </h1>
@@ -46,10 +45,13 @@ export default function HeaderPartnerPortal({
             size="medium"
             selected={false}
             startIcon={
-              <CircleCheckBig className="size-4" style={{ color: isOpen ? '#22c55e' : '#9ca3af' }} />
+              <div 
+                className="size-4 rounded-full" 
+                style={{ backgroundColor: isOpen ? 'var(--success)' : '#9ca3af' }} 
+              />
             }
             onClick={onOpenClick}
-            className="min-h-[48px] px-3 bg-[rgba(255,255,255,0.01)] border-[#e9eaec] rounded-[200px] [&>div]:gap-1 [&_span]:text-[16px] [&_span]:font-semibold"
+            className="min-h-[48px] px-4 bg-[rgba(255,255,255,0.01)] border-[#e9eaec] rounded-[200px] gap-2.5 [&_span]:text-[16px] [&_span]:font-semibold"
             style={{ fontFamily: 'Figtree, sans-serif' }}
           />
 
@@ -58,9 +60,9 @@ export default function HeaderPartnerPortal({
             label="Help"
             size="medium"
             selected={false}
-            startIcon={<HelpCircle className="size-5" />}
+            startIcon={<HelpCircle style={{ width: '20px', height: '20px' }} />}
             onClick={onHelpClick}
-            className="min-h-[48px] px-3 bg-[rgba(255,255,255,0.01)] border-[#e9eaec] rounded-[200px] [&>div]:gap-1 [&_span]:text-[16px] [&_span]:font-semibold"
+            className="min-h-[48px] px-4 bg-[rgba(255,255,255,0.01)] border-[#e9eaec] rounded-[200px] gap-2.5 [&_span]:text-[16px] [&_span]:font-semibold"
             style={{ fontFamily: 'Figtree, sans-serif' }}
           />
 

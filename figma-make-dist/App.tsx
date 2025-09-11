@@ -17,12 +17,12 @@ function App() {
 
   const navigationItems = [
     { id: "overview", label: "Overview", component: OverviewPage },
-    { id: "action", label: "Action", status: "completed", component: ActionPage },
-    { id: "form", label: "Form", status: "completed", component: FormPage },
-    { id: "content", label: "Content", status: "completed", component: ContentPage },
-    { id: "overlay", label: "Overlay", status: "completed", component: OverlayPage },
-    { id: "feedback", label: "Feedback", status: "completed", component: FeedbackPage },
-    { id: "navigation", label: "Navigation", status: "completed", component: NavigationPage },
+    { id: "action", label: "Action", component: ActionPage },
+    { id: "form", label: "Form", component: FormPage },
+    { id: "content", label: "Content", component: ContentPage },
+    { id: "overlay", label: "Overlay", component: OverlayPage },
+    { id: "feedback", label: "Feedback", component: FeedbackPage },
+    { id: "navigation", label: "Navigation", component: NavigationPage },
   ];
 
   const navigateToPage = (pageId: string) => {
@@ -66,22 +66,14 @@ function App() {
                 `}
               >
                 <span className="flex-1">{item.label}</span>
-                {item.status === 'completed' && (
-                  <span className="text-xs bg-success/20 text-success px-2 py-0.5 rounded-full">
-                    ✓
-                  </span>
-                )}
               </button>
             ))}
           </nav>
           
           <div className="p-4 border-t">
             <p className="text-xs text-muted-foreground">
-              6/6 Component categories completed
+              Cape Design System Components
             </p>
-            <div className="w-full bg-secondary rounded-full h-2 mt-2">
-              <div className="bg-success h-2 rounded-full" style={{ width: '100%' }}></div>
-            </div>
           </div>
         </div>
       </aside>

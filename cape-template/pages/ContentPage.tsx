@@ -7,6 +7,7 @@ import { Chip } from "../components/ui/chip";
 import TileCard from "../components/ui/tile-card";
 import { PromptCard } from "../components/ui/prompt-card";
 import { List, ListItem, ListItemText } from "../components/ui/list";
+import MetricCard from "../components/ui/metric-card";
 
 export function ContentPage() {
   const [selectedCard, setSelectedCard] = useState<string | null>(null);
@@ -126,6 +127,74 @@ export function ContentPage() {
                 variant="minimal"
                 title="Reports"
               />
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-medium mb-3">Metric Cards</h3>
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-md font-medium mb-3">Basic Metrics</h4>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <MetricCard
+                    title="Total Orders"
+                    value="1,248"
+                    unit="orders"
+                    variation="12.5%"
+                    subtitle="vs last month"
+                    footer="Last updated: 2 hours ago"
+                    isPositive={true}
+                  />
+                  <MetricCard
+                    title="Revenue"
+                    value="$45,230"
+                    unit=""
+                    variation="8.2%"
+                    subtitle="vs last month"
+                    footer="Last updated: 2 hours ago"
+                    isPositive={true}
+                  />
+                  <MetricCard
+                    title="Return Rate"
+                    value="2.4"
+                    unit="%"
+                    variation="0.8%"
+                    subtitle="vs last month"
+                    footer="Last updated: 3 hours ago"
+                    isPositive={false}
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <h4 className="text-md font-medium mb-3">With Progress Bars</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <MetricCard
+                    title="Customer Satisfaction"
+                    value="4.8"
+                    unit="/5"
+                    variation="3.1%"
+                    subtitle="based on 1,247 reviews"
+                    footer="Last updated: 1 hour ago"
+                    isPositive={true}
+                    showProgress={true}
+                    progressValue={96}
+                    progressColor="var(--success)"
+                  />
+                  <MetricCard
+                    title="Monthly Goal"
+                    value="78"
+                    unit="%"
+                    variation="15.2%"
+                    subtitle="of target achieved"
+                    footer="15 days remaining"
+                    isPositive={true}
+                    showProgress={true}
+                    progressValue={78}
+                    progressColor="var(--primary)"
+                  />
+                </div>
+              </div>
             </div>
           </div>
 

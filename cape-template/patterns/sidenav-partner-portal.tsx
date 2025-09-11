@@ -48,7 +48,7 @@ function SidenavItem({ icon: Icon, label, selected, onClick }: NavItem) {
         )}
         onClick={onClick}
       >
-        <Icon className="h-6 w-6 shrink-0" />
+        <Icon className="h-5 w-5 shrink-0" />
         <span className={cn(
           "flex-1 text-[16px] leading-[1.5]",
           selected ? "font-semibold" : "font-medium"
@@ -68,7 +68,7 @@ function SidenavSection({ title, items }: NavSection) {
     <div className="flex flex-col gap-1">
       {title && (
         <div className="px-8 py-0">
-          <p className="text-[14px] leading-[1.45] text-muted-foreground/50 font-medium">
+          <p className="text-[14px] leading-[1.45] text-muted-foreground font-medium">
             {title}
           </p>
         </div>

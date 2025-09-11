@@ -3,33 +3,33 @@
 **CRITICAL: This template contains a complete, customized codebase that replaces all default Figma Make components and patterns.**
 
 ## Source of Truth
-**IGNORE all default Figma Make files and components (in root folders like /components, /styles, etc.). Use ONLY the files provided in the `figma-make-dist/` folder as your reference.**
+**IGNORE all default Figma Make files and components (in root folders like /components, /styles, etc.). Use ONLY the files provided in the `cape-template/` folder as your reference.**
 
-This template contains (all within `figma-make-dist/`):
-- `figma-make-dist/components/ui/` - Complete Cape-styled shadcn components (Button, Card, Input, etc.)
-- `figma-make-dist/components/figma/` - Figma-specific utilities and components
-- `figma-make-dist/templates/` - Pre-built UI templates combining multiple components
-- `figma-make-dist/patterns/` - Complex component patterns (sidebars, headers, etc.)
-- `figma-make-dist/pages/` - Component showcase and documentation
-- `figma-make-dist/styles/globals.css` - Complete Cape design tokens and styling
-- `figma-make-dist/App.tsx` - Navigation and layout structure
+This template contains (all within `cape-template/`):
+- `cape-template/components/ui/` - Complete Cape-styled shadcn components (Button, Card, Input, etc.)
+- `cape-template/components/figma/` - Figma-specific utilities and components
+- `cape-template/templates/` - Pre-built UI templates combining multiple components
+- `cape-template/patterns/` - Complex component patterns (sidebars, headers, etc.)
+- `cape-template/pages/` - Component showcase and documentation
+- `cape-template/styles/globals.css` - Complete Cape design tokens and styling
+- `cape-template/App.tsx` - Navigation and layout structure
 
 ## Design Generation Rules
 
 ### 1. Component Usage
-- **ALWAYS** use components from `figma-make-dist/components/ui/` instead of creating new ones
+- **ALWAYS** use components from `cape-template/components/ui/` instead of creating new ones
 - **NEVER** reference or import default Figma Make components from root `/components` folder
-- Use only the Cape-styled versions provided in the `figma-make-dist/` folder
+- Use only the Cape-styled versions provided in the `cape-template/` folder
 - All components already include proper Cape styling, tokens, and variants
 
 ### 2. Templates First
-- **ALWAYS** start new designs using templates from the `figma-make-dist/templates/` folder
+- **ALWAYS** start new designs using templates from the `cape-template/templates/` folder
 - `UITemplateBasic` provides a complete layout with sidebar navigation and header
 - Build new pages within these template structures
 - **Content Spacing**: Template handles padding (40px/px-10) - use `p-0` or no padding classes on your content
 
 ### 3. Styling Rules
-- Use CSS variables defined in `figma-make-dist/styles/globals.css` (--success, --primary, --muted, etc.)
+- Use CSS variables defined in `cape-template/styles/globals.css` (--success, --primary, --muted, etc.)
 - Follow the Cape color palette and design tokens already configured
 - Maintain consistency with existing component styling patterns
 
@@ -42,17 +42,17 @@ This template contains (all within `figma-make-dist/`):
 
 ### 5. File Organization
 When creating new components or pages, place them in:
-- UI components → `figma-make-dist/components/ui/`
-- Complex patterns → `figma-make-dist/patterns/`
-- Full page templates → `figma-make-dist/templates/`
-- Documentation/showcase → `figma-make-dist/pages/`
+- UI components → `cape-template/components/ui/`
+- Complex patterns → `cape-template/patterns/`
+- Full page templates → `cape-template/templates/`
+- Documentation/showcase → `cape-template/pages/`
 
 ### 6. Import Strategy
 ```tsx
-// ✅ Correct - use figma-make-dist components and templates
-import { Button } from "./figma-make-dist/components/ui/button";
-import UITemplateBasic from "./figma-make-dist/templates/ui-template-basic";
-import { Chip } from "./figma-make-dist/components/ui/chip";
+// ✅ Correct - use cape-template components and templates
+import { Button } from "./cape-template/components/ui/button";
+import UITemplateBasic from "./cape-template/templates/ui-template-basic";
+import { Chip } from "./cape-template/components/ui/chip";
 
 // ✅ Correct - content structure (no padding, template handles it)
 <UITemplateBasic title="Dashboard">
@@ -80,18 +80,18 @@ import { Card } from "@/components/ui/card";
 - **Alert** (feedback messages)
 - **Accordion** (collapsible content)
 - **Switch** (toggle controls)
-- **And many more** - see `figma-make-dist/components/ui/` folder
+- **And many more** - see `cape-template/components/ui/` folder
 
-## Templates Available (in `figma-make-dist/templates/`)
+## Templates Available (in `cape-template/templates/`)
 - **UITemplateBasic** - Complete layout with sidebar + header (296px sidebar width)
 
-## Patterns Available (in `figma-make-dist/patterns/`)  
+## Patterns Available (in `cape-template/patterns/`)  
 - **SidenavPartnerPortal** - Left navigation with Cape styling
 - **HeaderPartnerPortal** - Top header with user actions and Cape tokens
 
 ## Critical File Structure Rules
 - **Default Figma Make files**: `/components`, `/styles`, `/App.tsx` (IGNORE these)
-- **Cape template files**: `figma-make-dist/` folder (USE only these)
-- **All imports must point to**: `./figma-make-dist/...` paths
+- **Cape template files**: `cape-template/` folder (USE only these)
+- **All imports must point to**: `./cape-template/...` paths
 
-**Remember: This is a complete, self-contained design system in the `figma-make-dist/` folder. Everything you need is already provided and Cape-styled. Focus on composition and layout rather than recreating components.**
+**Remember: This is a complete, self-contained design system in the `cape-template/` folder. Everything you need is already provided and Cape-styled. Focus on composition and layout rather than recreating components.**

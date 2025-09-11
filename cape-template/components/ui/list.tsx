@@ -21,7 +21,7 @@ const listVariants = cva(
 
 // List Item variants
 const listItemVariants = cva([
-  "flex items-center gap-4 px-4 relative bg-card border-b border-border",
+  "flex items-center gap-4 px-4 relative border-b border-border",
   "transition-colors hover:bg-accent/50 focus-visible:bg-accent focus-visible:outline-none",
   "data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50"
 ], {

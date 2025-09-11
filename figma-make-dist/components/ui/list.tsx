@@ -100,7 +100,7 @@ const secondaryTextVariants = cva([
 
 // Context for sharing props between List and ListItem
 interface ListContextValue {
-  size?: "small" | "medium" | "large"
+  size?: "small" | "medium" | "large" | null
   divider?: boolean
 }
 
@@ -119,7 +119,7 @@ interface ListProps
 
 const List = React.forwardRef<HTMLUListElement, ListProps>(
   ({ className, size, divider = true, children, ...props }, ref) => {
-    const contextValue = { size, divider }
+    const contextValue: ListContextValue = { size, divider }
     
     return (
       <ListContext.Provider value={contextValue}>
@@ -177,7 +177,7 @@ const ListItem = React.forwardRef<HTMLLIElement, ListItemProps>(
     ...props 
   }, ref) => {
     const context = React.useContext(ListContext)
-    const size = sizeProp ?? context.size
+    const size = sizeProp ?? context.size ?? "medium"
     const divider = dividerProp ?? context.divider ?? true
     const interactive = !!onClick
 
@@ -235,7 +235,7 @@ const ListItemText = React.forwardRef<HTMLDivElement, ListItemTextProps>(
     ...props 
   }, ref) => {
     const context = React.useContext(ListContext)
-    const size = sizeProp ?? context.size
+    const size = sizeProp ?? context.size ?? "medium"
 
     return (
       <div

@@ -26,6 +26,7 @@ This template contains (all within `figma-make-dist/`):
 - **ALWAYS** start new designs using templates from the `figma-make-dist/templates/` folder
 - `UITemplateBasic` provides a complete layout with sidebar navigation and header
 - Build new pages within these template structures
+- **Content Spacing**: Template handles padding (40px/px-10) - use `p-0` or no padding classes on your content
 
 ### 3. Styling Rules
 - Use CSS variables defined in `figma-make-dist/styles/globals.css` (--success, --primary, --muted, etc.)
@@ -48,14 +49,24 @@ When creating new components or pages, place them in:
 
 ### 6. Import Strategy
 ```tsx
-// ✅ Correct - use figma-make-dist components
+// ✅ Correct - use figma-make-dist components and templates
 import { Button } from "./figma-make-dist/components/ui/button";
 import UITemplateBasic from "./figma-make-dist/templates/ui-template-basic";
 import { Chip } from "./figma-make-dist/components/ui/chip";
 
+// ✅ Correct - content structure (no padding, template handles it)
+<UITemplateBasic title="Dashboard">
+  <div className="space-y-6"> {/* No padding classes */}
+    <h2>Content goes here</h2>
+  </div>
+</UITemplateBasic>
+
 // ❌ Wrong - don't use default Figma Make components
 import { Button } from "./components/ui/button"; 
 import { Card } from "@/components/ui/card";
+
+// ❌ Wrong - don't add padding (template handles it)
+<div className="p-6"> {/* Don't do this */}
 ```
 
 ## Key Cape Components Available

@@ -12,10 +12,10 @@ const chipVariants = cva(
         xsmall: "h-5 px-2 text-xs rounded-full gap-0.5 [&_svg]:size-3",
         small: "h-6 px-2.5 text-xs rounded-full gap-1 [&_svg]:size-3",
         medium: "h-8 px-3 text-sm rounded-full gap-1.5 [&_svg]:size-4",
-        large: "h-10 px-4 text-sm rounded-full gap-1.5 [&_svg]:size-4",
+        large: "h-10 px-4 text-m rounded-full gap-1.5 [&_svg]:size-4",
       },
       variant: {
-        default: "bg-chip-background-default text-foreground border-chip-border-default hover:bg-chip-background-hover",
+        default: "bg-chip-background-default text-foreground hover:bg-chip-background-hover",
         selected: "text-primary border-primary hover:bg-chip-background-selected",
         disabled: "bg-muted/50 text-muted-foreground border-border cursor-not-allowed",
       },

@@ -12,11 +12,12 @@ import { NavigationPage } from "./pages/NavigationPage";
 
 // Import patterns
 import SidenavPartnerPortal from "./patterns/sidenav-partner-portal";
-import HeaderPartnerPortal from "./patterns/header-partner-portal";
+import { HeaderPartnerPortal } from "./patterns/header-partner-portal";
 import ContentSectionPage from "./patterns/content-section";
 
 // Import templates
 import UITemplateBasic from "./templates/ui-template-basic";
+import UITemplateTabs from "./templates/ui-template-tabs";
 
 type NavSection = "components" | "patterns" | "templates";
 
@@ -49,6 +50,7 @@ function App() {
     
     // Templates section
     { id: "ui-template-basic", label: "UI Template Basic", component: UITemplateBasic, section: "templates" },
+    { id: "ui-template-tabs", label: "UI Template with Tabs", component: UITemplateTabs, section: "templates" },
   ];
 
   const componentItems = navigationItems.filter(item => item.section === "components");

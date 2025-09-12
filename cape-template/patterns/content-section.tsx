@@ -6,14 +6,14 @@ import { Avatar, AvatarFallback } from "../components/ui/avatar";
 export default function ContentSectionPage() {
   return (
     <div className="space-y-12">
-      <section className="space-y-4">
+      <section>
         <h2 className="text-2xl font-medium">Content Section</h2>
         
         <div className="space-y-8">
           {/* Cards Example - CORRECT */}
           <div>
             <div className="bg-muted/30 p-4 rounded-lg">
-              <section className="space-y-4">
+              <section>
                 <h3 className="text-xl font-semibold mb-3">Key Metrics</h3>
                 <div className="grid grid-cols-4 gap-4">
                   <MetricCard
@@ -59,7 +59,7 @@ export default function ContentSectionPage() {
           {/* Table Example - CORRECT */}
           <div>
             <div className="bg-muted/30 p-4 rounded-lg">
-              <section className="space-y-4">
+              <section>
                 <h3 className="text-xl font-semibold mb-3">Recent Orders</h3>
                 <div className="rounded-xl border border-border bg-card">
                   {/* Table renders directly inside container - no extra padding */}
@@ -105,7 +105,7 @@ export default function ContentSectionPage() {
           {/* List Example - CORRECT */}
           <div>
             <div className="bg-muted/30 p-4 rounded-lg">
-              <section className="space-y-4">
+              <section>
                 <h3 className="text-xl font-semibold mb-3">Recent Activity</h3>
                 <div className="rounded-xl border border-border bg-card">
                   {/* List renders directly inside container - no extra padding */}

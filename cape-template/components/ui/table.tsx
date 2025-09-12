@@ -70,7 +70,7 @@ function TableHeader({ className, sticky, ...props }: TableHeaderProps) {
       data-sticky={sticky ? "true" : "false"}
       className={cn(
         sticky && "sticky top-0 z-10 shadow-sm",
-        "[&_tr]:border-b [&_tr]:border-gray-300",
+        "[&_tr]:border-b [&_tr]:border-gray-200",
         className
       )}
       {...props}

@@ -1,5 +1,6 @@
 import SidenavPartnerPortal from "../patterns/sidenav-partner-portal";
 import HeaderPartnerPortalWithTabs from "../patterns/header-partner-portal";
+import userAvatar from "../assets/user-avatar.png";
 
 interface UITemplateTabsProps {
   title?: string;
@@ -22,7 +23,7 @@ interface UITemplateTabsProps {
 export default function UITemplateTabs({
   title = "Page title",
   userName = "User",
-  userImage = "https://github.com/shadcn.png",
+  userImage = userAvatar,
   isOpen = true,
   onOpenClick,
   onHelpClick,

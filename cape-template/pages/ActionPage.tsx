@@ -1,15 +1,14 @@
 import { Button } from "../components/ui/button";
 import { Chip } from "../components/ui/chip";
 import { Avatar, AvatarImage, AvatarFallback } from "../components/ui/avatar";
+import { ContentSection } from "../components/ui/content-section";
 import { Plus, Check } from "lucide-react";
 import userAvatar from "../assets/user-avatar.png";
 
 export function ActionPage() {
   return (
     <div className="space-y-12">
-      {/* Button Section */}
-      <section className="space-y-4">
-        <h2 className="text-2xl font-medium">Button</h2>
+      <ContentSection title="Button">
         
         <div className="space-y-6">
           <div>
@@ -40,7 +39,7 @@ export function ActionPage() {
             </div>
           </div>
         </div>
-      </section>
+      </ContentSection>
 
       {/* Chip Section */}
       <section className="space-y-4">

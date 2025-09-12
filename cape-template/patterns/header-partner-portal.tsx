@@ -42,7 +42,7 @@ export function HeaderPartnerPortal({
       <div className="flex items-start justify-between gap-4 w-full">
         {/* Start - Title Section */}
         <div className="flex-1 pt-10 pb-0">
-          <h1 className="text-[36px] font-bold text-[#141415] leading-[1.25]" style={{ fontFamily: 'Figtree, sans-serif' }}>
+          <h1 className="text-[36px] font-bold text-foreground leading-[1.25]" style={{ fontFamily: 'Figtree, sans-serif' }}>
             {title}
           </h1>
         </div>
@@ -57,11 +57,11 @@ export function HeaderPartnerPortal({
             startIcon={
               <div 
                 className="size-4 rounded-full" 
-                style={{ backgroundColor: isOpen ? 'var(--success)' : '#9ca3af' }} 
+                style={{ backgroundColor: isOpen ? 'var(--success)' : 'var(--muted-foreground)' }} 
               />
             }
             onClick={onOpenClick}
-            className="min-h-[48px] px-4 bg-[rgba(255,255,255,0.01)] border-[#e9eaec] rounded-[200px] gap-2.5 [&_span]:text-[16px] [&_span]:font-semibold"
+            className="min-h-[48px] px-4 bg-chip-background-default border-border rounded-[200px] gap-2.5 [&_span]:text-[16px] [&_span]:font-semibold"
             style={{ fontFamily: 'Figtree, sans-serif' }}
           />
 
@@ -72,14 +72,14 @@ export function HeaderPartnerPortal({
             selected={false}
             startIcon={<HelpCircle style={{ width: '20px', height: '20px' }} />}
             onClick={onHelpClick}
-            className="min-h-[48px] px-4 bg-[rgba(255,255,255,0.01)] border-[#e9eaec] rounded-[200px] gap-2.5 [&_span]:text-[16px] [&_span]:font-semibold"
+            className="min-h-[48px] px-4 bg-chip-background-default border-border rounded-[200px] gap-2.5 [&_span]:text-[16px] [&_span]:font-semibold"
             style={{ fontFamily: 'Figtree, sans-serif' }}
           />
 
           {/* Notification Button */}
           <button
             onClick={onNotificationClick}
-            className="relative min-h-[48px] min-w-[48px] max-h-[48px] max-w-[48px] rounded-[200px] border border-[#e9eaec] bg-[rgba(255,255,255,0.01)] flex items-center justify-center p-3 hover:bg-accent transition-colors"
+            className="relative min-h-[48px] min-w-[48px] max-h-[48px] max-w-[48px] rounded-[200px] border border-border bg-chip-background-default flex items-center justify-center p-3 hover:bg-accent transition-colors"
           >
             <Bell className="size-6" />
           </button>
@@ -90,7 +90,7 @@ export function HeaderPartnerPortal({
             onClick={onProfileClick}
           >
             <AvatarImage src={userAvatar} alt="User" />
-            <AvatarFallback className="bg-[#ccc0dd] text-[#141415] font-medium">
+            <AvatarFallback className="bg-accent text-foreground font-medium">
               {userName.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)}
             </AvatarFallback>
           </Avatar>

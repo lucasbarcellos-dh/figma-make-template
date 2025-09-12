@@ -18,6 +18,7 @@ import ContentSectionPage from "./patterns/content-section";
 // Import templates
 import UITemplateBasic from "./templates/ui-template-basic";
 import UITemplateTabs from "./templates/ui-template-tabs";
+import UITemplateFilters from "./templates/ui-template-filters";
 
 type NavSection = "components" | "patterns" | "templates";
 
@@ -51,6 +52,7 @@ function App() {
     // Templates section
     { id: "ui-template-basic", label: "UI Template Basic", component: UITemplateBasic, section: "templates" },
     { id: "ui-template-tabs", label: "UI Template with Tabs", component: UITemplateTabs, section: "templates" },
+    { id: "ui-template-filters", label: "UI Template with Filters", component: UITemplateFilters, section: "templates" },
   ];
 
   const componentItems = navigationItems.filter(item => item.section === "components");

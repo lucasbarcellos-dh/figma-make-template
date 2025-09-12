@@ -4,6 +4,7 @@ import {
 } from "lucide-react";
 import { Chip } from "../components/ui/chip";
 import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
+import { Tabs, TabsList, TabsTrigger } from "../components/ui/tabs";
 import userAvatar from "../assets/user-avatar.png";
 
 interface HeaderPartnerPortalProps {
@@ -17,7 +18,16 @@ interface HeaderPartnerPortalProps {
   onProfileClick?: () => void;
 }
 
-export default function HeaderPartnerPortal({
+interface HeaderPartnerPortalWithTabsProps extends HeaderPartnerPortalProps {
+  tabs?: Array<{
+    value: string;
+    label: string;
+  }>;
+  activeTab?: string;
+  onTabChange?: (value: string) => void;
+}
+
+export function HeaderPartnerPortal({
   title = "Page title",
   userName = "User",
   userImage = "https://github.com/shadcn.png",
@@ -28,7 +38,7 @@ export default function HeaderPartnerPortal({
   onProfileClick
 }: HeaderPartnerPortalProps) {
   return (
-    <div className="flex flex-col gap-6 w-full px-10">
+    <div className="flex flex-col w-full px-10">
       <div className="flex items-start justify-between gap-4 w-full">
         {/* Start - Title Section */}
         <div className="flex-1 pt-10 pb-0">
@@ -38,7 +48,7 @@ export default function HeaderPartnerPortal({
         </div>
 
         {/* Actions - Right Side */}
-        <div className="flex items-center gap-2 pt-10 pb-0">
+        <div className="flex items-center gap-2 pt-10 pb-4">
           {/* Open Status Chip */}
           <Chip 
             label="Open"
@@ -85,6 +95,59 @@ export default function HeaderPartnerPortal({
             </AvatarFallback>
           </Avatar>
         </div>
+      </div>
+    </div>
+  );
+}
+
+export default function HeaderPartnerPortalWithTabs({
+  title = "Page title",
+  userName = "User",
+  userImage = "https://github.com/shadcn.png",
+  isOpen = true,
+  onOpenClick,
+  onHelpClick,
+  onNotificationClick,
+  onProfileClick,
+  tabs = [
+    { value: "tab1", label: "Label" },
+    { value: "tab2", label: "Label" },
+    { value: "tab3", label: "Label" },
+    { value: "tab4", label: "Label" }
+  ],
+  activeTab = "tab1",
+  onTabChange
+}: HeaderPartnerPortalWithTabsProps) {
+  return (
+    <div className="flex flex-col w-full">
+      {/* Header Section */}
+      <div>
+        <HeaderPartnerPortal
+          title={title}
+          userName={userName}
+          userImage={userImage}
+          isOpen={isOpen}
+          onOpenClick={onOpenClick}
+          onHelpClick={onHelpClick}
+          onNotificationClick={onNotificationClick}
+          onProfileClick={onProfileClick}
+        />
+      </div>
+
+      {/* Tabs Section */}
+      <div>
+        <Tabs value={activeTab} onValueChange={onTabChange} className="w-full px-10">
+          <TabsList>
+            {tabs.map((tab) => (
+              <TabsTrigger
+                key={tab.value}
+                value={tab.value}
+              >
+                {tab.label}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+        </Tabs>
       </div>
     </div>
   );

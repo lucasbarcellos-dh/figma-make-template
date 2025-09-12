@@ -107,7 +107,7 @@ function App() {
       `}>
         <div className="flex flex-col h-full">
           <div className="p-6 border-b">
-            <h2 className="text-lg font-semibold">Cape Design System</h2>
+            <h2 className="text-lg font-semibold">Figma Make template</h2>
           </div>
           
           <nav className="flex-1 p-4 space-y-6 overflow-y-auto">

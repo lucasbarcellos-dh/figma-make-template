@@ -15,11 +15,10 @@ export default function ContentSectionPage() {
             <div className="bg-muted/30 p-4 rounded-lg">
               <section className="space-y-4">
                 <h3 className="text-xl font-semibold mb-3">Key Metrics</h3>
-                {/* Cards render directly - they already have borders/containers */}
                 <div className="grid grid-cols-4 gap-4">
                   <MetricCard
                     title="Total Revenue"
-                    value="$45,230"
+                    value="$4,230"
                     variation="+12.5%"
                     subtitle="This month"
                     footer="Last updated: 1 hour ago"

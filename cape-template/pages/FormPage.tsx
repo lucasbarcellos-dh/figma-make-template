@@ -28,12 +28,57 @@ export function FormPage() {
           </div>
 
           <div>
+            <h3 className="text-lg font-medium mb-3">Sizes</h3>
+            <div className="space-y-3 max-w-sm">
+              <div>
+                <Label>X-Small</Label>
+                <Input size="xsmall" placeholder="Extra small input" />
+              </div>
+              <div>
+                <Label>Small</Label>
+                <Input size="small" placeholder="Small input" />
+              </div>
+              <div>
+                <Label>Medium (Default)</Label>
+                <Input size="medium" placeholder="Medium input" />
+              </div>
+              <div>
+                <Label>Large</Label>
+                <Input size="large" placeholder="Large input" />
+              </div>
+            </div>
+          </div>
+
+          <div>
             <h3 className="text-lg font-medium mb-3">Search</h3>
-            <div className="max-w-sm">
-              <Label>Search</Label>
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 size-4 text-muted-foreground" />
-                <Input className="pl-10" placeholder="Search components..." />
+            <div className="space-y-3 max-w-sm">
+              <div>
+                <Label>Search X-Small</Label>
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 size-3 text-muted-foreground" />
+                  <Input size="xsmall" className="pl-9 rounded-full" placeholder="Search..." />
+                </div>
+              </div>
+              <div>
+                <Label>Search Small</Label>
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 size-4 text-muted-foreground" />
+                  <Input size="small" className="pl-10 rounded-full" placeholder="Search..." />
+                </div>
+              </div>
+              <div>
+                <Label>Search Medium</Label>
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 size-4 text-muted-foreground" />
+                  <Input size="medium" className="pl-10 rounded-full" placeholder="Search components..." />
+                </div>
+              </div>
+              <div>
+                <Label>Search Large</Label>
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 size-5 text-muted-foreground" />
+                  <Input size="large" className="pl-12 rounded-full" placeholder="Search components..." />
+                </div>
               </div>
             </div>
           </div>

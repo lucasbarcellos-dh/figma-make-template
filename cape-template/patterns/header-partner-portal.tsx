@@ -30,7 +30,7 @@ interface HeaderPartnerPortalWithTabsProps extends HeaderPartnerPortalProps {
 export function HeaderPartnerPortal({
   title = "Page title",
   userName = "User",
-  userImage = "https://github.com/shadcn.png",
+  userImage = userAvatar,
   isOpen = true,
   onOpenClick,
   onHelpClick,
@@ -89,7 +89,7 @@ export function HeaderPartnerPortal({
             className="min-h-[48px] min-w-[48px] max-h-[48px] max-w-[48px] cursor-pointer"
             onClick={onProfileClick}
           >
-            <AvatarImage src={userAvatar} alt="User" />
+            <AvatarImage src={userImage || userAvatar} alt="User" />
             <AvatarFallback className="bg-accent text-foreground font-medium">
               {userName.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)}
             </AvatarFallback>
@@ -103,7 +103,7 @@ export function HeaderPartnerPortal({
 export default function HeaderPartnerPortalWithTabs({
   title = "Page title",
   userName = "User",
-  userImage = "https://github.com/shadcn.png",
+  userImage = userAvatar,
   isOpen = true,
   onOpenClick,
   onHelpClick,

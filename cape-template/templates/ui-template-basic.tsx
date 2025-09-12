@@ -1,5 +1,5 @@
 import SidenavPartnerPortal from "../patterns/sidenav-partner-portal";
-import HeaderPartnerPortal from "../patterns/header-partner-portal";
+import { HeaderPartnerPortal } from "../patterns/header-partner-portal";
 
 interface UITemplateBasicProps {
   title?: string;

@@ -1,14 +1,15 @@
 import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "../components/ui/tooltip";
+import { Drawer, DrawerTrigger, DrawerContent, DrawerHeader, DrawerTitle, DrawerDescription, DrawerBody, DrawerFooter, DrawerClose } from "../components/ui/drawer";
+import { List, ListItem, ListItemText } from "../components/ui/list";
 import { Button } from "../components/ui/button";
-import { Info } from "lucide-react";
+import { ContentSection } from "../components/ui/content-section";
+import { Info, X, Users, Bell, Shield, CreditCard, HelpCircle } from "lucide-react";
 
 export function OverlayPage() {
   return (
     <TooltipProvider>
       <div className="space-y-12">
-        {/* Tooltip Section */}
-        <section className="space-y-4">
-          <h2 className="text-2xl font-medium">Tooltip</h2>
+        <ContentSection title="Tooltip">
           
           <div className="space-y-6">
             <div>
@@ -51,7 +52,87 @@ export function OverlayPage() {
               </div>
             </div>
           </div>
-        </section>
+        </ContentSection>
+
+        <ContentSection title="Drawer">
+          
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-medium mb-3">Basic Usage</h3>
+              <Drawer direction="right">
+                <DrawerTrigger asChild>
+                  <Button variant="secondary">Open Settings</Button>
+                </DrawerTrigger>
+                <DrawerContent>
+                  <DrawerHeader>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <DrawerTitle>Settings</DrawerTitle>
+                        <DrawerDescription>
+                          Configure your preferences
+                        </DrawerDescription>
+                      </div>
+                      <DrawerClose asChild>
+                        <Button variant="tertiary" size="small">
+                          <X className="h-4 w-4 text-foreground" />
+                        </Button>
+                      </DrawerClose>
+                    </div>
+                  </DrawerHeader>
+                  <DrawerBody>
+                    <div className="rounded-xl border border-border bg-card">
+                      <List>
+                        <ListItem onClick={() => console.log('Account clicked')}>
+                          <Users className="h-5 w-5 text-foreground" />
+                          <ListItemText 
+                            primary="Account Settings" 
+                            secondary="Manage your profile and preferences" 
+                          />
+                        </ListItem>
+                        <ListItem onClick={() => console.log('Notifications clicked')}>
+                          <Bell className="h-5 w-5 text-foreground" />
+                          <ListItemText 
+                            primary="Notifications" 
+                            secondary="Configure alerts and updates" 
+                          />
+                        </ListItem>
+                        <ListItem onClick={() => console.log('Security clicked')}>
+                          <Shield className="h-5 w-5 text-foreground" />
+                          <ListItemText 
+                            primary="Security & Privacy" 
+                            secondary="Password, two-factor authentication" 
+                          />
+                        </ListItem>
+                        <ListItem onClick={() => console.log('Billing clicked')}>
+                          <CreditCard className="h-5 w-5 text-foreground" />
+                          <ListItemText 
+                            primary="Billing & Plans" 
+                            secondary="Manage subscriptions and payments" 
+                          />
+                        </ListItem>
+                        <ListItem onClick={() => console.log('Support clicked')} divider={false}>
+                          <HelpCircle className="h-5 w-5 text-foreground" />
+                          <ListItemText 
+                            primary="Help & Support" 
+                            secondary="Documentation, contact support" 
+                          />
+                        </ListItem>
+                      </List>
+                    </div>
+                  </DrawerBody>
+                  <DrawerFooter>
+                    <div className="flex justify-end gap-2">
+                      <DrawerClose asChild>
+                        <Button variant="secondary">Cancel</Button>
+                      </DrawerClose>
+                      <Button variant="primary">Save Changes</Button>
+                    </div>
+                  </DrawerFooter>
+                </DrawerContent>
+              </Drawer>
+            </div>
+          </div>
+        </ContentSection>
       </div>
     </TooltipProvider>
   );

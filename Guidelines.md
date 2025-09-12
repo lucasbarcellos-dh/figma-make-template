@@ -31,13 +31,13 @@ This template contains (all within `cape-template/`):
 - **Content Spacing**: Template handles padding - use `p-0` or no padding classes on your content
 
 ### 3. Content Organization with Sections
-- **ALWAYS** organize first-level page content using the `ContentSection` pattern from `cape-template/patterns/content-section`
+- **ALWAYS** organize first-level page content using the `ContentSection` component from `cape-template/components/ui/content-section`
 - **NEVER** add extra containers around content sections or change its styling
 - **Use ContentSection for top-level page organization only** - content inside sections doesn't need additional ContentSection wrapping
 - **Never create manual content containers** for first-level content - use ContentSection instead
 - **Container Guidelines**: When a section contains already-contained elements (Cards, Tables, etc.), render them directly without additional container wrapping since they are already self-contained
 - **Spacing Guidelines**: Components with internal padding (Tables, Lists, etc.) should be rendered directly without additional spacing containers, as they already provide proper internal spacing
-- **REFERENCE EXAMPLES**: See `cape-template/patterns/content-section` for concrete examples of correct structure with Cards, Tables, and Lists
+- **REFERENCE EXAMPLES**: See `cape-template/patterns/content-section` for concrete examples of correct ContentSection usage with Cards, Tables, and Lists
 
 ### 4. Styling Rules
 - **CRITICAL**: Always import Cape styles first: `import "./cape-template/styles/globals.css";`
@@ -79,7 +79,7 @@ import "./cape-template/styles/globals.css";
 import { Button } from "./cape-template/components/ui/button";
 import UITemplateBasic from "./cape-template/templates/ui-template-basic";
 import { Chip } from "./cape-template/components/ui/chip";
-import { ContentSection } from "./cape-template/patterns/content-section";
+import { ContentSection } from "./cape-template/components/ui/content-section";
 
 // ✅ Correct - content structure using ContentSection for first-level organization
 <UITemplateBasic title="Dashboard">
@@ -199,6 +199,7 @@ import { Card } from "@/components/ui/card";
 - **Button** (primary, secondary, tertiary variants)
 - **Chip** (interactive tags with icons)
 - **Card** (content containers)
+- **ContentSection** (standardized content organization with optional title/description)
 - **Input** (form fields with Cape styling)
 - **Avatar** (user profile images)
 - **Table** (data display)
@@ -216,7 +217,7 @@ import { Card } from "@/components/ui/card";
 ## Patterns Available (in `cape-template/patterns/`)  
 - **SidenavPartnerPortal** - Left navigation with Cape styling
 - **HeaderPartnerPortal** - Top header with user actions and Cape tokens
-- **ContentSection** - Standardized content containers with borders and section headers
+- **content-section** - Examples and documentation for ContentSection component usage
 
 ## Critical File Structure Rules
 - **Default Figma Make files**: `/components`, `/styles`, `/App.tsx` (IGNORE these)

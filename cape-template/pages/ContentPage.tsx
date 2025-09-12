@@ -8,16 +8,14 @@ import TileCard from "../components/ui/tile-card";
 import { PromptCard } from "../components/ui/prompt-card";
 import { List, ListItem, ListItemText } from "../components/ui/list";
 import MetricCard from "../components/ui/metric-card";
+import { ContentSection } from "../components/ui/content-section";
 
 export function ContentPage() {
   const [selectedCard, setSelectedCard] = useState<string | null>(null);
 
   return (
     <div className="space-y-12">
-      {/* Table Section */}
-      <section className="space-y-4">
-        <h2 className="text-2xl font-medium">Table</h2>
-        
+      <ContentSection title="Table">
         <div className="space-y-6">
           <div>
             <h3 className="text-lg font-medium mb-3">Basic Usage</h3>
@@ -66,12 +64,9 @@ export function ContentPage() {
             </Table>
           </div>
         </div>
-      </section>
+      </ContentSection>
 
-      {/* Card Section */}
-      <section className="space-y-4">
-        <h2 className="text-2xl font-medium">Card</h2>
-        
+      <ContentSection title="Card">
         <div className="space-y-8">
           <div>
             <h3 className="text-lg font-medium mb-3">Basic Variants</h3>
@@ -267,12 +262,9 @@ export function ContentPage() {
             </p>
           </div>
         </div>
-      </section>
+      </ContentSection>
 
-      {/* List Section */}
-      <section className="space-y-4">
-        <h2 className="text-2xl font-medium">List</h2>
-        
+      <ContentSection title="List">
         <div className="space-y-8">
           <div>
             <h3 className="text-lg font-medium mb-3">List Sizes</h3>
@@ -289,7 +281,7 @@ export function ContentPage() {
                       secondary="Software Engineer" 
                     />
                   </ListItem>
-                  <ListItem>
+                  <ListItem divider={false}>
                     <Avatar size="small">
                       <AvatarFallback>JS</AvatarFallback>
                     </Avatar>
@@ -313,7 +305,7 @@ export function ContentPage() {
                       secondary="Product Manager" 
                     />
                   </ListItem>
-                  <ListItem>
+                  <ListItem divider={false}>
                     <Avatar>
                       <AvatarFallback>AB</AvatarFallback>
                     </Avatar>
@@ -337,7 +329,7 @@ export function ContentPage() {
                       secondary="Senior Developer" 
                     />
                   </ListItem>
-                  <ListItem>
+                  <ListItem divider={false}>
                     <Avatar size="large">
                       <AvatarFallback>DL</AvatarFallback>
                     </Avatar>
@@ -366,7 +358,7 @@ export function ContentPage() {
                       secondary="Click to view profile" 
                     />
                   </ListItem>
-                  <ListItem onClick={() => console.log("Clicked Jane")}>
+                  <ListItem onClick={() => console.log("Clicked Jane")} divider={false}>
                     <Avatar size="small">
                       <AvatarFallback>JS</AvatarFallback>
                     </Avatar>
@@ -402,6 +394,7 @@ export function ContentPage() {
                         Edit
                       </Button>
                     }
+                    divider={false}
                   >
                     <Avatar size="small">
                       <AvatarFallback>AB</AvatarFallback>
@@ -438,7 +431,7 @@ export function ContentPage() {
                     secondary="Currently selected" 
                   />
                 </ListItem>
-                <ListItem disabled>
+                <ListItem disabled divider={false}>
                   <Avatar size="small">
                     <AvatarFallback>D1</AvatarFallback>
                   </Avatar>
@@ -486,12 +479,9 @@ export function ContentPage() {
             </div>
           </div>
         </div>
-      </section>
+      </ContentSection>
 
-      {/* Divider Section */}
-      <section className="space-y-4">
-        <h2 className="text-2xl font-medium">Divider</h2>
-        
+      <ContentSection title="Divider">
         <div className="space-y-6">
           <div className="max-w-md">
             <h3 className="text-lg font-medium mb-3">Basic Usage</h3>
@@ -511,7 +501,7 @@ export function ContentPage() {
             </div>
           </div>
         </div>
-      </section>
+      </ContentSection>
     </div>
   );
 }

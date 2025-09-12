@@ -2,6 +2,7 @@ import { Button } from "../components/ui/button";
 import { Chip } from "../components/ui/chip";
 import { Avatar, AvatarImage, AvatarFallback } from "../components/ui/avatar";
 import { Plus, Check } from "lucide-react";
+import userAvatar from "../assets/user-avatar.png";
 
 export function ActionPage() {
   return (
@@ -97,7 +98,7 @@ export function ActionPage() {
                 <AvatarFallback size="medium">O</AvatarFallback>
               </Avatar>
               <Avatar>
-                <AvatarImage src="https://github.com/shadcn.png" alt="User" />
+                <AvatarImage src={userAvatar} alt="User" />
                 <AvatarFallback size="medium">U</AvatarFallback>
               </Avatar>
             </div>

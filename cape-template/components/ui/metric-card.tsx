@@ -16,7 +16,7 @@ import { Info, TrendingUp } from "lucide-react";
   export default function MetricCard({
     title = "Metric title",
     value = "48",
-    unit = "orders",
+    unit = "sales",
     variation = "1.24%",
     subtitle = "Optional subtitle",
     footer = "Footer caption",

@@ -25,11 +25,14 @@ This template contains (all within `cape-template/`):
 ### 2. Templates First
 - **ALWAYS** start new designs using templates from the `cape-template/templates/` folder
 - `UITemplateBasic` provides a complete layout with sidebar navigation and header
+- `UITemplateTabs` adds tab navigation below the header
+- `UITemplateFilters` includes a filter bar with search input, filter chips, and action button
 - Build new pages within these template structures
 - **Content Spacing**: Template handles padding - use `p-0` or no padding classes on your content
 
 ### 3. Content Organization with Sections
 - **ALWAYS** organize first-level page content using the `ContentSection` pattern from `cape-template/patterns/content-section`
+- **NEVER** add extra containers around content sections or change its styling
 - **Use ContentSection for top-level page organization only** - content inside sections doesn't need additional ContentSection wrapping
 - **Never create manual content containers** for first-level content - use ContentSection instead
 - **Container Guidelines**: When a section contains already-contained elements (Cards, Tables, etc.), render them directly without additional container wrapping since they are already self-contained
@@ -42,6 +45,8 @@ This template contains (all within `cape-template/`):
 - Follow the Cape color palette and design tokens already configured
 - Maintain consistency with existing component styling patterns
 - **Font**: All text should use Figtree font family (defined in Cape globals.css)
+- **NEVER modify global navigation pattern styling**: Core navigation patterns (SidenavPartnerPortal, HeaderPartnerPortal) must be preserved exactly as written
+- **Pattern Style Preservation**: Do not change background colors, borders, or spacing in existing patterns - they use Cape design tokens correctly
 
 ### 5. Cape Design Principles
 - **Colors**: Use Cape's primary red (#D61F26), success green (#05A34E), and neutral grays
@@ -57,7 +62,15 @@ When creating new components or pages, place them in:
 - Full page templates → `cape-template/templates/`
 - Documentation/showcase → `cape-template/pages/`
 
-### 7. Import Strategy
+### 7. Pattern and Template Preservation
+- **CRITICAL**: Existing patterns and templates in `cape-template/patterns/` and `cape-template/templates/` are production-ready and must not be modified
+- **SidenavPartnerPortal**: Background uses `bg-sidebar` CSS variable - do not change to hardcoded colors like `bg-white`
+- **HeaderPartnerPortal**: Uses Cape design tokens for colors and spacing - preserve all existing classes
+- **UITemplateBasic/UITemplateTabs**: Layout and spacing are optimized - do not modify template structure
+- **When generating code**: If Figma Make suggests style changes to existing patterns, reject them and keep the original Cape-styled classes
+- **CSS Variable Usage**: All patterns use CSS variables (like `bg-sidebar`, `text-foreground`, `border-border`) instead of hardcoded values - this enables proper theming
+
+### 8. Import Strategy
 ```tsx
 // ✅ Correct - ALWAYS import Cape styles first
 import "./cape-template/styles/globals.css";
@@ -97,6 +110,16 @@ import { Card } from "@/components/ui/card";
 
 // ❌ Wrong - forgetting to import Cape styles
 // Missing: import "./cape-template/styles/globals.css";
+
+// ❌ Wrong - modifying existing pattern styling
+<aside className="flex flex-col w-full bg-white border-r border-gray-200"> 
+  {/* Don't change bg-sidebar to bg-white or CSS variables to hardcoded colors */}
+</aside>
+
+// ✅ Correct - preserve existing pattern styling
+<aside className="flex flex-col w-full bg-sidebar border-r border-sidebar-border">
+  {/* Keep original Cape CSS variables and classes */}
+</aside>
 
 // ❌ Wrong - don't create manual first-level content containers
 <div className="border rounded-lg p-4"> {/* Use ContentSection for first-level */}
@@ -187,6 +210,8 @@ import { Card } from "@/components/ui/card";
 
 ## Templates Available (in `cape-template/templates/`)
 - **UITemplateBasic** - Complete layout with sidebar + header (296px sidebar width)
+- **UITemplateTabs** - Layout with sidebar, header, and tab navigation
+- **UITemplateFilters** - Layout with sidebar, header, and filter bar (search, chips, action button)
 
 ## Patterns Available (in `cape-template/patterns/`)  
 - **SidenavPartnerPortal** - Left navigation with Cape styling

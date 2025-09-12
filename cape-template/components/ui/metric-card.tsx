@@ -127,7 +127,7 @@ import { Info, TrendingUp } from "lucide-react";
             </div>
             
             {/* Footer */}
-            <div className="flex flex-col font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-muted-foreground/50 text-left text-nowrap">
+            <div className="flex flex-col font-regular justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-muted-foreground text-left text-nowrap">
               <p className="block leading-[1.34] whitespace-pre">{footer}</p>
             </div>
           </div>

@@ -124,8 +124,8 @@ export default function SidenavPartnerPortal() {
   return (
     <div className="space-y-12">
       <section className="space-y-4">
-        <div className="flex h-full w-full bg-white">
-          <aside className="flex flex-col w-full bg-white border-r border-[#f4f5f6]">
+        <div className="flex h-full w-full bg-sidebar">
+          <aside className="flex flex-col w-full bg-sidebar border-r border-sidebar-border">
             {/* Header with Logo */}
             <PartnerLogo />
             

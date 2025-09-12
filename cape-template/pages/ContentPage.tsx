@@ -147,7 +147,7 @@ export function ContentPage() {
                   />
                   <MetricCard
                     title="Revenue"
-                    value="$45,230"
+                    value="$4,230"
                     unit=""
                     variation="8.2%"
                     subtitle="vs last month"

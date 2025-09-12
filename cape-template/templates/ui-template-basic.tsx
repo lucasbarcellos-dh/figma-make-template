@@ -1,5 +1,6 @@
 import SidenavPartnerPortal from "../patterns/sidenav-partner-portal";
 import { HeaderPartnerPortal } from "../patterns/header-partner-portal";
+import userAvatar from "../assets/user-avatar.png";
 
 interface UITemplateBasicProps {
   title?: string;
@@ -16,7 +17,7 @@ interface UITemplateBasicProps {
 export default function UITemplateBasic({
   title = "Page title",
   userName = "User",
-  userImage = "https://github.com/shadcn.png",
+  userImage = userAvatar,
   isOpen = true,
   onOpenClick,
   onHelpClick,

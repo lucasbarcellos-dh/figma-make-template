@@ -26,7 +26,7 @@ This template contains (all within `cape-template/`):
 - **ALWAYS** start new designs using templates from the `cape-template/templates/` folder
 - `UITemplateBasic` provides a complete layout with sidebar navigation and header
 - Build new pages within these template structures
-- **Content Spacing**: Template handles padding (40px/px-10) - use `p-0` or no padding classes on your content
+- **Content Spacing**: Template handles padding - use `p-0` or no padding classes on your content
 
 ### 3. Content Organization with Sections
 - **ALWAYS** organize first-level page content using the `ContentSection` pattern from `cape-template/patterns/content-section`
@@ -97,9 +97,6 @@ import { Card } from "@/components/ui/card";
 
 // ❌ Wrong - forgetting to import Cape styles
 // Missing: import "./cape-template/styles/globals.css";
-
-// ❌ Wrong - don't add padding (template handles it)
-<div className="p-6"> {/* Don't do this */}
 
 // ❌ Wrong - don't create manual first-level content containers
 <div className="border rounded-lg p-4"> {/* Use ContentSection for first-level */}

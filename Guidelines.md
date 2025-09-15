@@ -72,6 +72,17 @@ This template contains (all within `cape-template/`):
 - Build new pages within these template structures
 - **Content Spacing**: Templates handle padding - use `p-0` or no padding classes on your content
 
+#### Template Selection Guide
+**When analyzing Figma designs, check in this order:**
+1. **Has filter/search controls?** → Use `UITemplateFilters`
+2. **Has tabbed navigation in header?** → Use `UITemplateTabs`
+3. **Simple layout only?** → Use `UITemplateBasic`
+
+**Visual indicators:**
+- **UITemplateFilters**: Search bars, filter chips, action buttons, data tables/grids
+- **UITemplateTabs**: Horizontal tabs below page title, content switching
+- **UITemplateBasic**: Clean header with just title, direct content display
+
 #### Template Usage Rules
 - **NEVER modify sidebar styling**: Do not add background colors, change spacing, or alter navigation styling
 - **NEVER modify header styling**: Do not change background colors, borders, or existing header patterns

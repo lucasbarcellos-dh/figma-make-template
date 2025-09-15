@@ -75,6 +75,7 @@ This template contains (all within `cape-template/`):
 #### Template Usage Rules
 - **NEVER modify sidebar styling**: Do not add background colors, change spacing, or alter navigation styling
 - **NEVER modify header styling**: Do not change background colors, borders, or existing header patterns
+- **NEVER add borders between header and content**: Do not add dividers or borders to separate template sections
 - **ONLY modify content areas**: Focus changes on the main content area inside the template
 - **Navigation content changes**: Only add/remove navigation items when explicitly requested by users
 - **Header content changes**: Only change page titles, breadcrumbs, or actions when explicitly requested by users
@@ -102,6 +103,7 @@ This template contains (all within `cape-template/`):
 **FORBIDDEN MODIFICATIONS** - These changes are commonly made by Figma Make but must be avoided:
 - ❌ **Changing sidebar background colors** - sidebar should always be white
 - ❌ **Modifying header background colors** or adding custom borders
+- ❌ **Adding borders between header and content areas** - template sections should flow seamlessly
 - ❌ **Altering navigation item styling** beyond content changes
 - ❌ **Adding custom spacing** to sidebar or header containers
 - ❌ **Overriding Cape CSS variables** with hardcoded colors in templates

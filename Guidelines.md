@@ -64,12 +64,21 @@ This template contains (all within `cape-template/`):
 - Use only the Cape-styled versions provided in the `cape-template/` folder
 - All components already include proper Cape styling, tokens, and variants
 
-### 2. Templates First
+### 2. Templates First - Application Layout
 - **ALWAYS** start new designs using templates from the `cape-template/templates/` folder
+- **CRITICAL**: Use templates as complete, unmodified application frames - DO NOT customize the sidebar or header styling
 - Templates provide complete page layouts with navigation, headers, and content areas
 - Choose templates based on functionality needs (basic layout, tab navigation, filtering capabilities)
 - Build new pages within these template structures
 - **Content Spacing**: Templates handle padding - use `p-0` or no padding classes on your content
+
+#### Template Usage Rules
+- **NEVER modify sidebar styling**: Do not add background colors, change spacing, or alter navigation styling
+- **NEVER modify header styling**: Do not change background colors, borders, or existing header patterns
+- **ONLY modify content areas**: Focus changes on the main content area inside the template
+- **Navigation content changes**: Only add/remove navigation items when explicitly requested by users
+- **Header content changes**: Only change page titles, breadcrumbs, or actions when explicitly requested by users
+- **Template frame is sacred**: The overall layout structure (sidebar width, header height, positioning) must remain unchanged
 
 ### 3. Content Organization with Sections
 - **ALWAYS** organize first-level page content using standardized content section components
@@ -88,6 +97,21 @@ This template contains (all within `cape-template/`):
 - **Font**: All text should use Figtree font family (defined in Cape globals.css)
 - **NEVER modify global navigation pattern styling**: Core navigation patterns must be preserved exactly as written
 - **Pattern Style Preservation**: Do not change background colors, borders, or spacing in existing patterns - they use Cape design tokens correctly
+
+#### Application Frame Styling Restrictions
+**FORBIDDEN MODIFICATIONS** - These changes are commonly made by Figma Make but must be avoided:
+- ❌ **Changing sidebar background colors** - sidebar should always be white
+- ❌ **Modifying header background colors** or adding custom borders
+- ❌ **Altering navigation item styling** beyond content changes
+- ❌ **Adding custom spacing** to sidebar or header containers
+- ❌ **Overriding Cape CSS variables** with hardcoded colors in templates
+- ❌ **Changing the overall layout dimensions** (sidebar width, header height)
+
+**PERMITTED MODIFICATIONS** - Only these content changes are allowed:
+- ✅ **Page title changes** in header (when requested by user)
+- ✅ **Navigation item additions/removals** (when explicitly requested by user)
+- ✅ **Content area modifications** (main page content only)
+- ✅ **Adding user-specific actions** to header (when requested by user)
 
 ### 5. Cape Design Principles
 - **Colors**: Use Cape's primary red (#D61F26), success green (#05A34E), and neutral grays
@@ -152,12 +176,29 @@ import { Card } from "@/components/ui/card";
 // ❌ Wrong - forgetting to import Cape styles
 // Missing: import "./cape-template/styles/globals.css";
 
-// ❌ Wrong - modifying existing pattern styling
+// ❌ Wrong - modifying template sidebar/header styling (common Figma Make error)
+<div className="flex h-screen">
+  <aside className="flex flex-col w-full bg-gray-100 border-r border-gray-200"> {/* Don't change sidebar background - keep white */}
+    {/* Sidebar content */}
+  </aside>
+  <header className="bg-white border-b border-gray-300"> {/* Don't override header styling */}
+    {/* Header content */}
+  </header>
+</div>
+
+// ✅ Correct - preserve existing template structure and styling
+<UITemplate title="Dashboard"> {/* Use template as-is, only change content */}
+  <div className="space-y-6"> {/* Only modify content area */}
+    {/* Your page content here */}
+  </div>
+</UITemplate>
+
+// ❌ Wrong - changing CSS variables to hardcoded colors in templates
 <aside className="flex flex-col w-full bg-white border-r border-gray-200">
   {/* Don't change CSS variables to hardcoded colors */}
 </aside>
 
-// ✅ Correct - preserve existing pattern styling
+// ✅ Correct - preserve existing pattern styling with CSS variables
 <aside className="flex flex-col w-full bg-sidebar border-r border-sidebar-border">
   {/* Keep original Cape CSS variables and classes */}
 </aside>

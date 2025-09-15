@@ -70,8 +70,6 @@ This template contains (all within `cape-template/`):
 - Templates provide complete page layouts with navigation, headers, and content areas
 - Choose templates based on functionality needs (basic layout, tab navigation, filtering capabilities)
 - Build new pages within these template structures
-- **Content Spacing**: Templates handle padding - use `p-0` or no padding classes on your content
-
 #### Template Selection Guide
 **When analyzing Figma designs, check in this order:**
 1. **Has filter/search controls?** → Use `UITemplateFilters`
@@ -82,11 +80,12 @@ This template contains (all within `cape-template/`):
 - **UITemplateFilters**: Search bars, filter chips, action buttons, data tables/grids
 - **UITemplateTabs**: Horizontal tabs below page title, content switching
 - **UITemplateBasic**: Clean header with just title, direct content display
+- **Content Spacing**: Templates handle padding - use `p-0` or no padding classes on your content
 
 #### Template Usage Rules
-- **NEVER modify sidebar styling**: Do not add background colors, change spacing, or alter navigation styling
+- **NEVER modify sidebar styling**: Do not add background colors, change spacing, typography styling, or alter navigation styling
 - **NEVER modify header styling**: Do not change background colors, borders, or existing header patterns
-- **NEVER add borders between header and content**: Do not add dividers or borders to separate template sections
+- **NEVER add borders between header and content**: Do not add dividers or borders to separate the header from the main content
 - **ONLY modify content areas**: Focus changes on the main content area inside the template
 - **Navigation content changes**: Only add/remove navigation items when explicitly requested by users
 - **Header content changes**: Only change page titles, breadcrumbs, or actions when explicitly requested by users
@@ -318,4 +317,44 @@ import { Card } from "@/components/ui/card";
 - **Cape template files**: `cape-template/` folder (USE only these)
 - **All imports must point to**: `./cape-template/...` paths
 
-**Remember: This is a complete, self-contained design system in the `cape-template/` folder. Everything you need is already provided and Cape-styled. Focus on composition and layout rather than recreating components.**
+## Design Ideation Philosophy
+
+**CRITICAL: This template is optimized for rapid design ideation, not production development.**
+
+### Code Generation Principles
+- **Minimal Code Generation**: Generate the least amount of code possible to communicate design ideas
+- **Maximum Reusability**: Prioritize existing components, patterns, and templates over custom code
+- **Rapid Iteration**: Focus on speed of idea communication rather than production-ready implementation
+- **Template-First Approach**: Use existing templates as-is with minimal customization
+
+### Forbidden Practices for Design Ideation
+- ❌ **Custom Component Creation**: Don't build new components when existing ones can work
+- ❌ **Style Overrides**: Don't customize existing component styling unless absolutely critical
+- ❌ **Complex State Management**: Avoid complex logic or state handling
+- ❌ **Production Patterns**: Don't implement error handling, loading states, or edge cases
+- ❌ **Performance Optimization**: Skip memoization, virtualization, or other performance concerns
+- ❌ **Custom Utilities**: Don't create helper functions or utility components
+
+### Preferred Practices for Design Ideation
+- ✅ **Direct Template Usage**: Use templates exactly as provided
+- ✅ **Component Composition**: Combine existing components without modification
+- ✅ **Static Data**: Use hardcoded example data rather than dynamic content
+- ✅ **Simple Layouts**: Use basic grid/flex patterns with existing components
+- ✅ **Placeholder Content**: Use Lorem ipsum or simple example text
+- ✅ **Mock Interactions**: Show UI states rather than implementing full functionality
+
+### Speed Over Perfection Guidelines
+- **Content**: Use placeholder text and mock data extensively
+- **Functionality**: Show static representations of interactive states
+- **Styling**: Accept existing component appearance rather than customizing
+- **Layout**: Use simple, standard layouts that communicate the design intent
+- **Data**: Use static arrays and hardcoded values instead of data fetching
+- **Navigation**: Implement basic routing without complex navigation logic
+
+### Template Selection for Speed
+1. **Choose the closest template** - Don't customize templates to match designs perfectly
+2. **Accept template constraints** - Work within existing template layouts
+3. **Use standard content sections** - Don't create custom content organization
+4. **Leverage existing patterns** - Use pre-built navigation and header patterns as-is
+
+**Remember: This is a complete, self-contained design system in the `cape-template/` folder. Everything you need is already provided and Cape-styled. Focus on composition and layout rather than recreating components. The goal is rapid design communication, not production implementation.**

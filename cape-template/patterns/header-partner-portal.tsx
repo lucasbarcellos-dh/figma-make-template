@@ -46,7 +46,6 @@ export function HeaderPartnerPortal({
             {title}
           </h1>
         </div>
-
         {/* Actions - Right Side */}
         <div className="flex items-center gap-2 pt-10 pb-4">
           {/* Open Status Chip */}

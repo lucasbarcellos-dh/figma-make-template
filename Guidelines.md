@@ -14,6 +14,48 @@ This template contains (all within `cape-template/`):
 - `cape-template/styles/globals.css` - Complete Cape design tokens and styling
 - `cape-template/App.tsx` - Navigation and layout structure
 
+## When Referencing Existing Figma Designs
+
+**CRITICAL: When users reference/paste existing Partner Portal Figma designs, you MUST identify and reuse matching elements from this cape-template bundle instead of recreating them from scratch.**
+
+### Component Reuse Priority
+**MANDATORY SEARCH ORDER**: Before creating any new component, search cape-template in this order:
+
+1. **Templates** (`cape-template/templates/`) - For overall page layouts
+2. **Patterns** (`cape-template/patterns/`) - For navigation, headers, and complex UI patterns
+3. **UI Components** (`cape-template/components/ui/`) - For individual interface elements
+
+### Element Categories That Must Be Reused
+
+#### Layout & Structure
+- **Page layouts with sidebars, headers, navigation** → Check `cape-template/templates/` first
+- **Navigation patterns and menu structures** → Check `cape-template/patterns/` first
+- **Content organization and sections** → Always use existing content organization patterns
+
+#### Interface Components
+- **Buttons, inputs, selects, and form elements** → NEVER recreate - all standard UI components exist
+- **Data display (tables, cards, lists)** → NEVER recreate - comprehensive data components available
+- **Interactive elements (chips, tabs, switches)** → NEVER recreate - all interaction patterns covered
+- **Feedback elements (alerts, tooltips, dialogs)** → NEVER recreate - complete feedback system exists
+
+#### Specialized Components
+- **Metrics, statistics, and dashboard elements** → Check for existing metric/data display components
+- **User interface patterns (avatars, profiles)** → Check for existing user-related components
+- **Content cards and information displays** → Check for existing card and content components
+
+### Reuse Enforcement Rules
+- **NEVER create layouts from scratch** - Templates provide complete layout foundations
+- **NEVER recreate navigation/headers** - Patterns contain production-ready navigation systems
+- **NEVER rebuild basic UI elements** - All standard components are comprehensively covered
+- **NEVER duplicate content organization** - Existing patterns handle content structure
+- **STRICT SEARCH REQUIREMENT**: Must search all three cape-template directories before creating anything new
+
+### When Custom Components Are Acceptable
+- **Only after exhaustive search** of templates, patterns, and UI components
+- **Truly unique functionality** not covered by existing components
+- **Composition needs** that combine existing components in new ways
+- **Domain-specific elements** unique to the specific feature being built
+
 ## Design Generation Rules
 
 ### 1. Component Usage

@@ -67,12 +67,39 @@ cape-template/
 - ❌ NEVER add borders between header and content
 - ❌ NEVER change sidebar background or spacing
 
-### Content Organization
-- ✅ Use `ContentSection` for first-level page organization.
-- ✅ Tables and lists should always be shown inside a `ContentSection`, but with no additional internal paddings
-- ✅ Render components with internal padding directly
+### Content Organization - MANDATORY STRUCTURE
+
+**REFERENCE: Use `cape-template/pages/ContentPage.tsx` as the definitive example for content organization.**
+- ✅ **ALWAYS wrap first-level content in `ContentSection`**
+- ✅ **Border Control**: Use `noBorder` prop for components with their own styling (cards, buttons, chips)
+- ✅ **No Border**: Lists and tables get automatic ContentSection borders
 - ❌ Don't nest `ContentSection` inside `ContentSection`
-- ❌ Don't add extra containers around tables, cards, lists
+- ❌ Don't add extra containers between `ContentSection` and components
+- ❌ Don't group multiple different examples in one ContentSection
+
+#### Perfect Examples from ContentPage.tsx:
+```tsx
+// ✅ Table - gets border automatically
+<ContentSection title="Basic Usage">
+  <Table size="medium">
+    {/* table content */}
+  </Table>
+</ContentSection>
+
+// ✅ List - gets border automatically
+<ContentSection title="Small Size List">
+  <List size="small">
+    {/* list items */}
+  </List>
+</ContentSection>
+
+// ✅ Cards - no border (cards have their own)
+<ContentSection title="Card Examples" noBorder>
+  <div className="grid grid-cols-3 gap-4">
+    <Card variant="outlined">{/* card content */}</Card>
+  </div>
+</ContentSection>
+```
 
 ### Imports (Always use cape-template paths)
 ```tsx

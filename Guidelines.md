@@ -1,6 +1,6 @@
 # Cape Design System Template - Guidelines
 
-## 🚀 Design Ideation Philosophy
+## 🚀 Design Ideation Purpose
 
 **CRITICAL: This template is optimized for rapid design ideation, not production development.**
 
@@ -23,7 +23,7 @@
 - Component composition without changes
 - Static/hardcoded example data
 - Simple grid/flex layouts with existing components
-- Placeholder content (Lorem ipsum)
+- Placeholder content
 - Mock UI states instead of full functionality
 
 ---
@@ -111,30 +111,6 @@ import UITemplate from "./cape-theme/templates/ui-template-basic";
 // ❌ Wrong - don't use default Figma Make paths
 import { Button } from "./components/ui/button";
 ```
-
----
-
-## 📋 Available Components
-
-**Complete catalog in `cape-theme/components/ui/`:**
-
-**Core UI**: button, input, textarea, select, checkbox, radio, switch, label
-**Data Display**: table, card, list, avatar, badge, chip, skeleton
-**Navigation**: tabs, accordion, drawer, pagination
-**Feedback**: alert, dialog, tooltip, progress
-**Layout**: content-section, separator, divider
-**Specialized**: metric-card, tile-card, prompt-card
-
-**All components are Cape-styled and ready to use.**
-
----
-
-## 🎨 Cape Design Tokens
-
-- **Colors**: Primary red (#D61F26), success green (#05A34E), neutral grays
-- **Typography**: Figtree font family
-- **Spacing**: Consistent Tailwind utilities
-- **Components**: Use chips (not badges), Cape-specific variants
 
 ---
 

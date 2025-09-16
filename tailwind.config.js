@@ -3,7 +3,7 @@ export default {
   content: [
     "./index.html",
     "./main.tsx",
-    "./cape-template/**/*.{js,ts,jsx,tsx}",
+    "./cape-theme/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: "class",
   theme: {

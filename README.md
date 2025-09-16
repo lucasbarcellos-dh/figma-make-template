@@ -12,7 +12,7 @@ npm run dev
 ## Project Structure
 
 ```
-├── cape-template/          # Final template files
+├── cape-theme/             # Cape-styled theme implementation
 │   ├── components/         # UI components with Cape styling
 │   ├── pages/             # Component showcase pages
 │   ├── patterns/          # Design patterns
@@ -38,4 +38,4 @@ The template includes Cape-styled versions of:
 
 ## Usage with Figma Make
 
-Copy the `cape-template/` folder contents to Figma Make for a complete Cape-styled component library. 
+Copy the `cape-theme/` folder contents to Figma Make for a complete Cape-styled component library. 

@@ -30,10 +30,10 @@
 
 ## 📂 Source of Truth
 
-**IGNORE all default Figma Make files. Use ONLY `cape-template/` folder.**
+**IGNORE all default Figma Make files. Use ONLY `cape-theme/` folder.**
 
 ```
-cape-template/
+cape-theme/
 ├── components/ui/     # Complete Cape-styled components
 ├── templates/         # Pre-built page layouts
 ├── patterns/          # Navigation, headers, complex UI
@@ -47,9 +47,9 @@ cape-template/
 
 **MANDATORY SEARCH ORDER** before creating anything new:
 
-1. **Templates** (`cape-template/templates/`) - Complete page layouts
-2. **Patterns** (`cape-template/patterns/`) - Navigation, headers
-3. **UI Components** (`cape-template/components/ui/`) - Individual elements
+1. **Templates** (`cape-theme/templates/`) - Complete page layouts
+2. **Patterns** (`cape-theme/patterns/`) - Navigation, headers
+3. **UI Components** (`cape-theme/components/ui/`) - Individual elements
 
 ### Template Selection (Choose closest, don't customize)
 - **UITemplateFilters** - Has search/filter controls, data tables
@@ -69,7 +69,7 @@ cape-template/
 
 ### Content Organization - MANDATORY STRUCTURE
 
-**REFERENCE: Use `cape-template/pages/ContentPage.tsx` as the definitive example for content organization.**
+**REFERENCE: Use `cape-theme/pages/ContentPage.tsx` as the definitive example for content organization.**
 - ✅ **ALWAYS wrap first-level content in `ContentSection`**
 - ✅ **Border Control**: Use `noBorder` prop for components with their own styling (cards, buttons, chips)
 - ✅ **No Border**: Lists and tables get automatic ContentSection borders
@@ -101,12 +101,12 @@ cape-template/
 </ContentSection>
 ```
 
-### Imports (Always use cape-template paths)
+### Imports (Always use cape-theme paths)
 ```tsx
 // ✅ Correct
-import "./cape-template/styles/globals.css";
-import { Button } from "./cape-template/components/ui/button";
-import UITemplate from "./cape-template/templates/ui-template-basic";
+import "./cape-theme/styles/globals.css";
+import { Button } from "./cape-theme/components/ui/button";
+import UITemplate from "./cape-theme/templates/ui-template-basic";
 
 // ❌ Wrong - don't use default Figma Make paths
 import { Button } from "./components/ui/button";
@@ -116,7 +116,7 @@ import { Button } from "./components/ui/button";
 
 ## 📋 Available Components
 
-**Complete catalog in `cape-template/components/ui/`:**
+**Complete catalog in `cape-theme/components/ui/`:**
 
 **Core UI**: button, input, textarea, select, checkbox, radio, switch, label
 **Data Display**: table, card, list, avatar, badge, chip, skeleton

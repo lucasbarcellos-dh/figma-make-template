@@ -1,12 +1,8 @@
-# Figma Make Template - Cape Design System
+# Cape Design System Template
 
-A customized shadcn/ui template adapted to use the Cape Design System for Figma Make.
+A React component library template built on shadcn/ui components, styled with Cape Design System tokens for use with Figma Make.
 
-## Purpose
-
-This project transforms Figma Make's base shadcn/ui code to match Cape's design patterns and tokens, creating a reusable template.
-
-## Development Setup
+## Quick Start
 
 ```bash
 npm install
@@ -15,28 +11,31 @@ npm run dev
 
 ## Project Structure
 
-- `figma-make-dist/` - Clean template files for Figma Make transfer
-- `cape-design-system/` - Cape design tokens and components for reference
-- Development files (configs, etc.) remain in root
-
-## Usage
-
-The `figma-make-dist/` folder contains the final template files to upload back to Figma Make with Cape styling applied to all shadcn components.
-
-### Uploading to Figma Make
-
-1. Copy all files from `figma-make-dist/` folder
-2. Paste them into Figma Make with this prompt:
-
 ```
-Replace all current code with the contents from the figma-make-dist folder I've uploaded. This folder contains:
+├── cape-template/          # Final template files
+│   ├── components/         # UI components with Cape styling
+│   ├── pages/             # Component showcase pages
+│   ├── patterns/          # Design patterns
+│   └── styles/            # Global styles and tokens
+├── cape-design-system/    # Reference Cape components and tokens
+└── Guidelines.md          # Usage guidelines
+```
 
-- components/ui/ - Updated shadcn components styled with Cape Design System
-- components/figma/ - Figma-specific components  
-- pages/ - Component showcase pages
-- styles/globals.css - Updated global styles and design tokens
-- App.tsx - Main application with organized navigation
-- Guidelines.md - Usage guidelines
+## Available Scripts
 
-Please maintain the exact folder structure and replace all existing files with these updated versions that implement the Cape Design System styling with organized component categories.
-``` 
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint
+
+## Component Library
+
+The template includes Cape-styled versions of:
+- Form components (Button, Input, Select, etc.)
+- Navigation (Tabs, Pagination, etc.)
+- Feedback (Alert, Tooltip, etc.)
+- Data display (Table, Card, etc.)
+- And more...
+
+## Usage with Figma Make
+
+Copy the `cape-template/` folder contents to Figma Make for a complete Cape-styled component library. 

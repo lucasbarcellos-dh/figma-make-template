@@ -18,6 +18,10 @@ interface ContentSectionProps extends React.HTMLAttributes<HTMLElement> {
    * Additional CSS classes
    */
   className?: string;
+  /**
+   * Disable the default border styling (useful for cards and other components with their own borders)
+   */
+  noBorder?: boolean;
 }
 
 /**
@@ -26,15 +30,16 @@ interface ContentSectionProps extends React.HTMLAttributes<HTMLElement> {
  * 
  * Components with internal padding (Tables, Lists, etc.) should be rendered directly without additional spacing containers.
  */
-export function ContentSection({ 
-  title, 
-  description, 
-  children, 
+export function ContentSection({
+  title,
+  description,
+  children,
   className,
-  ...props 
+  noBorder = false,
+  ...props
 }: ContentSectionProps) {
   return (
-    <section 
+    <section
       className={cn("space-y-3", className)}
       {...props}
     >
@@ -52,7 +57,9 @@ export function ContentSection({
           )}
         </div>
       )}
-      <div className="space-y-4">
+      <div className={cn(
+        noBorder ? "space-y-4" : "rounded-xl border border-border bg-card"
+      )}>
         {children}
       </div>
     </section>

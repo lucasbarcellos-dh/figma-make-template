@@ -15,58 +15,52 @@ export function ContentPage() {
 
   return (
     <div className="space-y-12">
-      <ContentSection title="Table">
-        <div className="space-y-6">
-          <div>
-            <h3 className="text-lg font-medium mb-3">Basic Usage</h3>
-            <Table size="medium">
-              <TableHeader>
-                <TableRow>
-                  <TableHead>Name</TableHead>
-                  <TableHead>Role</TableHead>
-                  <TableHead>Status</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow>
-                  <TableCell>John Doe</TableCell>
-                  <TableCell>Developer</TableCell>
-                  <TableCell>Active</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>Jane Smith</TableCell>
-                  <TableCell>Designer</TableCell>
-                  <TableCell>Active</TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-medium mb-3">Bordered</h3>
-            <Table bordered size="small">
-              <TableHeader>
-                <TableRow>
-                  <TableHead>Product</TableHead>
-                  <TableHead>Price</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow>
-                  <TableCell>MacBook Pro</TableCell>
-                  <TableCell>$1,999</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>iPhone 15</TableCell>
-                  <TableCell>$799</TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
-          </div>
-        </div>
+      <ContentSection title="Basic Usage">
+        <Table size="medium">
+          <TableHeader>
+            <TableRow>
+              <TableHead>Name</TableHead>
+              <TableHead>Role</TableHead>
+              <TableHead>Status</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            <TableRow>
+              <TableCell>John Doe</TableCell>
+              <TableCell>Developer</TableCell>
+              <TableCell>Active</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Jane Smith</TableCell>
+              <TableCell>Designer</TableCell>
+              <TableCell>Active</TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
       </ContentSection>
 
-      <ContentSection title="Card">
+      <ContentSection title="Bordered Table">
+        <Table bordered size="small">
+          <TableHeader>
+            <TableRow>
+              <TableHead>Product</TableHead>
+              <TableHead>Price</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            <TableRow>
+              <TableCell>MacBook Pro</TableCell>
+              <TableCell>$1,999</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>iPhone 15</TableCell>
+              <TableCell>$799</TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </ContentSection>
+
+      <ContentSection title="Card" noBorder>
         <div className="space-y-8">
           <div>
             <h3 className="text-lg font-medium mb-3">Basic Variants</h3>
@@ -264,242 +258,211 @@ export function ContentPage() {
         </div>
       </ContentSection>
 
-      <ContentSection title="List">
-        <div className="space-y-8">
-          <div>
-            <h3 className="text-lg font-medium mb-3">List Sizes</h3>
-            <div className="space-y-6">
-              <div className="max-w-md">
-                <p className="text-sm text-muted-foreground mb-3">Small Size</p>
-                <List size="small">
-                  <ListItem>
-                    <Avatar size="small">
-                      <AvatarFallback>JD</AvatarFallback>
-                    </Avatar>
-                    <ListItemText 
-                      primary="John Doe" 
-                      secondary="Software Engineer" 
-                    />
-                  </ListItem>
-                  <ListItem divider={false}>
-                    <Avatar size="small">
-                      <AvatarFallback>JS</AvatarFallback>
-                    </Avatar>
-                    <ListItemText 
-                      primary="Jane Smith" 
-                      secondary="UX Designer" 
-                    />
-                  </ListItem>
-                </List>
-              </div>
+      <ContentSection title="Small Size List">
+        <List size="small">
+          <ListItem>
+            <Avatar size="small">
+              <AvatarFallback>JD</AvatarFallback>
+            </Avatar>
+            <ListItemText
+              primary="John Doe"
+              secondary="Software Engineer"
+            />
+          </ListItem>
+          <ListItem divider={false}>
+            <Avatar size="small">
+              <AvatarFallback>JS</AvatarFallback>
+            </Avatar>
+            <ListItemText
+              primary="Jane Smith"
+              secondary="UX Designer"
+            />
+          </ListItem>
+        </List>
+      </ContentSection>
 
-              <div className="max-w-md">
-                <p className="text-sm text-muted-foreground mb-3">Medium Size (Default)</p>
-                <List size="medium">
-                  <ListItem>
-                    <Avatar>
-                      <AvatarFallback>MJ</AvatarFallback>
-                    </Avatar>
-                    <ListItemText 
-                      primary="Mike Johnson" 
-                      secondary="Product Manager" 
-                    />
-                  </ListItem>
-                  <ListItem divider={false}>
-                    <Avatar>
-                      <AvatarFallback>AB</AvatarFallback>
-                    </Avatar>
-                    <ListItemText 
-                      primary="Alice Brown" 
-                      secondary="DevOps Engineer" 
-                    />
-                  </ListItem>
-                </List>
-              </div>
+      <ContentSection title="Medium Size List (Default)">
+        <List size="medium">
+          <ListItem>
+            <Avatar>
+              <AvatarFallback>MJ</AvatarFallback>
+            </Avatar>
+            <ListItemText
+              primary="Mike Johnson"
+              secondary="Product Manager"
+            />
+          </ListItem>
+          <ListItem divider={false}>
+            <Avatar>
+              <AvatarFallback>AB</AvatarFallback>
+            </Avatar>
+            <ListItemText
+              primary="Alice Brown"
+              secondary="DevOps Engineer"
+            />
+          </ListItem>
+        </List>
+      </ContentSection>
 
-              <div className="max-w-md">
-                <p className="text-sm text-muted-foreground mb-3">Large Size</p>
-                <List size="large">
-                  <ListItem>
-                    <Avatar size="large">
-                      <AvatarFallback>CD</AvatarFallback>
-                    </Avatar>
-                    <ListItemText 
-                      primary="Carol Davis" 
-                      secondary="Senior Developer" 
-                    />
-                  </ListItem>
-                  <ListItem divider={false}>
-                    <Avatar size="large">
-                      <AvatarFallback>DL</AvatarFallback>
-                    </Avatar>
-                    <ListItemText 
-                      primary="David Lee" 
-                      secondary="UI Designer" 
-                    />
-                  </ListItem>
-                </List>
-              </div>
-            </div>
-          </div>
+      <ContentSection title="Large Size List">
+        <List size="large">
+          <ListItem>
+            <Avatar size="large">
+              <AvatarFallback>CD</AvatarFallback>
+            </Avatar>
+            <ListItemText
+              primary="Carol Davis"
+              secondary="Senior Developer"
+            />
+          </ListItem>
+          <ListItem divider={false}>
+            <Avatar size="large">
+              <AvatarFallback>DL</AvatarFallback>
+            </Avatar>
+            <ListItemText
+              primary="David Lee"
+              secondary="UI Designer"
+            />
+          </ListItem>
+        </List>
+      </ContentSection>
 
-          <div>
-            <h3 className="text-lg font-medium mb-3">Interactive Lists</h3>
-            <div className="space-y-6">
-              <div className="max-w-md">
-                <p className="text-sm text-muted-foreground mb-3">Clickable Items</p>
-                <List>
-                  <ListItem onClick={() => console.log("Clicked John")}>
-                    <Avatar size="small">
-                      <AvatarFallback>JD</AvatarFallback>
-                    </Avatar>
-                    <ListItemText 
-                      primary="John Doe" 
-                      secondary="Click to view profile" 
-                    />
-                  </ListItem>
-                  <ListItem onClick={() => console.log("Clicked Jane")} divider={false}>
-                    <Avatar size="small">
-                      <AvatarFallback>JS</AvatarFallback>
-                    </Avatar>
-                    <ListItemText 
-                      primary="Jane Smith" 
-                      secondary="Click to view profile" 
-                    />
-                  </ListItem>
-                </List>
-              </div>
+      <ContentSection title="Clickable Items">
+        <List>
+          <ListItem onClick={() => console.log("Clicked John")}>
+            <Avatar size="small">
+              <AvatarFallback>JD</AvatarFallback>
+            </Avatar>
+            <ListItemText
+              primary="John Doe"
+              secondary="Click to view profile"
+            />
+          </ListItem>
+          <ListItem onClick={() => console.log("Clicked Jane")} divider={false}>
+            <Avatar size="small">
+              <AvatarFallback>JS</AvatarFallback>
+            </Avatar>
+            <ListItemText
+              primary="Jane Smith"
+              secondary="Click to view profile"
+            />
+          </ListItem>
+        </List>
+      </ContentSection>
 
-              <div className="max-w-md">
-                <p className="text-sm text-muted-foreground mb-3">With Secondary Actions</p>
-                <List>
-                  <ListItem 
-                    secondaryAction={
-                      <Button size="xsmall" variant="tertiary">
-                        Edit
-                      </Button>
-                    }
-                  >
-                    <Avatar size="small">
-                      <AvatarFallback>MJ</AvatarFallback>
-                    </Avatar>
-                    <ListItemText 
-                      primary="Mike Johnson" 
-                      secondary="Product Manager" 
-                    />
-                  </ListItem>
-                  <ListItem 
-                    secondaryAction={
-                      <Button size="xsmall" variant="tertiary">
-                        Edit
-                      </Button>
-                    }
-                    divider={false}
-                  >
-                    <Avatar size="small">
-                      <AvatarFallback>AB</AvatarFallback>
-                    </Avatar>
-                    <ListItemText 
-                      primary="Alice Brown" 
-                      secondary="DevOps Engineer" 
-                    />
-                  </ListItem>
-                </List>
-              </div>
-            </div>
-          </div>
+      <ContentSection title="With Secondary Actions">
+        <List>
+          <ListItem
+            secondaryAction={
+              <Button size="xsmall" variant="tertiary">
+                Edit
+              </Button>
+            }
+          >
+            <Avatar size="small">
+              <AvatarFallback>MJ</AvatarFallback>
+            </Avatar>
+            <ListItemText
+              primary="Mike Johnson"
+              secondary="Product Manager"
+            />
+          </ListItem>
+          <ListItem
+            secondaryAction={
+              <Button size="xsmall" variant="tertiary">
+                Edit
+              </Button>
+            }
+            divider={false}
+          >
+            <Avatar size="small">
+              <AvatarFallback>AB</AvatarFallback>
+            </Avatar>
+            <ListItemText
+              primary="Alice Brown"
+              secondary="DevOps Engineer"
+            />
+          </ListItem>
+        </List>
+      </ContentSection>
 
-          <div>
-            <h3 className="text-lg font-medium mb-3">List States</h3>
-            <div className="max-w-md">
-              <List>
-                <ListItem>
-                  <Avatar size="small">
-                    <AvatarFallback>N1</AvatarFallback>
-                  </Avatar>
-                  <ListItemText 
-                    primary="Normal Item" 
-                    secondary="Default state" 
-                  />
-                </ListItem>
-                <ListItem selected>
-                  <Avatar size="small">
-                    <AvatarFallback>S1</AvatarFallback>
-                  </Avatar>
-                  <ListItemText 
-                    primary="Selected Item" 
-                    secondary="Currently selected" 
-                  />
-                </ListItem>
-                <ListItem disabled divider={false}>
-                  <Avatar size="small">
-                    <AvatarFallback>D1</AvatarFallback>
-                  </Avatar>
-                  <ListItemText 
-                    primary="Disabled Item" 
-                    secondary="Cannot be interacted with" 
-                  />
-                </ListItem>
-              </List>
-            </div>
-          </div>
+      <ContentSection title="List States">
+        <List>
+          <ListItem>
+            <Avatar size="small">
+              <AvatarFallback>N1</AvatarFallback>
+            </Avatar>
+            <ListItemText
+              primary="Normal Item"
+              secondary="Default state"
+            />
+          </ListItem>
+          <ListItem selected>
+            <Avatar size="small">
+              <AvatarFallback>S1</AvatarFallback>
+            </Avatar>
+            <ListItemText
+              primary="Selected Item"
+              secondary="Currently selected"
+            />
+          </ListItem>
+          <ListItem disabled divider={false}>
+            <Avatar size="small">
+              <AvatarFallback>D1</AvatarFallback>
+            </Avatar>
+            <ListItemText
+              primary="Disabled Item"
+              secondary="Cannot be interacted with"
+            />
+          </ListItem>
+        </List>
+      </ContentSection>
 
-          <div>
-            <h3 className="text-lg font-medium mb-3">Without Dividers</h3>
-            <div className="max-w-md">
-              <List divider={false}>
-                <ListItem>
-                  <Avatar size="small">
-                    <AvatarFallback>T1</AvatarFallback>
-                  </Avatar>
-                  <ListItemText 
-                    primary="Task 1" 
-                    secondary="No divider below" 
-                  />
-                </ListItem>
-                <ListItem>
-                  <Avatar size="small">
-                    <AvatarFallback>T2</AvatarFallback>
-                  </Avatar>
-                  <ListItemText 
-                    primary="Task 2" 
-                    secondary="Clean design" 
-                  />
-                </ListItem>
-                <ListItem>
-                  <Avatar size="small">
-                    <AvatarFallback>T3</AvatarFallback>
-                  </Avatar>
-                  <ListItemText 
-                    primary="Task 3" 
-                    secondary="Seamless appearance" 
-                  />
-                </ListItem>
-              </List>
-            </div>
-          </div>
+      <ContentSection title="Without Dividers">
+        <List divider={false}>
+          <ListItem>
+            <Avatar size="small">
+              <AvatarFallback>T1</AvatarFallback>
+            </Avatar>
+            <ListItemText
+              primary="Task 1"
+              secondary="No divider below"
+            />
+          </ListItem>
+          <ListItem>
+            <Avatar size="small">
+              <AvatarFallback>T2</AvatarFallback>
+            </Avatar>
+            <ListItemText
+              primary="Task 2"
+              secondary="Clean design"
+            />
+          </ListItem>
+          <ListItem>
+            <Avatar size="small">
+              <AvatarFallback>T3</AvatarFallback>
+            </Avatar>
+            <ListItemText
+              primary="Task 3"
+              secondary="Seamless appearance"
+            />
+          </ListItem>
+        </List>
+      </ContentSection>
+
+      <ContentSection title="Basic Usage">
+        <div>
+          <p className="text-sm mb-2">Content above</p>
+          <hr className="border-border" />
+          <p className="text-sm mt-2">Content below</p>
         </div>
       </ContentSection>
 
-      <ContentSection title="Divider">
-        <div className="space-y-6">
-          <div className="max-w-md">
-            <h3 className="text-lg font-medium mb-3">Basic Usage</h3>
-            <div>
-              <p className="text-sm mb-2">Content above</p>
-              <hr className="border-border" />
-              <p className="text-sm mt-2">Content below</p>
-            </div>
-          </div>
-
-          <div className="max-w-md">
-            <h3 className="text-lg font-medium mb-3">Vertical</h3>
-            <div className="flex items-center space-x-4">
-              <p className="text-sm">Left content</p>
-              <div className="h-8 border-l border-border"></div>
-              <p className="text-sm">Right content</p>
-            </div>
-          </div>
+      <ContentSection title="Vertical">
+        <div className="flex items-center space-x-4">
+          <p className="text-sm">Left content</p>
+          <div className="h-8 border-l border-border"></div>
+          <p className="text-sm">Right content</p>
         </div>
       </ContentSection>
     </div>

@@ -40,7 +40,7 @@ export function ContentSection({
 }: ContentSectionProps) {
   return (
     <section
-      className={cn("space-y-3", className)}
+      className={cn("space-y-3 mb-8", className)}
       {...props}
     >
       {(title || description) && (

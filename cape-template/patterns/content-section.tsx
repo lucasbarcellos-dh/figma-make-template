@@ -19,6 +19,7 @@ export default function ContentSectionPage() {
             <ContentSection 
               title="Key Metrics" 
               description="Performance overview for this month"
+              noBorder
             >
               <div className="grid grid-cols-4 gap-4">
                 <MetricCard
@@ -63,9 +64,8 @@ export default function ContentSectionPage() {
           {/* Table Example - CORRECT */}
           <div className="bg-muted/30 p-4 rounded-lg">
             <ContentSection title="Recent Orders">
-              <div className="rounded-xl border border-border bg-card">
-                {/* Table renders directly inside container - no extra padding */}
-                <Table>
+              {/* Table renders directly inside ContentSection - no extra container needed */}
+              <Table>
                 <TableHeader>
                   <TableRow>
                     <TableHead>Order ID</TableHead>
@@ -98,17 +98,15 @@ export default function ContentSectionPage() {
                     <TableCell>2024-01-13</TableCell>
                   </TableRow>
                 </TableBody>
-                </Table>
-              </div>
+              </Table>
             </ContentSection>
           </div>
 
           {/* List Example - CORRECT */}
           <div className="bg-muted/30 p-4 rounded-lg">
             <ContentSection title="Recent Activity">
-              <div className="rounded-xl border border-border bg-card">
-                {/* List renders directly inside container - no extra padding */}
-                <List>
+              {/* List renders directly inside ContentSection - no extra container needed */}
+              <List>
                 <ListItem>
                   <Avatar size="small">
                     <AvatarFallback>🛒</AvatarFallback>
@@ -139,8 +137,7 @@ export default function ContentSectionPage() {
                   />
                   <span className="text-sm text-muted-foreground">1 hour ago</span>
                 </ListItem>
-                </List>
-              </div>
+              </List>
             </ContentSection>
           </div>
         </div>

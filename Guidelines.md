@@ -68,7 +68,8 @@ cape-template/
 - ❌ NEVER change sidebar background or spacing
 
 ### Content Organization
-- ✅ Use `ContentSection` for first-level page organization
+- ✅ Use `ContentSection` for first-level page organization.
+- ✅ Tables and lists should always be shown inside a `ContentSection`, but with no additional internal paddings
 - ✅ Render components with internal padding directly
 - ❌ Don't nest `ContentSection` inside `ContentSection`
 - ❌ Don't add extra containers around tables, cards, lists
